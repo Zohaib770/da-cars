@@ -14,19 +14,31 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 KFZAufbereitung: "KFZ-Aufbereitung",
                 Scheibentönung: "Scheibentönung",
                 Autoglasservice: "Autoglasservice",
-                klimaservice: "Klimaservice"
+                klimaservice: "Klimaservice",
+                Dienste: "Dienste",
+                Beschreibung: "Beschreibung",
+                PkwPreis: "PKW Preis",
+                VanSuvPreis: "Van/SUV Preis",
+                KleinbusPreis: "Kleinbus Preis",
+                PreislisteKfzAufbereitung:"Preisliste KFZ-Aufbereitung"
             }
         },
         fr:{
             translation:{
-                dienstleistungen: "Services",
+                Dienstleistungen: "Services",
                 Fahrzeuge: "Véhicule",
                 Kontakt: "Contact",
                 einloggen: "s'identifier",
                 KFZAufbereitung: "Préparation du véhicule",
                 Scheibentönung: "Teinte des verres",
                 Autoglasservice: "Service de vitres de voiture",
-                klimaservice: "Service de climatisation"
+                klimaservice: "Service de climatisation",
+                Dienste: "Services",
+                Beschreibung: "Description",
+                PkwPreis: "Prix de la voiture",
+                VanSuvPreis: "Prix fourgon/SUV",
+                KleinbusPreis: "Prix du minibus",
+                PreislisteKfzAufbereitung:"Liste de prix pour l’esthétique automobile"
             }
         }
     }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "./Navbar.css";
 import daCars from '../assets/da-cars-logo.png';
 import { useTranslation } from "react-i18next";
@@ -21,10 +22,10 @@ const Navbar: React.FC = () => {
         </div>
         <div className="navbar-right">
           <ul>
-            <li><a href="#home">{t("Dienstleistungen")}</a></li>
-            <li><a href="#about">{t("Fahrzeuge")}</a></li>
-            <li><a href="#services">{t("Kontakt")}</a></li>
-            <li><a href="#contact">{t("einloggen")}</a></li>
+            <li><Link to="/">{t("Dienstleistungen")}</Link></li>
+            <li><Link to="/fahrzeug">{t("Fahrzeuge")}</Link></li>
+            <li><Link to="/kontakt">{t("Kontakt")}</Link></li>
+            <li><Link to="/einloggen">{t("einloggen")}</Link></li>
           </ul>
           {/* <div className="language-selector"> */}
             <select onChange={changeLanguage} defaultValue={i18n.language}>
