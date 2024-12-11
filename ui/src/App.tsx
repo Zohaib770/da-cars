@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from "./components/Navbar";
-import Fahrzeug from "./components/Fahrzeug";
-import Kontakt from "./components/Kontakt";
-import Einloggen from "./components/Einloggen";
+import Fahrzeug from "./components/navbarpages/Fahrzeug";
+import Kontakt from "./components/navbarpages/Kontakt";
+import Einloggen from "./components/navbarpages/Einloggen";
+
 import MainGrid from "./components/MainGrid";
-import KfzAufbereitung from './components/pages/kfzaufbereitung';
+import KfzAufbereitung from './components/maingridpages/kfzAufbereitung';
 import "./App.css";
 
 const App: React.FC = () => {

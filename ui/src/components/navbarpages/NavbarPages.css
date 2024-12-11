@@ -1,0 +1,31 @@
+/* ======================== dienstleistungen ======================== */
+.main-grid {
+    background-color: #131111;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-item {
+    width: 30%;
+    height: 10%;
+    margin-left: 10%;
+    margin-top: 4%;
+    background-color: red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-grid .grid-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+/* ======================== fahrzeug ======================== */
