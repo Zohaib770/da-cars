@@ -29,13 +29,16 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 Land: "Deutschland",
                 // kontakt-firma-form
                 frage: "Für weitere fragen gerne anschreiben",
-                Name: "Nom",
+                Name: "Name",
                 IhrName: "Ihr Name",
                 Email: "Email",
                 IhreEmailAdresse: "Ihre Email Adresse",
                 IhreNachricht: "Ihre Nachricht",
                 agb: "Ich akzeptiere die AGB",
-                Absenden: "Asenden"
+                Absenden: "Asenden",
+                //login-Form
+                Anmelden: "Anmelden",
+                Password: "Passwort"
             }
         },
         fr:{
@@ -64,11 +67,14 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 frage: "Pour d’autres questions, veuillez écrire à",
                 Name: "Nom",
                 IhrName: "Votre nom",
-                Email: "Email",
+                Email: "Émail",
                 IhreEmailAdresse: "Votre adresse e-mail",
                 IhreNachricht: "Votre message",
                 agb: "J’accepte les conditions générales",
-                Absenden: "Dépêche"
+                Absenden: "Dépêche",
+                //login-Form
+                Anmelden: "annoncer",
+                Password: "Mot de passe"
             }
         }
     }

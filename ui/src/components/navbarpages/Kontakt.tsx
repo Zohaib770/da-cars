@@ -29,7 +29,7 @@ const Kontakt : React.FC = () => {
           <label htmlFor="nachricht">{t("Nachricht")}</label>
           <textarea id="nachricht" name="nachricht" placeholder={t("IhreNachricht")} rows={5}></textarea>
           <label>
-            <input type="checkbox" id="agb" name="agb" />
+            <input type="checkbox" id="agb" name="agb" required />
             {t("agb")}
           </label>
         <button type="submit" className="absenden-button">{t("Absenden")}</button>

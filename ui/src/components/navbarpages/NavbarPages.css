@@ -126,3 +126,48 @@ textarea {
     font-size: 1rem;
 }
   
+/* ======================== einloggen ======================== */
+.einloggen-container{
+    background-color: #131111;
+    height: 100vh;
+}
+
+.login-form{
+    color: #fff;
+}
+
+.login-form h1{
+    padding-top: 10%;
+    text-align: center
+}
+
+.login-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+  align-items: center; 
+}
+
+.login-form form label {
+    font-weight: bold;
+}
+
+.login-form form input {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    width: 40vh;
+}
+
+.anmelden-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    width: 16vh;
+    background-color: #017cbc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
