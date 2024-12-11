@@ -64,3 +64,65 @@ td:first-child {
     color: #fff;
 }
 
+/* ======================== kontakt ======================== */
+.kontakt-container{
+    background-color: #131111;
+    height: 100%;
+}
+
+.kontakt-container h1 {
+    background-color: #131111;
+    color: white;
+}
+
+.adresse{
+    color: white;
+    padding-top: 3%;
+    padding-left: 10%;
+}
+
+.kontakt-firma{
+    color: white;
+    padding-top: 3%;
+    padding-left: 10%;
+}
+
+.kontakt-firma-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kontakt-firma-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+  
+.kontakt-firma-form input,
+.kontakt-firma-form textarea {
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    width: 60vh;
+}
+  
+#agb{
+    width: 2vh;
+}
+
+textarea {
+    resize: vertical;
+}
+  
+.absenden-button {
+    padding: 10px 15px;
+    margin-left: 12%;
+    width: 18vh;
+    background-color: #017cbc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+  

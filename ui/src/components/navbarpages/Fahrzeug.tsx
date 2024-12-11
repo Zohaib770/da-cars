@@ -80,7 +80,7 @@ const Fahrzeug: React.FC = () => {
                       className="fahrzeug-button"
                       onClick={() => alert(`Vielen Dank für Ihr Interesse an ${auto.name}!`)}
                     >
-                      {t("nachricht")}
+                      {t("Nachricht")}
                     </button>
                 </td>
             </tr>
