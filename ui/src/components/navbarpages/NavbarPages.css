@@ -29,3 +29,38 @@
 }
 
 /* ======================== fahrzeug ======================== */
+.fahrzeug-container {
+    background-color: #131111;
+    height: 100%;
+}
+
+.fahrzeug-table{
+    margin-left: 5%;
+}
+
+td:first-child {
+    width: 25%;
+}
+
+.fahrzeug-bild {
+    border: none;
+}
+
+.fahrzeug-details {
+    border: none;
+}
+
+.fahrzeug-bild img {
+    width: 70%;
+    height: auto;
+}
+
+.slider {
+    transform: translateY(-120%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 35px;
+    color: #fff;
+}
+

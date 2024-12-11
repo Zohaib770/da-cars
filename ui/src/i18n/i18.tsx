@@ -20,7 +20,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 PkwPreis: "PKW Preis",
                 VanSuvPreis: "Van/SUV Preis",
                 KleinbusPreis: "Kleinbus Preis",
-                PreislisteKfzAufbereitung:"Preisliste KFZ-Aufbereitung"
+                PreislisteKfzAufbereitung:"Preisliste KFZ-Aufbereitung",
+                nachricht: "nachricht"
             }
         },
         fr:{
@@ -38,7 +39,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 PkwPreis: "Prix de la voiture",
                 VanSuvPreis: "Prix fourgon/SUV",
                 KleinbusPreis: "Prix du minibus",
-                PreislisteKfzAufbereitung:"Liste de prix pour l’esthétique automobile"
+                PreislisteKfzAufbereitung:"Liste de prix pour l’esthétique automobile",
+                nachricht: "message"
             }
         }
     }
