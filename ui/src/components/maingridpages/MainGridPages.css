@@ -1,3 +1,5 @@
+/* ======================== Global ======================== */
+
 /* ======================== maingrid ======================== */
 .main-grid {
     background-color: #131111;
@@ -75,12 +77,66 @@ td {
     margin-left: 5%;
 }
 
-.imag img {
+.scheibentoenung-container .imag img {
     max-width: 85%;
     height: auto;
 }
 
 .scheibentoenung-container .txt{
+    color: #fff;
+    width: 45%;
+    height: 70%;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+/* ======================== Autoglasservice ======================== */
+.autoglasservice-container{
+    background-color: #131111;
+    height: 100vh;
+    display: flex;
+}
+
+.autoglasservice-container .imag{
+    width: 40%;
+    height: 80%;
+    margin-top: 5%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.autoglasservice-container .imag img {
+    max-width: 60%;
+    height: auto;
+}
+
+.autoglasservice-container .txt{
+    color: #fff;
+    width: 55%;
+    height: 70%;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+/* ======================== Klimaservice ======================== */
+.klimaservice-container{
+    background-color: #131111;
+    height: 100vh;
+    display: flex;
+}
+
+.klimaservice-container .imag{
+    width: 45%;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.klimaservice-container .txt{
     color: #fff;
     width: 45%;
     height: 70%;

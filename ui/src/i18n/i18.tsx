@@ -30,6 +30,21 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                                     "nur eine ansprechende Optik, sondern schützt auch vor UV-Strahlen und" + 
                                     "verbessert die Privatsphäre im Fahrzeug. Mit hochwertigen Folien garantieren" +
                                     "wir eine präzise Verarbeitung und langlebige Ergebnisse, die Ihr Fahrzeug individuell aufwerten.",
+                // Autoglasservice
+                AutoglasserviceTitle: "Autoglasservice",
+                AutoglasserviceTxt: "Unser Autoglasservice umfasst die fachgerechte Begutachtung, Reparatur" +
+                                    "oder den Austausch beschädigter Scheiben, um die Sicherheit und Sicht" + 
+                                    "Ihres Fahrzeugs zu gewährleisten. Wir verwenden hochwertige Materialien" + 
+                                    "und Techniken, damit Ihre Scheibe schnell wieder in einwandfreiem Zustand ist",
+                // KlimaService                   
+                klimaserviceTitle: "Klimaservice",
+                klimaserviceTxt: "Ein Klimaservice beginnt mit der Überprüfung des Klimasystems auf" + 
+                                 "Leckagen und den allgemeinen Zustand. Anschließend wird das alte" +
+                                 "Kältemittel abgesaugt und fachgerecht entsorgt. Das System wird" +
+                                 "gereinigt, um Schmutz und Bakterien zu entfernen. Danach erfolgt" +
+                                 "die Neubefüllung mit neuem Kältemittel. Abschließend testen wir die" +
+                                 "Funktionstüchtigkeit des Systems, um sicherzustellen, dass Ihre Klimaanlage" +
+                                 "effizient und zuverlässig arbeitet.",
                 nachricht: "nachricht",
                 // Adresse
                 Land: "Deutschland",
