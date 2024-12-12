@@ -24,6 +24,12 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 VanSuvPreis: "Van/SUV Preis",
                 KleinbusPreis: "Kleinbus Preis",
                 PreislisteKfzAufbereitung:"Preisliste KFZ-Aufbereitung",
+                // Scheibentoenung
+                ScheibentoenungTitle: "Scheibentönung x Foliatec",
+                ScheibentoenungTxt: "Unsere Scheibentönung in Kooperation mit Foliatec bietet nicht" +
+                                    "nur eine ansprechende Optik, sondern schützt auch vor UV-Strahlen und" + 
+                                    "verbessert die Privatsphäre im Fahrzeug. Mit hochwertigen Folien garantieren" +
+                                    "wir eine präzise Verarbeitung und langlebige Ergebnisse, die Ihr Fahrzeug individuell aufwerten.",
                 nachricht: "nachricht",
                 // Adresse
                 Land: "Deutschland",

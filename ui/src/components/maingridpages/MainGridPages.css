@@ -61,4 +61,29 @@ td {
     color: #017cbc;
 }
 
-/* ========================  ======================== */
+/* ======================== Scheibentoenung ======================== */
+.scheibentoenung-container{
+    background-color: #131111;
+    height: 100vh;
+    display: flex;
+}
+
+.scheibentoenung-container .imag{
+    width: 45%;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.imag img {
+    max-width: 85%;
+    height: auto;
+}
+
+.scheibentoenung-container .txt{
+    color: #fff;
+    width: 45%;
+    height: 70%;
+    margin-top: 5%;
+    margin-right: 5%;
+}
