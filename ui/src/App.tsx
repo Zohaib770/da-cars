@@ -8,6 +8,9 @@ import Einloggen from "./components/navbarpages/Einloggen";
 
 import MainGrid from "./components/MainGrid";
 import KfzAufbereitung from './components/maingridpages/kfzAufbereitung';
+import Scheibentoenung from './components/maingridpages/Scheibentoenung';
+import Autoglasservice from './components/maingridpages/Autoglasservice';
+import Klimaservice from './components/maingridpages/Klimaservice';
 import "./App.css";
 
 const App: React.FC = () => {
@@ -18,6 +21,10 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<MainGrid />}/>
         <Route path="/kfzaufbereitung" element={<KfzAufbereitung />} />
+        <Route path="/scheibentoenung" element={<Scheibentoenung />} />
+        <Route path="/autoglasservice" element={<Autoglasservice />} />
+        <Route path="/klimaservice" element={<Klimaservice />} />
+
         <Route path="/fahrzeug" element={<Fahrzeug />}/>
         <Route path="/kontakt" element={<Kontakt />}/>
         <Route path="/einloggen" element={<Einloggen />}/>
