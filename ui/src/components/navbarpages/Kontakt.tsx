@@ -32,8 +32,8 @@ const Kontakt : React.FC = () => {
             <input type="checkbox" id="agb" name="agb" required />
             {t("agb")}
           </label>
-        <button type="submit" className="absenden-button">{t("Absenden")}</button>
-      </form>
+          <button type="submit" className="absenden-button">{t("Absenden")}</button>
+        </form>
       </div>
 
     </div>
