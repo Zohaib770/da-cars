@@ -18,17 +18,19 @@ const App: React.FC = () => {
     <>
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<MainGrid />}/>
-        <Route path="/kfzaufbereitung" element={<KfzAufbereitung />} />
-        <Route path="/scheibentoenung" element={<Scheibentoenung />} />
-        <Route path="/autoglasservice" element={<Autoglasservice />} />
-        <Route path="/klimaservice" element={<Klimaservice />} />
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<MainGrid />}/>
+          <Route path="/kfzaufbereitung" element={<KfzAufbereitung />} />
+          <Route path="/scheibentoenung" element={<Scheibentoenung />} />
+          <Route path="/autoglasservice" element={<Autoglasservice />} />
+          <Route path="/klimaservice" element={<Klimaservice />} />
 
-        <Route path="/fahrzeug" element={<Fahrzeug />}/>
-        <Route path="/kontakt" element={<Kontakt />}/>
-        <Route path="/einloggen" element={<Einloggen />}/>
-      </Routes>
+          <Route path="/fahrzeug" element={<Fahrzeug />}/>
+          <Route path="/kontakt" element={<Kontakt />}/>
+          <Route path="/einloggen" element={<Einloggen />}/>
+        </Routes>
+      </div>
     </Router>
     </>
   );
