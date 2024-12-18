@@ -6,6 +6,11 @@ import Fahrzeug from "./components/navbarpages/Fahrzeug";
 import Kontakt from "./components/navbarpages/Kontakt";
 import Einloggen from "./components/navbarpages/Einloggen";
 
+import AdminLayout from "./components/navbarpages/admin/AdminLayout";
+import FahrzeugVerwalten from "./components/navbarpages/admin/FahrzeugVerwalten";
+import Profil from "./components/navbarpages/admin/Profil";
+
+import MainLayout from "./components/MainLayout";
 import MainGrid from "./components/MainGrid";
 import KfzAufbereitung from './components/maingridpages/kfzAufbereitung';
 import Scheibentoenung from './components/maingridpages/Scheibentoenung';
@@ -19,16 +24,31 @@ const App: React.FC = () => {
     <Router>
       <Navbar />
       <div className="main-content">
-        <Routes>
+         <Routes>
+          {/*<Route path="/" element={<MainLayout />}>
+            <Route path="/maingrid" element={<MainGrid />}>
+              <Route path="/kfzaufbereitung" element={<KfzAufbereitung />} />
+              <Route path="/scheibentoenung" element={<Scheibentoenung />} />
+              <Route path="/autoglasservice" element={<Autoglasservice />} />
+              <Route path="/klimaservice" element={<Klimaservice />} />
+            </Route>
+          </Route> */}
           <Route path="/" element={<MainGrid />}/>
           <Route path="/kfzaufbereitung" element={<KfzAufbereitung />} />
           <Route path="/scheibentoenung" element={<Scheibentoenung />} />
           <Route path="/autoglasservice" element={<Autoglasservice />} />
           <Route path="/klimaservice" element={<Klimaservice />} />
-
+           {/* Navbar */}
           <Route path="/fahrzeug" element={<Fahrzeug />}/>
           <Route path="/kontakt" element={<Kontakt />}/>
           <Route path="/einloggen" element={<Einloggen />}/>
+          {/* Admin */}
+          {/* <Route path="/adminlayout" element={<AdminLayout />}/> */}
+          {/* <Route path="/fahrzeugverwalten" element={<FahrzeugVerwalten />}/> */}
+          <Route path="/adminlayout" element={<AdminLayout />}>
+            <Route path="fahrzeugverwalten" element={<FahrzeugVerwalten />} />
+            <Route path="profil" element={<Profil />} />
+          </Route>
         </Routes>
       </div>
     </Router>
