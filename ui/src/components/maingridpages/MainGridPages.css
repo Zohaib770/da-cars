@@ -136,6 +136,11 @@ td {
     margin-left: 5%;
 }
 
+.klimaservice-container .imag img {
+    max-width: 85%;
+    height: auto;
+}
+
 .klimaservice-container .txt{
     color: #fff;
     width: 45%;
