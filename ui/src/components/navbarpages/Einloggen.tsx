@@ -1,10 +1,23 @@
 import React from 'react'
 import { useTranslation } from "react-i18next";
+import { useNavigate } from 'react-router-dom'; 
 
 const Einloggen : React.FC = () => {
   const{t} = useTranslation();
+  const navigate = useNavigate();
   const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // Prevents page reload
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const email = formData.get('email') as string;
+    const password = formData.get('password') as string;
+
+    if (email === 'admin@gmail.com' && password === 'admin') {
+      navigate('/adminlayout/FahrzeugVerwalten');
+    } else {
+      alert(t("Falsche Anmeldeinformationen"));
+    }
+
   };
 
   return (

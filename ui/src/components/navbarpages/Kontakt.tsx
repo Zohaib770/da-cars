@@ -5,7 +5,7 @@ const Kontakt : React.FC = () => {
   const{t} = useTranslation();
 
   const handleForm = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // Prevents page reload
+    event.preventDefault();
   };
 
   return (
