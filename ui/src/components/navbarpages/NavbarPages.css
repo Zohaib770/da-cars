@@ -52,6 +52,10 @@ td:first-child {
     border: none;
 }
 
+.fahrzeug-details h1{
+    text-align: left;
+}
+
 .fahrzeug-bild img {
     width: 70%;
     height: auto;

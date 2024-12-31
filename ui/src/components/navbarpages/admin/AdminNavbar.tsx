@@ -11,8 +11,8 @@ const AdminNavbar : React.FC = () => {
         <div className="adminnavbar-container">
             <ul>
                 <li><Link to="/adminlayout/fahrzeugverwalten">{t("Fahrzeug")}</Link></li>
-                <li><Link to="/adminlayout/profil">{t("profil")}</Link></li>
-                <li><Link to="/adminlayout">{t("Fahrzeug")}</Link></li>
+                <li><Link to="/adminlayout/profil">{t("Profil")}</Link></li>
+                <li><Link to="/einloggen">{t("Abmelden")}</Link></li>
             </ul>
         </div>
     </nav>
