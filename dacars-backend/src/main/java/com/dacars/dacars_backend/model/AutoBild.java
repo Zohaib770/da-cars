@@ -4,32 +4,25 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
+@Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "auto")
-public class Auto {
-
+public class AutoBild {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String marke;
-    private String modell;
-    private int baujahr;
+    private Long autoId;
+    private String bildUrl;
 
-    public Auto(String marke, String modell, int baujahr) {
-        this.marke = marke;
-        this.modell = modell;
-        this.baujahr = baujahr;
+    public AutoBild(Long autoId, String bildUrl) {
+        this.autoId = autoId;
+        this.bildUrl = bildUrl;
     }
-    
 }

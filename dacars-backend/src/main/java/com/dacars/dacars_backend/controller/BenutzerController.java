@@ -3,14 +3,19 @@ package com.dacars.dacars_backend.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.dacars.dacars_backend.dto.LoginDto;
 import com.dacars.dacars_backend.model.Benutzer;
 import com.dacars.dacars_backend.service.BenutzerService;
+import com.dacars.dacars_backend.util.PasswordUtil;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
@@ -26,8 +31,29 @@ public class BenutzerController {
     @GetMapping({"/register"})
     public Benutzer register(@RequestBody Benutzer benutzer) {
         log.info("===================== register");        
-  
+        
+        benutzer.setPasswort(PasswordUtil.hashPassword(benutzer.getPasswort()));
         return benutzerservice.save(benutzer);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody LoginDto loginDto) {
+        log.info("===================== login ENTERED, email: {}", loginDto.getEmail());
+
+        Benutzer benutzer = benutzerservice.findByEmail(loginDto.getEmail());
+
+        if (benutzer != null) {
+            if (PasswordUtil.checkPassword(loginDto.getPassword(), benutzer.getPasswort())) {
+                log.info("anmelden erfolgreich fuer email: {}", loginDto.getEmail());
+                return ResponseEntity.ok("anmelden erfolgreich");
+            } else {
+                log.error("falscher passwort for email: {}", loginDto.getEmail());
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("falsche passswort");
+            }
+        } else {
+            log.error("User not found for email: {}", loginDto.getEmail());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("benutzer nicht gefunden");
+        }
     }
 
     @GetMapping({"/deletebyid/{id}"})
