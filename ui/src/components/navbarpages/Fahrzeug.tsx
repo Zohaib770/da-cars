@@ -49,7 +49,13 @@ const Fahrzeug: React.FC = () => {
     fetchAutoDaten();
   }, []);
   
-
+  if (autoDaten.length === 0) {
+    return (
+      <div className="fahrzeug-container">
+        <p className="keine-autos">{t("Keine Fahrzeuge verfügbar.")}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="fahrzeug-container">
@@ -58,13 +64,20 @@ const Fahrzeug: React.FC = () => {
           {autoDaten.map((auto, index) => (
             <tr key={index}>
                 <td className="fahrzeug-bild">
-                    <button className="slider links" onClick={() => vorherigesBild(index)}>&lt;</button>
+                    {auto.bildUrl.length > 1 && (
+                      <>
+                        <button className="slider links" onClick={() => vorherigesBild(index)}>&lt;</button>
+                      </>
+                    )}
                     <img
                       src={`http://localhost:8080/autobilder/${auto.bildUrl[bilderIndex[index]]}`}
                       alt={`${auto.marke} ${auto.modell}`}
                     />
-
-                    <button className="slider rechts" onClick={() => naechstesBild(index)}>&gt;</button>
+                    {auto.bildUrl.length > 1 && (
+                        <>
+                          <button className="slider rechts" onClick={() => naechstesBild(index)}>&gt;</button>
+                        </>
+                      )}
                 </td>
 
                 <td className="fahrzeug-details">
