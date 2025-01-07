@@ -59,7 +59,10 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 Absenden: "Asenden",
                 //login-Form
                 Anmelden: "Anmelden",
-                Password: "Passwort"
+                Password: "Passwort",
+                //Admin-Navabr
+                Fahrzeughochladen: "Fahrzeug Hochladen",
+                Fahrzeugverwalten: "Fahrzeugverwalten"
             }
         },
         fr:{
@@ -95,7 +98,10 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 Absenden: "Dépêche",
                 //login-Form
                 Anmelden: "annoncer",
-                Password: "Mot de passe"
+                Password: "Mot de passe",
+                //Admin-Navabr
+                Fahrzeughochladen: "Télécharger le véhicule",
+                Fahrzeugverwalten: "Gérer votre véhicule"
             }
         }
     }
