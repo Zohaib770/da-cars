@@ -1,3 +1,16 @@
+/* ======================== AdminLayout ======================== */
+.adminlayout-container {
+    display: flex;
+}
+
+.adminlayout-navbar {
+    width: 15%;
+}
+
+.adminlayout-content {
+    width: 85%;
+}
+
 /* ======================== adminnavbar ======================== */
 .adminnavbar{
     background: #919191;
@@ -7,6 +20,7 @@
 .adminnavbar-container ul li {
     font-size: 20px;
     font-weight: bold;
+    color: white;
 }
 
 .adminnavbar-container ul li:not(:first-child) {
@@ -16,7 +30,7 @@
 .adminnavbar-container ul {
     list-style: none;
     margin: 0;
-    padding-left: 10%;
+    padding-left: 8%;
     padding-top: 10%;
 }
 
@@ -25,32 +39,63 @@
     text-decoration: none;
 }
 
-.adminnavbar-container ul li a:hover {
+.adminnavbar-container ul li:hover {
     text-decoration: underline;
 }
 
-/* ======================== AdminLayout ======================== */
-.adminlayout-container {
-    display: flex;
-    height: 100vh;
-}
-  
-.adminlayout-navbar {
-    width: 10%;
-}
-  
-.adminlayout-content {
-    width: 90%;
-}
-  
-/* ======================== FahrzeugVerwalten ======================== */
-.fahrzeugverwalten-container{
+/* ======================== Fahrzeughochladen ======================== */
+.fahrzeughochladen-container {
     background-color: #131111;
     height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.fahrzeugverwalten-container div{
+.vehicle-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 2%;
+}
+
+.form-group {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.form-group label {
+    font-size: larger;
+    margin-left: 22%;
+}
+
+.form-group input{
+    margin-right: 20%;
+    width: 30%;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.vehicle-form .submit-button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
     color: white;
-    padding-left: 10%;
-    padding-top: 5%;
-} 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* ======================== Profil ======================== */
+

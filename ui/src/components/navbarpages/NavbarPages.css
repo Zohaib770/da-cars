@@ -31,14 +31,25 @@
 /* ======================== fahrzeug ======================== */
 .fahrzeug-container {
     background-color: #131111;
-    height: 100%;
+    min-height: 100vh;
 }
 
-.fahrzeug-table{
-    background-color: #131111;
-    height: 100vh;
-    margin-left: 5%;
+.keine-autos{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15%; 
 }
+
+.fahrzeug-table {
+    display: block;
+    width: 100%;
+    margin-left: 5%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
 
 td:first-child {
     width: 25%;
@@ -73,7 +84,9 @@ td:first-child {
 /* ======================== kontakt ======================== */
 .kontakt-container{
     background-color: #131111;
-    height: 100%;
+    display: flex;
+    gap: 15%;
+    height: 100vh;
 }
 
 .kontakt-container h1 {
@@ -83,7 +96,7 @@ td:first-child {
 
 .adresse{
     color: white;
-    padding-top: 3%;
+    padding-top: 1%;
     padding-left: 10%;
 }
 

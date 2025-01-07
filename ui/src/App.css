@@ -1,7 +1,25 @@
-.main-content {
-    height: 100vh;
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-body {
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar-content {
+    height: 10vh;
     background-color: #000;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #131111;
+    overflow-y: auto;
 }
