@@ -1,116 +1,118 @@
-import React, { useState } from 'react';
-import './Admin.css';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from "react-i18next";
 import axios from 'axios';
+import "../NavbarPages.css";
+
+interface Auto {
+  autoId: number;
+  marke: string;
+  modell: string;
+  baujahr: number;
+  bildUrl: string[];
+}
+
 
 const FahrzeugVerwalten: React.FC = () => {
-  const [auto, setAuto] = useState({
-    bilder: [] as File[],
-    marke: '',
-    baujahr: '',
-    modell: '',
-  });
+  const{t} = useTranslation();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setAuto({ ...auto, [name]: value });
+  const [autoDaten, setAutoDaten] = useState<Auto[]>([]);
+  const [bilderIndex, setBilderIndex] = useState<number[]>([]);
+
+  const vorherigesBild = (index: number) => {
+    setBilderIndex((prevIndex) =>
+      prevIndex.map((current, idx) =>
+        idx === index
+          ? (current - 1 + autoDaten[index].bildUrl.length) % autoDaten[index].bildUrl.length
+          : current
+      )
+    );
   };
 
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const files = Array.from(e.target.files);
-      setAuto(prevData => ({
-        ...prevData,
-        bilder: [...prevData.bilder, ...files], // Speichern der Dateien in einem Array
-      }));
-    }
+  const naechstesBild = (index: number) => {
+    setBilderIndex((prevIndex) =>
+      prevIndex.map((current, idx) =>
+        idx === index ? (current + 1) % autoDaten[index].bildUrl.length : current
+      )
+    );
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const formData = new FormData();
-    formData.append('marke', auto.marke);
-    formData.append('baujahr', auto.baujahr);
-    formData.append('modell', auto.modell);
-
-    // Alle Bilder zum FormData hinzufügen
-    auto.bilder.forEach((file, index) => {
-      formData.append('dateien', file, file.name); // 'dateien' ist der Name für die Multipart-Dateien im DTO
-    });
-
+  const deleteAuto = async (autoId: number) => {
     try {
-      const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/auto/save`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data', // Wichtig für das Senden von FormData
-        },
-      });
-      
-      if (response.status === 200) {
-        alert('Fahrzeug erfolgreich hochgeladen');
-        setAuto({
-          bilder: [],
-          marke: '',
-          baujahr: '',
-          modell: '',
-        });
-      }
-    } catch (error) {
-      console.error('Fehler beim Hochladen des Fahrzeugs:', error);
-      alert('Fehler beim Hochladen des Fahrzeugs');
+      await axios.delete(`${import.meta.env.VITE_REACT_APP_API_URL}/auto/deletebyid?id=${autoId}`);
+      setAutoDaten((prevAutos) => prevAutos.filter((auto) => auto.autoId !== autoId));
+      alert(t("Fahrzeug erfolgreich gelöscht"));
+    } catch (err) {
+      console.error("Fehler beim Löschen des Fahrzeugs", err);
+      alert(t("Fehler beim Löschen des Fahrzeugs"));
     }
   };
+
+  useEffect(() => {
+    const fetchAutoDaten = async () => {
+      try {
+        const response = await axios.get<Auto[]>(`${import.meta.env.VITE_REACT_APP_API_URL}/auto/findAll`);
+        setAutoDaten(response.data);
+        setBilderIndex(response.data.map(() => 0));
+      } catch (err) {
+        console.error("Fehler beim Laden der Daten", err);
+      }
+    };
+  
+    fetchAutoDaten();
+  }, []);
+  
+  if (autoDaten.length === 0) {
+    return (
+      <div className="fahrzeug-container">
+        <p className="keine-autos">{t("Keine Fahrzeuge verfügbar.")}</p>
+      </div>
+    );
+  }
 
   return (
-    <div className="fahrzeugverwalten-container">
-      <h1>Fahrzeug hochladen</h1>
-      <form onSubmit={handleSubmit} className="vehicle-form">
-        <div className="form-group">
-          <label htmlFor="dateien">Fahrzeugbilder</label>
-          <input
-            type="file"
-            id="dateien"
-            name="dateien"
-            multiple
-            onChange={handleImageChange}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="marke">Marke</label>
-          <input
-            type="text"
-            id="marke"
-            name="marke"
-            value={auto.marke}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="modell">Modell</label>
-          <input
-            type="text"
-            id="modell"
-            name="modell"
-            value={auto.modell}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="baujahr">Baujahr</label>
-          <input
-            type="number"
-            id="baujahr"
-            name="baujahr"
-            value={auto.baujahr}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit" className="submit-button">
-          Fahrzeug hochladen
-        </button>
-      </form>
+    <div className="fahrzeug-container">
+       <table className="fahrzeug-table">
+        <tbody>
+          {autoDaten.map((auto, index) => (
+            <tr key={index}>
+                <td className="fahrzeug-bild">
+                    {auto.bildUrl.length > 1 && (
+                      <>
+                        <button className="slider links" onClick={() => vorherigesBild(index)}>&lt;</button>
+                      </>
+                    )}
+                    <img
+                      src={`http://localhost:8080/autobilder/${auto.bildUrl[bilderIndex[index]]}`}
+                      alt={`${auto.marke} ${auto.modell}`}
+                    />
+                    {auto.bildUrl.length > 1 && (
+                        <>
+                          <button className="slider rechts" onClick={() => naechstesBild(index)}>&gt;</button>
+                        </>
+                      )}
+                </td>
+
+                <td className="fahrzeug-details">
+                    <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
+                    <p className="fahrzeug-beschreibung">Baujahr: {auto.baujahr}</p>
+                    <p className="fahrzeug-beschreibung">Autoid: {auto.autoId}</p>
+                    <button
+                      className="fahrzeug-button"
+                      onClick={() => alert(`Vielen Dank für Ihr Interesse an ${auto.marke} ${auto.modell}!`)}
+                    >
+                      {t("Nachricht")}
+                    </button>
+                    <button
+                        className="fahrzeug-delete-button"
+                        onClick={() => deleteAuto(auto.autoId)}
+                    >
+                        {t("Löschen")}
+                    </button>
+                </td>
+            </tr>
+          ))}
+        </tbody>
+       </table>
     </div>
   );
 };
