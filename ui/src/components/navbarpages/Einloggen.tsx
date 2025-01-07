@@ -1,11 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { AuthContext } from "../../context/Authcontext";
 
 const Einloggen : React.FC = () => {
   const{t} = useTranslation();
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -24,7 +26,8 @@ const Einloggen : React.FC = () => {
       console.log(" ================= data " + data);
       /* navigate('/adminlayout/FahrzeugVerwalten'); */
       if (response.status === 200) {
-        navigate('/adminlayout/FahrzeugVerwalten');
+        login();
+        navigate('/adminlayout/fahrzeugverwalten');
       } else {
           alert(t("Falsche Anmeldeinformationen"));
       }

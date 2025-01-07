@@ -8,6 +8,7 @@ import Einloggen from "./components/navbarpages/Einloggen";
 
 import AdminLayout from "./components/navbarpages/admin/AdminLayout";
 import FahrzeugVerwalten from "./components/navbarpages/admin/FahrzeugVerwalten";
+import FahrzeugHochladen from "./components/navbarpages/admin/FahrzeugHochladen";
 import Profil from "./components/navbarpages/admin/Profil";
 
 import MainGrid from "./components/MainGrid";
@@ -15,13 +16,18 @@ import KfzAufbereitung from './components/maingridpages/kfzAufbereitung';
 import Scheibentoenung from './components/maingridpages/Scheibentoenung';
 import Autoglasservice from './components/maingridpages/Autoglasservice';
 import Klimaservice from './components/maingridpages/Klimaservice';
+
+import { AuthProvider } from "./context/Authcontext";
 import "./App.css";
 
 const App: React.FC = () => {
   return (
-    <>
+    <AuthProvider>
+    <div className="app">
     <Router>
+    <div className="navbar-content">
       <Navbar />
+    </div>
       <div className="main-content">
          <Routes>
           <Route path="/" element={<MainGrid />}/>
@@ -33,13 +39,15 @@ const App: React.FC = () => {
           <Route path="/kontakt" element={<Kontakt />}/>
           <Route path="/einloggen" element={<Einloggen />}/>
           <Route path="/adminlayout" element={<AdminLayout />}>
+            <Route path="fahrzeughochladen" element={<FahrzeugHochladen />} />
             <Route path="fahrzeugverwalten" element={<FahrzeugVerwalten />} />
             <Route path="profil" element={<Profil />} />
           </Route>
         </Routes>
       </div>
     </Router>
-    </>
+    </div>
+    </AuthProvider>
   );
 };
 
