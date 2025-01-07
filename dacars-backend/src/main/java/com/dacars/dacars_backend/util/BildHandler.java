@@ -1,5 +1,7 @@
 package com.dacars.dacars_backend.util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -11,9 +13,10 @@ import java.nio.file.StandardCopyOption;
 
 public class BildHandler {
 
+    private static final Logger log = LoggerFactory.getLogger(BildHandler.class);
+
     private static final String BILDER_ORDNER = "src/main/resources/static/autobilder";
 
-    // Initialisiert das Bilderverzeichnis, falls es nicht existiert
     static {
         try {
             Path ordnerPath = Paths.get(BILDER_ORDNER);
@@ -43,30 +46,19 @@ public class BildHandler {
         }
     }
 
-    // Lädt ein Bild aus dem Verzeichnis
-    public byte[] ladeBild(String dateiname) {
-        try {
-            Path bildPfad = Paths.get(BILDER_ORDNER).resolve(dateiname);
-            if (!Files.exists(bildPfad)) {
-                throw new IOException("Bild nicht gefunden: " + dateiname);
-            }
-            return Files.readAllBytes(bildPfad);
-        } catch (IOException e) {
-            throw new RuntimeException("Fehler beim Laden des Bildes: " + dateiname, e);
-        }
-    }
-
-    // Löscht ein Bild aus dem Verzeichnis
-    public void loescheBild(String dateiname) {
-        try {
-            Path bildPfad = Paths.get(BILDER_ORDNER).resolve(dateiname);
-            if (Files.exists(bildPfad)) {
+    public static void loescheBild(String dateiname) {
+        log.info(" ===== loescheBild ENTER dateiname={}", dateiname);
+        Path bildPfad = Paths.get(BILDER_ORDNER).resolve(dateiname);
+        if (Files.exists(bildPfad)) {
+            try {
                 Files.delete(bildPfad);
-            } else {
-                throw new IOException("Bild nicht gefunden: " + dateiname);
+                log.info("Bild erfolgreich gelöscht: {}", dateiname);
+            } catch (IOException e) {
+                log.error("Fehler beim Löschen des Bildes: {}", dateiname, e);
             }
-        } catch (IOException e) {
-            throw new RuntimeException("Fehler beim Löschen des Bildes: " + dateiname, e);
+        } else {
+            log.warn("Bild nicht gefunden: {}", dateiname);
         }
     }
+    
 }

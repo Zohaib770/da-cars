@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.dacars.dacars_backend.model.AutoBild;
 import com.dacars.dacars_backend.repository.AutoBildRepository;
+import com.dacars.dacars_backend.util.BildHandler;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class AutoBildService {
@@ -22,7 +25,12 @@ public class AutoBildService {
         autoBildRepository.deleteById(id);
     }
 
+    @Transactional
     public void deleteByAutoId(long autoId){
+        List<AutoBild> autoBilder = findByAutoId(autoId);
+        for (AutoBild ab : autoBilder) {
+            BildHandler.loescheBild(ab.getBildUrl());
+        }
         autoBildRepository.deleteByAutoId(autoId);
     }
 

@@ -19,6 +19,7 @@ import com.dacars.dacars_backend.service.AutoService;
 import com.dacars.dacars_backend.util.BildHandler;
 import com.dacars.dacars_backend.util.DtoKonverter;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -81,6 +82,13 @@ public class AutoController {
         }
         
         return autoDtos;
+    }
+
+    @DeleteMapping("deletebyid")
+    public void deletById(@RequestParam long id) {
+        log.info("===================== deletById ENTERED");
+        autoService.deleteById(id);
+        autoBildService.deleteByAutoId(id);
     }
 
 }

@@ -16,7 +16,7 @@ public class DtoKonverter {
     public static AutoDto convertAutoAndAutoBildToAutoDto(Auto auto, List<AutoBild> autoBild) {
 
         List<String> bildUrls = autoBild.stream().map(AutoBild::getBildUrl).collect(Collectors.toList());
-        AutoDto autoDto = new AutoDto(auto.getMarke(), auto.getModell(), auto.getBaujahr(), bildUrls);
+        AutoDto autoDto = new AutoDto(auto.getId(), auto.getMarke(), auto.getModell(), auto.getBaujahr(), bildUrls);
         
         return autoDto;
     }
@@ -24,7 +24,7 @@ public class DtoKonverter {
     public static AutoDto convertAutoAndAutoBildToAutoDtoList(Auto auto, List<AutoBild> autoBild) {
 
         List<String> bildUrls = autoBild.stream().map(AutoBild::getBildUrl).collect(Collectors.toList());
-        AutoDto autoDto = new AutoDto(auto.getMarke(), auto.getModell(), auto.getBaujahr(), bildUrls);
+        AutoDto autoDto = new AutoDto(auto.getId(), auto.getMarke(), auto.getModell(), auto.getBaujahr(), bildUrls);
         
         return autoDto;
     }

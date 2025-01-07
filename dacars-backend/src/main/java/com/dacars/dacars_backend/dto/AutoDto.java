@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AutoDto {
 
+    private Long autoId;
     private String marke;
     private String modell;
     private int baujahr;
