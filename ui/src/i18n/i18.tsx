@@ -12,6 +12,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 Fahrzeuge: "Fahrzeuge",
                 Kontakt: "Kontakt",
                 einloggen: "Einloggen",
+
                 // Dienstleistungen
                 KFZAufbereitung: "KFZ-Aufbereitung",
                 Scheibentönung: "Scheibentönung",
@@ -45,10 +46,14 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                                  "die Neubefüllung mit neuem Kältemittel. Abschließend testen wir die" +
                                  "Funktionstüchtigkeit des Systems, um sicherzustellen, dass Ihre Klimaanlage" +
                                  "effizient und zuverlässig arbeitet.",
-                nachricht: "nachricht",
+                Nachricht: "nachricht",
+
+                //Fahrzeug
+
+                //Kontakt
                 // Adresse
                 Land: "Deutschland",
-                // kontakt-firma-form
+                // Kontakt-firma-form
                 frage: "Für weitere fragen gerne anschreiben",
                 Name: "Name",
                 IhrName: "Ihr Name",
@@ -57,12 +62,17 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 IhreNachricht: "Ihre Nachricht",
                 agb: "Ich akzeptiere die AGB",
                 Absenden: "Asenden",
-                //login-Form
+
+                //Einloggen
                 Anmelden: "Anmelden",
                 Password: "Passwort",
-                //Admin-Navabr
+                //Admin-Navabar
                 Fahrzeughochladen: "Fahrzeug Hochladen",
                 Fahrzeugverwalten: "Fahrzeugverwalten"
+
+                //Fahrzeug hochladen
+                //Profil
+                //Abmelden
             }
         },
         fr:{
@@ -72,6 +82,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 Fahrzeuge: "Véhicule",
                 Kontakt: "Contact",
                 einloggen: "s'identifier",
+
                 // Dienstleistungen
                 KFZAufbereitung: "Préparation du véhicule",
                 Scheibentönung: "Teinte des verres",
@@ -85,9 +96,11 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 KleinbusPreis: "Prix du minibus",
                 PreislisteKfzAufbereitung:"Liste de prix pour l’esthétique automobile",
                 Nachricht: "message",
+
+                //Kontakt
                 // Adresse
                 Land: "Allemagne",
-                // kontakt-firma-form
+                // Kontakt-firma-form
                 frage: "Pour d’autres questions, veuillez écrire à",
                 Name: "Nom",
                 IhrName: "Votre nom",
@@ -96,12 +109,17 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 IhreNachricht: "Votre message",
                 agb: "J’accepte les conditions générales",
                 Absenden: "Dépêche",
-                //login-Form
+
+                //Einloggen
                 Anmelden: "annoncer",
                 Password: "Mot de passe",
-                //Admin-Navabr
+                //Admin-Navbar
                 Fahrzeughochladen: "Télécharger le véhicule",
                 Fahrzeugverwalten: "Gérer votre véhicule"
+
+                //Fahrzeug hochladen
+                //Profil
+                //Abmelden
             }
         }
     }
