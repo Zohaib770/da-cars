@@ -95,7 +95,6 @@ const FahrzeugVerwalten: React.FC = () => {
                 <td className="fahrzeug-details">
                     <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
                     <p className="fahrzeug-beschreibung">Baujahr: {auto.baujahr}</p>
-                    <p className="fahrzeug-beschreibung">Autoid: {auto.autoId}</p>
                     <button
                       className="fahrzeug-button"
                       onClick={() => alert(`Vielen Dank für Ihr Interesse an ${auto.marke} ${auto.modell}!`)}
