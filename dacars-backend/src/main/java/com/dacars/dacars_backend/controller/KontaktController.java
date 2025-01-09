@@ -33,4 +33,5 @@ public class KontaktController {
                                  .body("Fehler beim Senden der E-Mail.");
         }
     }
+
 }
