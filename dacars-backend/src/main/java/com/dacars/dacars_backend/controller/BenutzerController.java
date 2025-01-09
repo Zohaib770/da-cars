@@ -8,6 +8,8 @@ import com.dacars.dacars_backend.model.Benutzer;
 import com.dacars.dacars_backend.service.BenutzerService;
 import com.dacars.dacars_backend.util.PasswordUtil;
 
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,5 +70,26 @@ public class BenutzerController {
         Benutzer benutzer = benutzerservice.findByEmail(email);
         log.error(" benutzer: {}", benutzer);
         return benutzer;
+    }
+
+    @PostMapping("/admin/update-password")
+    public ResponseEntity<String> adminUpdatePassword(@RequestBody Map<String, String> request) {
+        String email = request.get("email");
+        String newPassword = request.get("newPassword");
+
+        log.info("===== adminUpdatePassword ENTERED email={}", email);
+
+        Benutzer benutzer = benutzerservice.findByEmail(email);
+
+        if (benutzer != null) {
+            benutzer.setPasswort(PasswordUtil.hashPassword(newPassword));
+            benutzerservice.save(benutzer);
+
+            log.info("Passwort erfolgreich geaendert fuer email: {}", email);
+            return ResponseEntity.ok("Passwort erfolgreich geändert");
+        } else {
+            log.error("Benutzer nicht gefunden für email: {}", email);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Benutzer nicht gefunden");
+        }
     }
 }
