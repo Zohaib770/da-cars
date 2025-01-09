@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { AuthContext } from "../../context/Authcontext";
+import { AuthContext } from "../../context/AuthContext";
 
 const Einloggen : React.FC = () => {
   const{t} = useTranslation();
@@ -23,10 +23,12 @@ const Einloggen : React.FC = () => {
       console.log(import.meta.env.VITE_REACT_APP_API_URL);
       const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/benutzer/login`, formData);
       const data = response;
-      console.log(" ================= data " + data);
+      console.log(" ================= data " + data.statusText);
       /* navigate('/adminlayout/FahrzeugVerwalten'); */
       if (response.status === 200) {
         login();
+        localStorage.setItem("benutzeremail", email);
+        localStorage.setItem("isLoggedIn", "true");
         navigate('/adminlayout/fahrzeugverwalten');
       } else {
           alert(t("Falsche Anmeldeinformationen"));

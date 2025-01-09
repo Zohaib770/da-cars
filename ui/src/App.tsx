@@ -17,7 +17,8 @@ import Scheibentoenung from './components/maingridpages/Scheibentoenung';
 import Autoglasservice from './components/maingridpages/Autoglasservice';
 import Klimaservice from './components/maingridpages/Klimaservice';
 
-import { AuthProvider } from "./context/Authcontext";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from './context/ProtectedRoute';
 import "./App.css";
 
 const App: React.FC = () => {
@@ -38,11 +39,15 @@ const App: React.FC = () => {
           <Route path="/fahrzeug" element={<Fahrzeug />}/>
           <Route path="/kontakt" element={<Kontakt />}/>
           <Route path="/einloggen" element={<Einloggen />}/>
-          <Route path="/adminlayout" element={<AdminLayout />}>
-            <Route path="fahrzeughochladen" element={<FahrzeugHochladen />} />
-            <Route path="fahrzeugverwalten" element={<FahrzeugVerwalten />} />
-            <Route path="profil" element={<Profil />} />
+          {/* Geschützte Admin-Routen */}
+          <Route element={<ProtectedRoute />}>
+            <Route path="/adminlayout" element={<AdminLayout />}>
+              <Route path="fahrzeughochladen" element={<FahrzeugHochladen />} />
+              <Route path="fahrzeugverwalten" element={<FahrzeugVerwalten />} />
+              <Route path="profil" element={<Profil />} />
+            </Route>
           </Route>
+
         </Routes>
       </div>
     </Router>

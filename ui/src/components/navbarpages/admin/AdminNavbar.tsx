@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { Link, useNavigate  } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import { AuthContext } from "../../../context/Authcontext";
+import { AuthContext } from "../../../context/AuthContext";
 import "./Admin.css";
 
 const AdminNavbar : React.FC = () => {
@@ -11,6 +11,7 @@ const AdminNavbar : React.FC = () => {
   
   const handleLogout = () => {
     logout();
+    localStorage.removeItem("benutzeremail");
     navigate("/einloggen");
   };
 
@@ -28,7 +29,6 @@ const AdminNavbar : React.FC = () => {
                     </span>
                   )}
                 </li>
-                {/* <li><Link to="/einloggen">{t("Abmelden")}</Link></li> */}
             </ul>
         </div>
     </nav>

@@ -1,4 +1,4 @@
-import React, { createContext, useState, ReactNode } from "react";
+import React, { createContext, useState, ReactNode, useEffect } from "react";
 
 interface AuthContextProps {
   isLoggedIn: boolean;
@@ -15,8 +15,21 @@ export const AuthContext = createContext<AuthContextProps>({
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const login = () => setIsLoggedIn(true);
-  const logout = () => setIsLoggedIn(false);
+  useEffect(() => {
+    const storedLoginStatus = localStorage.getItem("isLoggedIn") === "true";
+    console.log("storedLoginStatus ", storedLoginStatus);
+    setIsLoggedIn(storedLoginStatus);
+  }, []);
+
+  const login = () => {
+    setIsLoggedIn(true);
+    localStorage.setItem("isLoggedIn", "true");
+  };
+
+  const logout = () => {
+    setIsLoggedIn(false);
+    localStorage.setItem("isLoggedIn", "false");
+  };
 
   return (
     <AuthContext.Provider value={{ isLoggedIn, login, logout }}>
