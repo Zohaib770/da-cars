@@ -13,10 +13,10 @@ const Klimaservice: React.FC = () => {
             <img src={klimaservice} alt="Scheiben" />
         </div>
         <div className="txt">
-            <h1>{t("klimaserviceTitle")}</h1>
-            <p>{t("klimaserviceTxt")}</p>
+            <h1>{t("klimaservice_title")}</h1>
+            <p>{t("klimaservice_text")}</p>
             <br />
-            <h1>{t("Preise")}</h1>
+            <h1>{t("preis")}</h1>
         </div>  
     </div>
   )

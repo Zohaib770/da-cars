@@ -19,13 +19,13 @@ const AdminNavbar : React.FC = () => {
     <nav className='adminnavbar'>
         <div className="adminnavbar-container">
             <ul>
-                <li><Link to="/adminlayout/fahrzeughochladen">{t("Fahrzeughochladen")}</Link></li>
-                <li><Link to="/adminlayout/fahrzeugverwalten">{t("Fahrzeugverwalten")}</Link></li>
-                <li><Link to="/adminlayout/profil">{t("Profil")}</Link></li>
+                <li><Link to="/adminlayout/fahrzeughochladen">{t("fahrzeughochladen")}</Link></li>
+                <li><Link to="/adminlayout/fahrzeugverwalten">{t("fahrzeugverwalten")}</Link></li>
+                <li><Link to="/adminlayout/profil">{t("profil")}</Link></li>
                 <li>
                   {isLoggedIn && (
                     <span onClick={handleLogout} style={{ cursor: "pointer" }}>
-                      {t("Abmelden")}
+                      {t("abmelden")}
                     </span>
                   )}
                 </li>

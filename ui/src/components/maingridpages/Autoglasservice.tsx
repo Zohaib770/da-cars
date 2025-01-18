@@ -14,10 +14,10 @@ const Autoglasservice: React.FC = () => {
             <img src={autoglasservice2} alt="autoglasservice" />
         </div>
         <div className="txt">
-            <h1>{t("AutoglasserviceTitle")}</h1>
-            <p>{t("AutoglasserviceTxt")}</p>
+            <h1>{t("autoglasservice_title")}</h1>
+            <p>{t("autoglasservice_text")}</p>
             <br />
-            <h1>{t("Preise")}</h1>
+            <h1>{t("preis")}</h1>
         </div>  
     </div>
   )

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useTranslation } from "react-i18next";
 import './Admin.css';
 import axios from 'axios';
 
 const FahrzeugHochladen: React.FC = () => {
+  const{t} = useTranslation();
   const [auto, setAuto] = useState({
     bilder: [] as File[],
     marke: '',
@@ -62,10 +64,10 @@ const FahrzeugHochladen: React.FC = () => {
 
   return (
     <div className="fahrzeughochladen-container">
-      <h1>Fahrzeug hochladen</h1>
+      <h1>{("fahrzeughochladen")}</h1>
       <form onSubmit={handleSubmit} className="vehicle-form">
         <div className="form-group">
-          <label htmlFor="dateien">Fahrzeugbilder</label>
+          <label htmlFor="dateien">{t("fahrzeugbilder")}</label>
           <input
             type="file"
             id="dateien"
@@ -75,7 +77,7 @@ const FahrzeugHochladen: React.FC = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="marke">Marke</label>
+          <label htmlFor="marke">{t("marke")}</label>
           <input
             type="text"
             id="marke"
@@ -86,7 +88,7 @@ const FahrzeugHochladen: React.FC = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="modell">Modell</label>
+          <label htmlFor="modell">{t("modell")}</label>
           <input
             type="text"
             id="modell"
@@ -97,7 +99,7 @@ const FahrzeugHochladen: React.FC = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="baujahr">Baujahr</label>
+          <label htmlFor="baujahr">{t("baujahr")}</label>
           <input
             type="number"
             id="baujahr"
@@ -108,7 +110,7 @@ const FahrzeugHochladen: React.FC = () => {
           />
         </div>
         <button type="submit" className="submit-button">
-          Fahrzeug hochladen
+          {t("fahrzeughochladen")}
         </button>
       </form>
     </div>

@@ -27,19 +27,14 @@ const Navbar: React.FC = () => {
         </div>
         <div className="navbar-right">
           <ul>
-            <li><Link to="/">{t("Dienstleistungen")}</Link></li>
-            <li><Link to="/fahrzeug">{t("Fahrzeuge")}</Link></li>
-            <li><Link to="/kontakt">{t("Kontakt")}</Link></li>
+            <li><Link to="/">{t("dienstleistungen")}</Link></li>
+            <li><Link to="/fahrzeug">{t("fahrzeuge")}</Link></li>
+            <li><Link to="/kontakt">{t("kontakt")}</Link></li>
             <li>
               {isLoggedIn ? (
-                  <Link to="/adminlayout/fahrzeugverwalten">{t("Admin eingeloggt")}</Link>
-                )
-                /* (
-                <span onClick={logout} style={{ cursor: "pointer" }}>
-                  {t("Eingeloggt")}
-                </span>
-                ) */ : (
-                <Link to="/einloggen">{t("Einloggen")}</Link>
+                  <Link to="/adminlayout/fahrzeugverwalten">{t("admin_eingeloggt")}</Link>
+                ): (
+                <Link to="/einloggen">{t("einloggen")}</Link>
               )}
             </li>
           </ul>

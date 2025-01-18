@@ -64,7 +64,7 @@ const FahrzeugVerwalten: React.FC = () => {
   if (autoDaten.length === 0) {
     return (
       <div className="fahrzeug-container">
-        <p className="keine-autos">{t("Keine Fahrzeuge verfügbar.")}</p>
+        <p className="keine-autos">{t("Keine_fahrzeuge")}</p>
       </div>
     );
   }
@@ -94,18 +94,18 @@ const FahrzeugVerwalten: React.FC = () => {
 
                 <td className="fahrzeug-details">
                     <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
-                    <p className="fahrzeug-beschreibung">Baujahr: {auto.baujahr}</p>
+                    <p className="fahrzeug-beschreibung">{("baujahr")} {auto.baujahr}</p>
                     <button
                       className="fahrzeug-button"
                       onClick={() => alert(`Vielen Dank für Ihr Interesse an ${auto.marke} ${auto.modell}!`)}
                     >
-                      {t("Nachricht")}
+                      {t("nachricht")}
                     </button>
                     <button
                         className="fahrzeug-delete-button"
                         onClick={() => deleteAuto(auto.autoId)}
                     >
-                        {t("Löschen")}
+                        {t("loeschen")}
                     </button>
                 </td>
             </tr>

@@ -34,11 +34,11 @@ const Kontakt : React.FC = () => {
   return (
     <div className="kontakt-container">
       <div className='adresse'>
-        <h1>{t("Kontakt")}</h1>
+        <h1>{t("kontakt")}</h1>
         <h1>DA-Cars</h1>
         <p>Pirmasenserstrasse 98</p>
         <p>66482 Zweibrücken</p>
-        <p>{t("Land")}</p>
+        <p>{t("land")}</p>
         <p>+4963328003425</p>
         <p>info@da-cars.de</p>
       </div>
@@ -47,24 +47,24 @@ const Kontakt : React.FC = () => {
         <h1>{t("frage")}</h1>
         <form className="kontakt-firma-form" onSubmit={handleKontaktForm}>
           
-          <label htmlFor="name">{t("Name")}</label>
+          <label htmlFor="name">{t("name")}</label>
           <input 
             type="text" id="name" 
-            name="name" placeholder={t("IhrName")} 
+            name="name" placeholder={t("ihr_name")} 
             value={name} onChange={(e) => setName(e.target.value)} 
             />
 
           <label htmlFor="email">{t("Email")}</label>
           <input 
             type="email" id="email" 
-            name="email" placeholder={t("IhreEmailAdresse")} 
+            name="email" placeholder={t("ihre_email_adresse")} 
             value={email} onChange={(e) => setEmail(e.target.value)}
             />
 
-          <label htmlFor="nachricht">{t("Nachricht")}</label>
+          <label htmlFor="nachricht">{t("nachricht")}</label>
           <textarea 
             id="nachricht" name="nachricht" 
-            placeholder={t("IhreNachricht")} rows={5}
+            placeholder={t("ihre_nachricht")} rows={5}
             value={nachricht} onChange={(e) => setNachricht(e.target.value)}>
           </textarea>
           
@@ -73,7 +73,7 @@ const Kontakt : React.FC = () => {
             {t("agb")}
           </label>
 
-          <button type="submit" className="absenden-button">{t("Absenden")}</button>
+          <button type="submit" className="absenden-button">{t("absenden")}</button>
         </form>
       </div>
 

@@ -44,18 +44,18 @@ const Einloggen : React.FC = () => {
   return (
     <div className='einloggen-container'>
       <div className='login-form'>
-        <h1>{t("Anmelden")}</h1>
+        <h1>{t("anmelden")}</h1>
         <form onSubmit={handleLogin}>
-          <label htmlFor="email">{t("Email")}</label>
+          <label htmlFor="email">{t("email")}</label>
           <input 
             type="email" 
             name="email" 
-            placeholder={t("IhreEmailAdresse")} 
+            placeholder={t("ihre_email_adresse")} 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
           />
           
-          <label htmlFor="password">{t("Password")}</label>
+          <label htmlFor="password">{t("passwort")}</label>
           <input 
             type="password" 
             name="password" 
@@ -64,7 +64,7 @@ const Einloggen : React.FC = () => {
             onChange={(e) => setPassword(e.target.value)} 
           />
           
-          <button type="submit" className="anmelden-button">{t("Anmelden")}</button>
+          <button type="submit" className="anmelden-button">{t("anmelden")}</button>
         </form>
       </div>
     </div>

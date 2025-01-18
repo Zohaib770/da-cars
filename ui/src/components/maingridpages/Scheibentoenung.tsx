@@ -13,10 +13,10 @@ const Scheibentoenung: React.FC = () => {
             <img src={scheibentoenung} alt="Scheiben" />
         </div>
         <div className="txt">
-            <h1>{t("ScheibentoenungTitle")}</h1>
-            <p>{t("ScheibentoenungTxt")}</p>
+            <h1>{t("scheibentoenung_title")}</h1>
+            <p>{t("scheibentoenung_text")}</p>
             <br />
-            <h1>{t("Preise")}</h1>
+            <h1>{t("preis")}</h1>
         </div>  
     </div>
   )

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 import axios from 'axios';
 
 import "./Admin.css";
 
 const Profil: React.FC = () => {
+  const {t} = useTranslation();
   const [step, setStep] = useState<number>(1); // Track current step (1 - email, 2 - OTP, 3 - new password)
   const [savedEmail, setSavedEmail] = useState<string>(''); 
   const [otp, setOtp] = useState<string>('');
@@ -70,13 +72,13 @@ const Profil: React.FC = () => {
 
   return (
     <div className="profil-container">
-      <h1>Benutzer Profil</h1>
-      <h2>Email: {savedEmail}</h2>
+      <h1>{t("benutzer_profil")}</h1>
+      <h2>{t("email")}{savedEmail}</h2>
 
       {step === 1 && (
         <form onSubmit={handleEmailSubmit} className="profil-form">
           <button type="submit" className="profil-button">
-            Passwort Zurücksetzen
+          {t("pass_zurueck")}
           </button>
         </form>
       )}
@@ -84,10 +86,10 @@ const Profil: React.FC = () => {
       {step === 2 && otpSent && (
         <form onSubmit={handleOtpSubmit} className="profil-otp">
           <label>
-            OTP wurde an die Email adresse geschickt
+          {t("otp_an_email")}
           </label>
           <label>
-            Geben Sie den OTP ein:
+            {t("otp_geben")}
           </label>
           <input
               type="text"
@@ -96,7 +98,7 @@ const Profil: React.FC = () => {
               required
           />
           <button type="submit" className="profil-button">
-            OTP Bestätigen
+            {t("otp_best")}
           </button>
         </form>
       )}
@@ -105,7 +107,7 @@ const Profil: React.FC = () => {
         <form onSubmit={handlePasswordSubmit} className="profil-password-change">
           <div className="password-group">
           <label>
-            Neues Passwort:
+            {t("neu_pass")}
             <input
               type="password"
               value={newPassword}
@@ -114,7 +116,7 @@ const Profil: React.FC = () => {
             />
           </label>
           <label>
-            Bestätigen Sie das Passwort:
+            {t("neu_pass_best")}
             <input
               type="password"
               value={confirmPassword}
@@ -131,7 +133,7 @@ const Profil: React.FC = () => {
           )}
           
           <button type="submit" className="profil-button">
-            Passwort Ändern
+            {t("btn_pass_aendern")}
           </button>
         </form>
       )}

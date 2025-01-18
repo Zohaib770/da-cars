@@ -10,15 +10,15 @@ const MainGrid: React.FC = () => {
   return (
     <div className="main-grid">
       <div className="grid-item">
-        <Link to="kfzaufbereitung">{t("KFZAufbereitung")}</Link>
+        <Link to="kfzaufbereitung">{t("kfz_aufbereitung")}</Link>
       </div>
 
       <div className="grid-item">
-        <Link to="/scheibentoenung">{t("Scheibentönung")}</Link>
+        <Link to="/scheibentoenung">{t("scheibentoenung")}</Link>
       </div>
 
       <div className="grid-item">
-        <Link to="/autoglasservice">{t("Autoglasservice")}</Link>
+        <Link to="/autoglasservice">{t("autoglasservice")}</Link>
       </div>
       
       <div className="grid-item">

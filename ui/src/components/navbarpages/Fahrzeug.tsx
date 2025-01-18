@@ -52,7 +52,7 @@ const Fahrzeug: React.FC = () => {
   if (autoDaten.length === 0) {
     return (
       <div className="fahrzeug-container">
-        <p className="keine-autos">{t("Keine Fahrzeuge verfügbar.")}</p>
+        <p className="keine-autos">{t("keine_fahrzeug")}</p>
       </div>
     );
   }
@@ -82,13 +82,7 @@ const Fahrzeug: React.FC = () => {
 
                 <td className="fahrzeug-details">
                     <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
-                    <p className="fahrzeug-beschreibung">Baujahr: {auto.baujahr}</p>
-                    <button
-                      className="fahrzeug-button"
-                      onClick={() => alert(`Vielen Dank für Ihr Interesse an ${auto.marke} ${auto.modell}!`)}
-                    >
-                      {t("Nachricht")}
-                    </button>
+                    <p className="fahrzeug-beschreibung">{t("baujahr")} {auto.baujahr}</p>
                 </td>
             </tr>
           ))}
