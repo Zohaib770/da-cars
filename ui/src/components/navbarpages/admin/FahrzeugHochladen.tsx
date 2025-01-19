@@ -8,8 +8,13 @@ const FahrzeugHochladen: React.FC = () => {
   const [auto, setAuto] = useState({
     bilder: [] as File[],
     marke: '',
-    baujahr: '',
     modell: '',
+    beschreibung: '',
+    baujahr: '',
+    kmStand: '',
+    tuev: '',
+    leistung: '',
+    preis: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,11 +34,16 @@ const FahrzeugHochladen: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    
     const formData = new FormData();
     formData.append('marke', auto.marke);
-    formData.append('baujahr', auto.baujahr);
     formData.append('modell', auto.modell);
+    formData.append('beschreibung', auto.beschreibung);
+    formData.append('baujahr', auto.baujahr);
+    formData.append('kmStand', auto.kmStand);
+    formData.append('tuev', auto.tuev);
+    formData.append('leistung', auto.leistung);
+    formData.append('preis', auto.preis);
 
     // Alle Bilder zum FormData hinzufügen
     auto.bilder.forEach((file, index) => {
@@ -43,7 +53,7 @@ const FahrzeugHochladen: React.FC = () => {
     try {
       const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/auto/save`, formData, {
         headers: {
-          'Content-Type': 'multipart/form-data', // Wichtig für das Senden von FormData
+          'Content-Type': 'multipart/form-data',
         },
       });
       
@@ -52,8 +62,13 @@ const FahrzeugHochladen: React.FC = () => {
         setAuto({
           bilder: [],
           marke: '',
-          baujahr: '',
           modell: '',
+          beschreibung: '',
+          baujahr: '',
+          kmStand: '',
+          tuev: '',
+          leistung: '',
+          preis: '',
         });
       }
     } catch (error) {
@@ -99,12 +114,67 @@ const FahrzeugHochladen: React.FC = () => {
           />
         </div>
         <div className="form-group">
+          <label htmlFor="beschreibung">{t("beschreibung")}</label>
+          <textarea
+            id="beschreibung"
+            name="beschreibung"
+            rows={5}
+            value={auto.beschreibung}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
           <label htmlFor="baujahr">{t("baujahr")}</label>
           <input
             type="number"
             id="baujahr"
             name="baujahr"
             value={auto.baujahr}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="kmStand">{t("km_stand")}</label>
+          <input
+            type="number"
+            id="kmStand"
+            name="kmStand"
+            value={auto.kmStand}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="tuev">{t("tuev")}</label>
+          <input
+            type="date"
+            id="tuev"
+            name="tuev"
+            value={auto.tuev}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="leistung">{t("leistung")}</label>
+          <input
+            type="number"
+            id="leistung"
+            name="leistung"
+            value={auto.leistung}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="preis">{t("preis")} in €</label>
+          <input
+            type="number"
+            id="preis"
+            name="preis"
+            value={auto.preis}
             onChange={handleChange}
             required
           />

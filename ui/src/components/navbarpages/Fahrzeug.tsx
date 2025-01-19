@@ -4,9 +4,15 @@ import axios from 'axios';
 import "./NavbarPages.css";
 
 interface Auto {
+  autoId: number;
   marke: string;
   modell: string;
+  beschreibung: string;
   baujahr: number;
+  kmStand: number;
+  tuev: Date;
+  leistung: number;
+  preis: number;
   bildUrl: string[];
 }
 
@@ -81,8 +87,17 @@ const Fahrzeug: React.FC = () => {
                 </td>
 
                 <td className="fahrzeug-details">
-                    <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
-                    <p className="fahrzeug-beschreibung">{t("baujahr")} {auto.baujahr}</p>
+                <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
+                    <p className="">{t("beschreibung")}: {auto.beschreibung}</p>
+                    <div className="b-k-t">
+                      <p className="">{t("baujahr")}: {auto.baujahr}</p>
+                      <p className="">{t("kmStand")}: {auto.kmStand}</p>
+                      <p className="">{t("tuev")}: {new Intl.DateTimeFormat('de-DE').format(new Date(auto.tuev))}</p>
+                    </div>
+                    <div className="l-p">
+                      <p className="">{t("leistung")}: {auto.leistung}</p>
+                      <p className="">{t("preis")}: {auto.preis} €</p>
+                    </div>
                 </td>
             </tr>
           ))}

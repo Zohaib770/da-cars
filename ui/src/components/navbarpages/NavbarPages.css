@@ -50,7 +50,6 @@
     overflow-y: auto;
 }
 
-
 td:first-child {
     width: 25%;
 }
@@ -61,6 +60,18 @@ td:first-child {
 
 .fahrzeug-details {
     border: none;
+}
+
+.b-k-t{
+    display: flex;
+    justify-content: flex-start;
+    gap: 3%
+}
+
+.l-p{
+    display: flex;
+    justify-content: flex-start;
+    gap: 3%
 }
 
 .fahrzeug-details h1{

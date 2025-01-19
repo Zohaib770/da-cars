@@ -7,10 +7,14 @@ interface Auto {
   autoId: number;
   marke: string;
   modell: string;
+  beschreibung: string;
   baujahr: number;
+  kmStand: number;
+  tuev: Date;
+  leistung: number;
+  preis: number;
   bildUrl: string[];
 }
-
 
 const FahrzeugVerwalten: React.FC = () => {
   const{t} = useTranslation();
@@ -94,7 +98,16 @@ const FahrzeugVerwalten: React.FC = () => {
 
                 <td className="fahrzeug-details">
                     <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
-                    <p className="fahrzeug-beschreibung">{("baujahr")} {auto.baujahr}</p>
+                    <p className="">{t("beschreibung")}: {auto.beschreibung}</p>
+                    <div className="b-k-t">
+                      <p className="">{t("baujahr")}: {auto.baujahr}</p>
+                      <p className="">{t("kmStand")}: {auto.kmStand}</p>
+                      <p className="">{t("tuev")}: {new Intl.DateTimeFormat('de-DE').format(new Date(auto.tuev))}</p>
+                    </div>
+                    <div className="l-p">
+                      <p className="">{t("leistung")}: {auto.leistung}</p>
+                      <p className="">{t("preis")}: {auto.preis} €</p>
+                    </div>
                     <button
                         className="fahrzeug-delete-button"
                         onClick={() => deleteAuto(auto.autoId)}
