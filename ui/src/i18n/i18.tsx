@@ -33,12 +33,15 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 klimaservice: "Klimaservice",
 
                 // KFZ-Aufbereitung
+                kfzaufbereitungverwalten: "Kfz-Aufbereitung verwaltung",
                 preis_liste_kfzaufbereitung:"Preisliste KFZ-Aufbereitung",
                 dienste: "Dienste",
                 beschreibung: "Beschreibung",
                 pkw_preis: "PKW-Preis",
                 van_suv_preis: "Van/SUV Preis",
                 kleinbus_preis: "Kleinbus Preis",
+                aktion: "Aktion",
+                aktualisieren: "Aktualisieren",
                 
                 aussenreinigung: "Außenreinigung",
                 aussenreinigung_text: "Eine gründliche Außenreinigung schützt den Lack, lässt Ihr Fahrzeug in" +
@@ -184,6 +187,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 pkw_preis: "Prix pour voiture particulière (PKW)",
                 van_suv_preis: "Prix pour Van/SUV ",
                 kleinbus_preis: "Prix pour minibus",
+                aktion: "Action",
+                aktualisieren: "mettre à jour",
 
                 aussenreinigung: "Nettoyage extérieur",
                 aussenreinigung_text: "Un nettoyage extérieur complet protège la peinture, redonne" +
