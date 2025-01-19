@@ -64,7 +64,7 @@ const FahrzeugHochladen: React.FC = () => {
 
   return (
     <div className="fahrzeughochladen-container">
-      <h1>{("fahrzeughochladen")}</h1>
+      <h1>{t("fahrzeughochladen")}</h1>
       <form onSubmit={handleSubmit} className="vehicle-form">
         <div className="form-group">
           <label htmlFor="dateien">{t("fahrzeugbilder")}</label>

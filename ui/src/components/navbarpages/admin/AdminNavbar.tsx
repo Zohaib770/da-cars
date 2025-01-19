@@ -21,6 +21,7 @@ const AdminNavbar : React.FC = () => {
             <ul>
                 <li><Link to="/adminlayout/fahrzeughochladen">{t("fahrzeughochladen")}</Link></li>
                 <li><Link to="/adminlayout/fahrzeugverwalten">{t("fahrzeugverwalten")}</Link></li>
+                <li><Link to="/adminlayout/kfzaufbereitungverwalten">{t("kfzaufbereitungverwalten")}</Link></li>
                 <li><Link to="/adminlayout/profil">{t("profil")}</Link></li>
                 <li>
                   {isLoggedIn && (

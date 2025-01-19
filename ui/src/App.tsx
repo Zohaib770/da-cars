@@ -7,8 +7,9 @@ import Kontakt from "./components/navbarpages/Kontakt";
 import Einloggen from "./components/navbarpages/Einloggen";
 
 import AdminLayout from "./components/navbarpages/admin/AdminLayout";
-import FahrzeugVerwalten from "./components/navbarpages/admin/FahrzeugVerwalten";
 import FahrzeugHochladen from "./components/navbarpages/admin/FahrzeugHochladen";
+import FahrzeugVerwalten from "./components/navbarpages/admin/FahrzeugVerwalten";
+import KfzAufbereitungVerwalten from "./components/navbarpages/admin/KfzAufbereitungVerwalten";
 import Profil from "./components/navbarpages/admin/Profil";
 
 import MainGrid from "./components/MainGrid";
@@ -44,6 +45,7 @@ const App: React.FC = () => {
             <Route path="/adminlayout" element={<AdminLayout />}>
               <Route path="fahrzeughochladen" element={<FahrzeugHochladen />} />
               <Route path="fahrzeugverwalten" element={<FahrzeugVerwalten />} />
+              <Route path="kfzaufbereitungverwalten" element={<KfzAufbereitungVerwalten />} />
               <Route path="profil" element={<Profil />} />
             </Route>
           </Route>
