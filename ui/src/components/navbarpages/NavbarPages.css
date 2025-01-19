@@ -100,6 +100,11 @@ td:first-child {
     padding-left: 10%;
 }
 
+.adresse a{
+    color: white;
+    text-decoration: none;
+}
+
 .kontakt-firma{
     color: white;
     padding-top: 1%;

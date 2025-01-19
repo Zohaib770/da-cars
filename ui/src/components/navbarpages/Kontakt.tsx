@@ -36,9 +36,16 @@ const Kontakt : React.FC = () => {
       <div className='adresse'>
         <h1>{t("kontakt")}</h1>
         <h1>DA-Cars</h1>
+        <a
+          href="https://maps.google.com?q=Pirmasenserstrasse 98, 66482 Zweibrücken"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="adresse-link"
+        >
         <p>Pirmasenserstrasse 98</p>
         <p>66482 Zweibrücken</p>
         <p>{t("land")}</p>
+        </a>
         <p>+4963328003425</p>
         <p>info@da-cars.de</p>
       </div>
