@@ -30,6 +30,14 @@ const kfzaufbereitung : React.FC = () => {
     fetchKfzAufbereitungPreise();
   }, []);
 
+  if (kfzAufbereitungPreise.length === 0) {
+    return (
+      <div className="kfzaufbereitung-container">
+        <p className="keine-kfzaufbereitung">{t("keine_preis_liste_kfzaufbereitung")}</p>
+      </div>
+    );
+  }
+
   return (
     <div className="kfzaufbereitung-container">
       <div className="table-container">

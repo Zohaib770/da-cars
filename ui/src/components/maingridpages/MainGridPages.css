@@ -2,37 +2,44 @@
 
 /* ======================== maingrid ======================== */
 .main-grid {
-    background-color: #131111;
-    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-left{
+    padding-top: 3%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 20px;
+    gap: 20px;
 }
 
-.grid-item {
-    width: 30%;
-    height: 10%;
-    margin-left: 10%;
-    margin-top: 4%;
-    background-color: red;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.grid-item{
+    width: 60%;
+    height: 70px;
 }
 
-.main-grid .grid-item a {
-    color: white;
-    text-decoration: none;
-    font-size: 2vw;
+.grid-right{
+    color: #ccc;
+    width: 100%;
+    padding-top: 4%;
+}
+
+.grid-right{
+    font-size: larger;
 }
 
 /* ======================== kfzaufbereitung ======================== */
 .kfzaufbereitung-container {
     height: 100vh;
+}
+
+.keine-kfzaufbereitung{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15%; 
 }
 
 .table-container {
@@ -121,31 +128,26 @@ td {
     background-color: #131111;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .autoglasservice-container .imag{
-    width: 40%;
-    height: 80%;
-    margin-top: 5%;
-    margin-left: 5%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 7%;
 }
 
 .autoglasservice-container .imag img {
     max-width: 60%;
     height: auto;
 }
-
+ 
 .autoglasservice-container .txt{
     color: #fff;
     width: 55%;
     height: 70%;
     margin-top: 5%;
-    margin-right: 5%;
 }
 
 /* ======================== Klimaservice ======================== */
