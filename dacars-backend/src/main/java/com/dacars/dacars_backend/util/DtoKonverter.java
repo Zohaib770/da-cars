@@ -9,23 +9,23 @@ import com.dacars.dacars_backend.model.AutoBild;
 
 public class DtoKonverter {
     
-    public static Auto convertAutoDtoToAuto(AutoDto autoDto) {
-        return new Auto(autoDto.getMarke(), autoDto.getModell(), autoDto.getBaujahr());
-    }
-
     public static AutoDto convertAutoAndAutoBildToAutoDto(Auto auto, List<AutoBild> autoBild) {
 
         List<String> bildUrls = autoBild.stream().map(AutoBild::getBildUrl).collect(Collectors.toList());
-        AutoDto autoDto = new AutoDto(auto.getId(), auto.getMarke(), auto.getModell(), auto.getBaujahr(), bildUrls);
-        
+        AutoDto autoDto = new AutoDto(auto.getId(), auto.getMarke(), auto.getModell(), 
+                                    auto.getBeschreibung(), auto.getBaujahr(), auto.getKmStand(),
+                                    auto.getTuev(), auto.getLeistung(), auto.getPreis(),
+                                    bildUrls);
         return autoDto;
     }
 
     public static AutoDto convertAutoAndAutoBildToAutoDtoList(Auto auto, List<AutoBild> autoBild) {
 
         List<String> bildUrls = autoBild.stream().map(AutoBild::getBildUrl).collect(Collectors.toList());
-        AutoDto autoDto = new AutoDto(auto.getId(), auto.getMarke(), auto.getModell(), auto.getBaujahr(), bildUrls);
-        
+        AutoDto autoDto = new AutoDto(auto.getId(), auto.getMarke(), auto.getModell(), 
+                                    auto.getBeschreibung(), auto.getBaujahr(), auto.getKmStand(),
+                                    auto.getTuev(), auto.getLeistung(), auto.getPreis(),
+                                    bildUrls);
         return autoDto;
     }
 

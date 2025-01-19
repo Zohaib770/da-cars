@@ -21,6 +21,7 @@ import com.dacars.dacars_backend.util.DtoKonverter;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @RestController
@@ -36,14 +37,10 @@ public class AutoController {
     AutoBildService autoBildService;
 
     @PostMapping("save")
-    public Auto save(
-                    @RequestParam("marke") String marke,
-                    @RequestParam("modell") String modell,
-                    @RequestParam("baujahr") int baujahr,
+    public Auto save(@ModelAttribute Auto auto,
                     @RequestParam("dateien") List<MultipartFile> dateien) {
         log.info("===================== save ENTERED");
 
-        Auto auto = new Auto(marke, modell, baujahr);
         Auto autosaved =  autoService.save(auto);
         long autoId = autosaved.getId();
 

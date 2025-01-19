@@ -1,5 +1,8 @@
 package com.dacars.dacars_backend.model;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,14 +25,28 @@ public class Auto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "marke")
     private String marke;
+
+    @Column(name = "modell")
     private String modell;
+
+    @Column(name = "beschreibung")
+    private String beschreibung;
+
+    @Column(name = "baujahr")
     private int baujahr;
 
-    public Auto(String marke, String modell, int baujahr) {
-        this.marke = marke;
-        this.modell = modell;
-        this.baujahr = baujahr;
-    }
-    
+    @Column(name = "km_stand")
+    private int kmStand;
+
+    @Column(name = "tuev")
+    private LocalDate tuev;
+
+    @Column(name = "leistung")
+    private int leistung;//ps
+
+    @Column(name = "preis")
+    private BigDecimal preis;
+
 }
