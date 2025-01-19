@@ -86,6 +86,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                                     "nur eine ansprechende Optik, sondern schützt auch vor UV-Strahlen und" + 
                                     "verbessert die Privatsphäre im Fahrzeug. Mit hochwertigen Folien garantieren" +
                                     "wir eine präzise Verarbeitung und langlebige Ergebnisse, die Ihr Fahrzeug individuell aufwerten.",
+                ab: "ab",
+
                 // Autoglasservice
                 autoglasservice_title: "Autoglasservice",
                 autoglasservice_text: "Unser Autoglasservice umfasst die fachgerechte Begutachtung, Reparatur" +
@@ -234,6 +236,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                                     "les rayons UV et une meilleure confidentialité dans votre véhicule." +
                                     "Avec des films de haute qualité, nous garantissons une finition précise" +
                                     "et des résultats durables qui valorisent votre véhicule.",
+                ab: "à partir de",
+
                 // Autoglasservice
                 autoglasservice_title: "Service de vitrage automobile",
                 autoglasservice_text: "Notre service comprend l’évaluation, la réparation ou le remplacement des" +
