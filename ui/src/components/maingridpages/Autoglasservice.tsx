@@ -16,8 +16,6 @@ const Autoglasservice: React.FC = () => {
         <div className="txt">
             <h1>{t("autoglasservice_title")}</h1>
             <p>{t("autoglasservice_text")}</p>
-            <br />
-            <h1>{t("preis")}</h1>
         </div>  
     </div>
   )

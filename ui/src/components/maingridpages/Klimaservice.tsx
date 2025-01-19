@@ -16,7 +16,7 @@ const Klimaservice: React.FC = () => {
             <h1>{t("klimaservice_title")}</h1>
             <p>{t("klimaservice_text")}</p>
             <br />
-            <h1>{t("preis")}</h1>
+            <h1>{t("preis")}: {t("ab")} 79 €</h1>
         </div>  
     </div>
   )

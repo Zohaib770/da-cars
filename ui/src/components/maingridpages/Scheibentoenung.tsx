@@ -16,7 +16,7 @@ const Scheibentoenung: React.FC = () => {
             <h1>{t("scheibentoenung_title")}</h1>
             <p>{t("scheibentoenung_text")}</p>
             <br />
-            <h1>{t("preis")}</h1>
+            <h1>{t("preis")}: {t("ab")} 120 €</h1>
         </div>  
     </div>
   )
