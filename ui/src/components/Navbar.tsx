@@ -23,7 +23,9 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-left">
-          <img src={daCars} alt="Logo" className="navbar-logo" />
+          <Link to="/">
+            <img src={daCars} alt="Logo" className="navbar-logo" />
+          </Link>  
         </div>
         <div className="navbar-right">
           <ul>
@@ -38,12 +40,10 @@ const Navbar: React.FC = () => {
               )}
             </li>
           </ul>
-          {/* <div className="language-selector"> */}
             <select onChange={changeLanguage} defaultValue={i18n.language}>
               <option value="de">DE</option>
               <option value="fr">FR</option>
             </select>
-          {/* </div> */}
         </div>
       </div>
     </nav>
