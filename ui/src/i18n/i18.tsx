@@ -35,6 +35,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 // KFZ-Aufbereitung
                 kfzaufbereitungverwalten: "Kfz-Aufbereitung verwaltung",
                 preis_liste_kfzaufbereitung:"Preisliste KFZ-Aufbereitung",
+                keine_preis_liste_kfzaufbereitung: "Preise noch nicht vorhanden",
                 dienste: "Dienste",
                 beschreibung: "Beschreibung",
                 pkw_preis: "PKW-Preis",
@@ -183,7 +184,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 klimaservice: "Service de climatisation",
 
                 // KFZ-Aufbereitung
+                kfzaufbereitungverwalten: "Administration de la préparation du véhicule",
                 preis_liste_kfzaufbereitung:"Liste de prix pour préparation automobile",
+                keine_preis_liste_kfzaufbereitung: "Prix pas encore disponibles",
                 dienste: "Services",
                 beschreibung: "Description",
                 pkw_preis: "Prix pour voiture particulière (PKW)",
