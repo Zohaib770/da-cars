@@ -9,7 +9,7 @@ const MainGrid: React.FC = () => {
 
   return (
     <div className="main-grid">
-
+      <div className="main-content">
       <div className="grid-left">
         <div className="grid-item">
           <Link to="kfzaufbereitung">{t("kfz_aufbereitung")}</Link>
@@ -33,7 +33,7 @@ const MainGrid: React.FC = () => {
         <h2>{t("dacar_text")}</h2>
         <p>{t("dacar_wilk_text")}</p>
       </div>
-      
+      </div>
     </div>
   );
 };

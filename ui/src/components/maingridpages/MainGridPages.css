@@ -4,29 +4,63 @@
 .main-grid {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-y: auto;
 }
 
-.grid-left{
+.grid-left {
     padding-top: 3%;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.grid-item{
-    width: 60%;
+.grid-item {
+    width: 70%;
     height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
 }
 
-.grid-right{
+.grid-right {
     color: #ccc;
-    width: 100%;
+    width: 50%;
     padding-top: 4%;
+    font-size: larger;
 }
 
-.grid-right{
-    font-size: larger;
+/* Responsive Design für kleinere Bildschirme */
+@media screen and (max-width: 768px) {
+    .main-grid {
+        height: 100vh;
+    }
+
+    .main-content{
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-right {
+        width: 100%;
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    .grid-left {
+        width: 70%;
+        padding-top: 2%;
+    }
+
+    .grid-left .grid-item a {
+        font-size: 18px;
+    }
+
 }
 
 /* ======================== kfzaufbereitung ======================== */
