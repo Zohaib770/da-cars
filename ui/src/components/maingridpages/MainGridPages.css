@@ -113,6 +113,14 @@ td {
     color: #017cbc;
 }
 
+@media screen and (max-width: 768px) {
+
+    .kfzaufbereitung-container {
+        width: 100vh;
+    }
+
+}
+
 /* ======================== KfzAufbereitungverwalten ======================== */
 .kfz-aufbereitung-preis {
     width: 60%; 
