@@ -59,9 +59,9 @@ const kfzaufbereitung : React.FC = () => {
                   <tr key={`aussenreinigung-${index}`}>
                     <td>{t("aussenreinigung")}</td>
                     <td>{t("aussenreinigung_text")}</td>
-                    <td className="kfz-aufbereitung-preis">{item.pkwPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.vanSuvPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.kleinbusPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.pkwPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.vanSuvPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.kleinbusPreis}€</td>
                   </tr>
                 );
               } else if (item.dienste === "aussenwaesche" && item.diensteBeschreibung === "aussenwaesche_shampoo") {
@@ -69,9 +69,9 @@ const kfzaufbereitung : React.FC = () => {
                   <tr key={`aussenwaesche-${index}`}>
                     <td>{t("aussenwaesche")}</td>
                     <td>{t("aussenwaesche_shampoo")}</td>
-                    <td className="kfz-aufbereitung-preis">{item.pkwPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.vanSuvPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.kleinbusPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.pkwPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.vanSuvPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.kleinbusPreis}€</td>
                   </tr>
                 );
               } else if (item.dienste === "lackpflege") {
@@ -85,9 +85,9 @@ const kfzaufbereitung : React.FC = () => {
                       <tr key={`lackpflege-${index}`}>
                         <td>{t("lackpflege")}</td>
                         <td>{t(item.diensteBeschreibung)}</td>
-                        <td className="kfz-aufbereitung-preis">{item.pkwPreis}€</td>
-                        <td className="kfz-aufbereitung-preis">{item.vanSuvPreis}€</td>
-                        <td className="kfz-aufbereitung-preis">{item.kleinbusPreis}€</td>
+                        <td className="kfz-aufbereitung-preis-kunde">{item.pkwPreis}€</td>
+                        <td className="kfz-aufbereitung-preis-kunde">{item.vanSuvPreis}€</td>
+                        <td className="kfz-aufbereitung-preis-kunde">{item.kleinbusPreis}€</td>
                       </tr>
                     );
                   default:
@@ -99,9 +99,9 @@ const kfzaufbereitung : React.FC = () => {
                     <tr key={`Innenreinigung-${index}`}>
                       <td>{t("Innenreinigung")}</td>
                       <td>{t(item.diensteBeschreibung)}</td>
-                      <td className="kfz-aufbereitung-preis">{item.pkwPreis}€</td>
-                      <td className="kfz-aufbereitung-preis">{item.vanSuvPreis}€</td>
-                      <td className="kfz-aufbereitung-preis">{item.kleinbusPreis}€</td>
+                      <td className="kfz-aufbereitung-preis-kunde">{item.pkwPreis}€</td>
+                      <td className="kfz-aufbereitung-preis-kunde">{item.vanSuvPreis}€</td>
+                      <td className="kfz-aufbereitung-preis-kunde">{item.kleinbusPreis}€</td>
                     </tr>
                   );
                 }
@@ -110,9 +110,9 @@ const kfzaufbereitung : React.FC = () => {
                   <tr key={`stoff_textil-${index}`}>
                     <td>{t("stoff_textil")}</td>
                     <td>{t("stoff_textil")}</td>
-                    <td className="kfz-aufbereitung-preis">{item.pkwPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.vanSuvPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.kleinbusPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.pkwPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.vanSuvPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.kleinbusPreis}€</td>
                   </tr>
                 );
               } else if (item.dienste === "motorwaesche" && item.diensteBeschreibung === "motorwaesche_text") {
@@ -120,9 +120,9 @@ const kfzaufbereitung : React.FC = () => {
                   <tr key={`motorwaesche-${index}`}>
                     <td>{t("motorwaesche")}</td>
                     <td>{t("motorwaesche_text")}</td>
-                    <td className="kfz-aufbereitung-preis">{item.pkwPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.vanSuvPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.kleinbusPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.pkwPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.vanSuvPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.kleinbusPreis}€</td>
                   </tr>
                 );
               } else if (item.dienste === "komplett_aufbereitung_inkl_motor" && item.diensteBeschreibung === "komplett_aufbereitung_inkl_motor") {
@@ -130,9 +130,9 @@ const kfzaufbereitung : React.FC = () => {
                   <tr key={`komplett_aufbereitung-${index}`}>
                     <td>{t("komplett_aufbereitung_inkl_motor")}</td>
                     <td>{t("komplett_aufbereitung_inkl_motor")}</td>
-                    <td className="kfz-aufbereitung-preis">{item.pkwPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.vanSuvPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.kleinbusPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.pkwPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.vanSuvPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.kleinbusPreis}€</td>
                   </tr>
                 );
               } else if (item.dienste === "glasversiegelung" && item.diensteBeschreibung === "glasversiegelung_text") {
@@ -140,9 +140,9 @@ const kfzaufbereitung : React.FC = () => {
                   <tr key={`glasversiegelung-${index}`}>
                     <td>{t("glasversiegelung")}</td>
                     <td>{t("glasversiegelung_text")}</td>
-                    <td className="kfz-aufbereitung-preis">{item.pkwPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.vanSuvPreis}€</td>
-                    <td className="kfz-aufbereitung-preis">{item.kleinbusPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.pkwPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.vanSuvPreis}€</td>
+                    <td className="kfz-aufbereitung-preis-kunde">{item.kleinbusPreis}€</td>
                   </tr>
                 );
               }

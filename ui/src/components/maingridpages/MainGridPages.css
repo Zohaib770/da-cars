@@ -106,6 +106,10 @@ td {
     color: #fff;
 }
 
+.kfz-aufbereitung-preis-kunde{
+    color: #017cbc;
+}
+
 /* ======================== KfzAufbereitungverwalten ======================== */
 .kfz-aufbereitung-preis {
     width: 60%; 
