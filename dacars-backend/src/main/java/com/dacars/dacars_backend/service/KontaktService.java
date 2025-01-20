@@ -24,12 +24,19 @@ public class KontaktService {
             message.setFrom("noreply@dacars.com");
             message.setTo("kzohaib770@gmail.com");
             /* message.setReplyTo("support@dacars.com"); */
-            message.setSubject("Neue Kontaktanfrage von " + kontaktDto.getName());
-            message.setText(
-                "Name: " + kontaktDto.getName()+ "\n" +
-                "E-Mail: " + kontaktDto.getEmail() + "\n\n" +
-                "Nachricht:\n" + kontaktDto.getNachricht()
-            );
+            message.setSubject("Da Cars: Neue Kontaktanfrage von " + kontaktDto.getName());
+            
+            StringBuilder emailText = new StringBuilder();
+            emailText.append("Guten Tag,\n\n")
+                 .append("Sie haben eine neue Kontaktanfrage erhalten. Hier sind die Details:\n\n")
+                 .append("Name: ").append(kontaktDto.getName()).append("\n")
+                 .append("E-Mail: ").append(kontaktDto.getEmail()).append("\n")
+                 .append("Nachricht:\n")
+                 .append(kontaktDto.getNachricht()).append("\n\n")
+                 .append("Vielen Dank.\n")
+                 .append("Ihr dacars Team");
+            
+            message.setText(emailText.toString());
 
             emailService.sendEmail(message);
             log.info("E-Mail erfolgreich gesendet.");

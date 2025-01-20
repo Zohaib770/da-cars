@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useTranslation } from "react-i18next";
 import axios from 'axios';
+import "./NavbarPages.css"
 
 const Kontakt : React.FC = () => {
   const{t} = useTranslation();
@@ -8,6 +9,8 @@ const Kontakt : React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [nachricht, setNachricht] = useState('');
+  const [agbChecked, setAgbChecked] = useState(false);
+  const [message, setMessage] = useState<{ type: string; text: string } | null>(null);
 
   const handleKontaktForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -21,12 +24,20 @@ const Kontakt : React.FC = () => {
     try {
       console.log(import.meta.env.VITE_REACT_APP_API_URL);
       const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/kontakt/mailanempfaenger`, formData);
-      const data = response;
-      console.log(" ================= data " + data);
+      
+      // Felder zurücksetzen
+      setName('');
+      setEmail('');
+      setNachricht('');
+      setAgbChecked(false);
+
+      setMessage({ type: 'success', text: t("kontakt_success") });
+      setTimeout(() => setMessage(null), 3000);
 
     } catch (err) {
       console.error(err);
-      alert(t("Falsche Anmeldeinformationen"));
+      setMessage({ type: 'error', text: t("kontakt_error") });
+      setTimeout(() => setMessage(null), 3000);
     }
 
   };
@@ -52,6 +63,12 @@ const Kontakt : React.FC = () => {
 
       <div className='kontakt-firma'>
         <h1>{t("frage")}</h1>
+
+        {message && (
+          <div className={`alert ${message.type === 'success' ? 'alert-success' : 'alert-error'}`}>
+            {message.text}
+          </div>
+        )}
         <form className="kontakt-firma-form" onSubmit={handleKontaktForm}>
           
           <label htmlFor="name">{t("name")}</label>
@@ -76,8 +93,11 @@ const Kontakt : React.FC = () => {
           </textarea>
           
           <label>
-            <input type="checkbox" id="agb" name="agb" required />
-            {t("agb")}
+            <input 
+              type="checkbox" id="agb" 
+              name="agb" checked={agbChecked} 
+              onChange={(e) => setAgbChecked(e.target.checked)} required />
+              {t("agb")}
           </label>
 
           <button type="submit" className="absenden-button">{t("absenden")}</button>

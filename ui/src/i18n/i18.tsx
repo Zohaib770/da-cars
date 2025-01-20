@@ -118,6 +118,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 ihre_nachricht: "Ihre Nachricht",
                 agb: "Ich akzeptiere die AGB",
                 absenden: "Asenden",
+                kontakt_success: "Nachricht erfolgreich gesendet !",
+                kontakt_error: "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut",
 
                 //Einloggen
                 anmelden: "Anmelden",
@@ -268,6 +270,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 ihre_nachricht: "Votre message",
                 agb: "J’accepte les conditions générales",
                 absenden: "Dépêche",
+                kontakt_success: "Message envoyé avec succès !",
+                kontakt_error: "Une erreur s’est produite. Veuillez réessayer",
 
                 //Einloggen
                 anmelden: "annoncer",
