@@ -24,6 +24,7 @@ const Kontakt : React.FC = () => {
     try {
       console.log(import.meta.env.VITE_REACT_APP_API_URL);
       const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/kontakt/mailanempfaenger`, formData);
+      console.log(response.data);
       
       // Felder zurücksetzen
       setName('');
