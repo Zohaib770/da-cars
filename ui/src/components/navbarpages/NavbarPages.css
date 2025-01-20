@@ -93,6 +93,23 @@ td:first-child {
     color: #fff;
 }
 
+@media screen and (max-width: 768px) {
+    .fahrzeug-bild img {
+        height: 100px;
+        width: auto;
+    }
+
+    .fahrzeug-bild {
+        display: flex;
+        align-items: center;
+    }
+
+    .slider {
+        transform: translateY(-30%);
+    }
+
+}
+
 /* ======================== kontakt ======================== */
 .kontakt-container{
     width: 100%;
