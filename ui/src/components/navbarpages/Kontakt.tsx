@@ -45,6 +45,7 @@ const Kontakt : React.FC = () => {
 
   return (
     <div className="kontakt-container">
+      <div className="kontakt-content">
       <div className='adresse'>
         <h1>{t("kontakt")}</h1>
         <h1>DA-Cars</h1>
@@ -104,7 +105,7 @@ const Kontakt : React.FC = () => {
           <button type="submit" className="absenden-button">{t("absenden")}</button>
         </form>
       </div>
-
+      </div>
     </div>
   )
 }

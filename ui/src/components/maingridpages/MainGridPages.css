@@ -42,7 +42,7 @@
     .main-content{
         height: 80vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
