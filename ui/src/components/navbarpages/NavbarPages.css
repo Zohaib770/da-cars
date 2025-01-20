@@ -202,8 +202,18 @@ textarea {
         flex-direction: column-reverse;
     }
 
-    .absenden-button {
-        transform: translateX(0);
+    .kontakt-firma{
+        color: white;
+        padding-top: 1%;
+        width: 100%;
+    }
+
+    .kontakt-firma-form input,
+    .kontakt-firma-form textarea {
+        padding: 10px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        width: 40vh;
     }
 
 }
