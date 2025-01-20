@@ -46,7 +46,7 @@ const FahrzeugHochladen: React.FC = () => {
     formData.append('preis', auto.preis);
 
     // Alle Bilder zum FormData hinzufügen
-    auto.bilder.forEach((file, index) => {
+    auto.bilder.forEach((file) => {
       formData.append('dateien', file, file.name); // 'dateien' ist der Name für die Multipart-Dateien im DTO
     });
 
