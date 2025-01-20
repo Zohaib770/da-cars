@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef  } from 'react';
 import { useTranslation } from "react-i18next";
 import './Admin.css';
 import axios from 'axios';
@@ -16,6 +16,8 @@ const FahrzeugHochladen: React.FC = () => {
     leistung: '',
     preis: '',
   });
+
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -58,7 +60,6 @@ const FahrzeugHochladen: React.FC = () => {
       });
       
       if (response.status === 200) {
-        alert('Fahrzeug erfolgreich hochgeladen');
         setAuto({
           bilder: [],
           marke: '',
@@ -70,6 +71,10 @@ const FahrzeugHochladen: React.FC = () => {
           leistung: '',
           preis: '',
         });
+
+        if (fileInputRef.current) {
+          fileInputRef.current.value = ''; // Rücksetzen des Datei-Inputs
+        }
       }
     } catch (error) {
       console.error('Fehler beim Hochladen des Fahrzeugs:', error);
@@ -89,6 +94,7 @@ const FahrzeugHochladen: React.FC = () => {
             name="dateien"
             multiple
             onChange={handleImageChange}
+            ref={fileInputRef}
           />
         </div>
         <div className="form-group">
