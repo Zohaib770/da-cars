@@ -1,7 +1,30 @@
 {
+  "compilerOptions": {
+    "composite": true,          // Enable project references
+    "noEmit": false,            // Ensure emit is not disabled (can be omitted if you want to generate JS)
+    "target": "esnext",         // You can adjust the target based on your needs
+    "module": "esnext",         // Use appropriate module system
+    "moduleResolution": "node", // Node-style module resolution
+    "jsx": "react-jsx",         // JSX transformation for React 17+
+    "strict": true,             // Enable strict type checking
+    "esModuleInterop": true,    // Enable ES module compatibility
+    "skipLibCheck": true,       // Skip library checks for faster builds
+    "resolveJsonModule": true,  // Resolve JSON modules
+    "baseUrl": ".",             // Set base URL
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}
+
+
+
+/* {
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ]
-}
+} */
