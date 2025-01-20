@@ -78,7 +78,6 @@ const FahrzeugHochladen: React.FC = () => {
       }
     } catch (error) {
       console.error('Fehler beim Hochladen des Fahrzeugs:', error);
-      alert('Fehler beim Hochladen des Fahrzeugs');
     }
   };
 

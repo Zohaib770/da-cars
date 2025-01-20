@@ -31,12 +31,11 @@ const Einloggen : React.FC = () => {
         localStorage.setItem("isLoggedIn", "true");
         navigate('/adminlayout/fahrzeugverwalten');
       } else {
-          alert(t("Falsche Anmeldeinformationen"));
+          console.log("Falsche Anmeldeinformationen");
       }
 
     } catch (err) {
       console.error(err);
-      alert(t("Falsche Anmeldeinformationen"));
     }
 
   };

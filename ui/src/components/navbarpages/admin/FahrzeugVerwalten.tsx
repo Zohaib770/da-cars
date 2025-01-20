@@ -44,10 +44,8 @@ const FahrzeugVerwalten: React.FC = () => {
     try {
       await axios.delete(`${import.meta.env.VITE_REACT_APP_API_URL}/auto/deletebyid?id=${autoId}`);
       setAutoDaten((prevAutos) => prevAutos.filter((auto) => auto.autoId !== autoId));
-      alert(t("Fahrzeug erfolgreich gelöscht"));
     } catch (err) {
       console.error("Fehler beim Löschen des Fahrzeugs", err);
-      alert(t("Fehler beim Löschen des Fahrzeugs"));
     }
   };
 
