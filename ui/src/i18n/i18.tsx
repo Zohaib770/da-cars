@@ -52,9 +52,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 aussenwaesche_shampoo: "mit Wax Shampoo",
                 
                 lackpflege: "Lackpflege",
-                lackpflege_politur: "-	Politur" +
-                                        "Entfernt kleine Kratzer, reinigt den Lack und erzeugt ein" +
-                                        "spiegelglattes Hochglanzbild mit UV – Schutz.",
+                lackpflege_politur: "-	Politur " +
+                                        "(Entfernt kleine Kratzer, reinigt den Lack und erzeugt ein" +
+                                        "spiegelglattes Hochglanzbild mit UV – Schutz)",
                 lackpflege_schleife: "Lackaufbereitung (Schleifen & Politur)",
                 lackpflege_versiegelung: "Lackversiegelung (Langzeit Versiegelung)",
                 lackpflege_24: "Nano Lackbeschichtung (Bis zu 24 Monaten)",
@@ -205,9 +205,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 aussenwaesche_shampoo: "Avec shampooing à la cire",
                 
                 lackpflege: "Entretien de la peinture",
-                lackpflege_politur: "-	Polissage" +
-                                        "Élimine les petites rayures, nettoie la peinture et crée une brillance" +
-                                        "miroir avec une protection UV.",
+                lackpflege_politur: "-	Polissage " +
+                                        "(Élimine les petites rayures, nettoie la peinture et crée une brillance" +
+                                        "miroir avec une protection UV)",
                 lackpflege_schleife: "Préparation de la peinture (Ponçage et polissage)",
                 lackpflege_versiegelung: "Protection de la peinture (Scellement longue durée)",
                 lackpflege_24: "Revêtement nano (-	Jusqu’à 24 mois)",
