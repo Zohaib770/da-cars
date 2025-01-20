@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
 import { AuthContext } from "../context/AuthContext";
 
@@ -13,6 +13,11 @@ const Navbar: React.FC = () => {
 
   const{t, i18n} = useTranslation();
   const { isLoggedIn } = useContext(AuthContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const lang = event.target.value;
@@ -28,7 +33,12 @@ const Navbar: React.FC = () => {
           </Link>  
         </div>
         <div className="navbar-right">
-          <ul>
+          
+          <div className="menu-icon" onClick={toggleMenu}>
+            ☰
+          </div>
+          
+          <ul className={`menu-items ${isMenuOpen ? "show" : ""}`}>
             <li><Link to="/">{t("dienstleistungen")}</Link></li>
             <li><Link to="/fahrzeug">{t("fahrzeuge")}</Link></li>
             <li><Link to="/kontakt">{t("kontakt")}</Link></li>
