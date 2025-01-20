@@ -19,6 +19,10 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const lang = event.target.value;
     i18n.changeLanguage(lang);
@@ -39,14 +43,14 @@ const Navbar: React.FC = () => {
           </div>
           
           <ul className={`menu-items ${isMenuOpen ? "show" : ""}`}>
-            <li><Link to="/">{t("dienstleistungen")}</Link></li>
-            <li><Link to="/fahrzeug">{t("fahrzeuge")}</Link></li>
-            <li><Link to="/kontakt">{t("kontakt")}</Link></li>
+            <li><Link to="/" onClick={closeMenu}>{t("dienstleistungen")}</Link></li>
+            <li><Link to="/fahrzeug" onClick={closeMenu}>{t("fahrzeuge")}</Link></li>
+            <li><Link to="/kontakt" onClick={closeMenu}>{t("kontakt")}</Link></li>
             <li>
               {isLoggedIn ? (
-                  <Link to="/adminlayout/fahrzeugverwalten">{t("admin_eingeloggt")}</Link>
+                  <Link to="/adminlayout/fahrzeugverwalten" onClick={closeMenu}>{t("admin_eingeloggt")}</Link>
                 ): (
-                <Link to="/einloggen">{t("einloggen")}</Link>
+                <Link to="/einloggen" onClick={closeMenu}>{t("einloggen")}</Link>
               )}
             </li>
           </ul>
