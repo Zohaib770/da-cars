@@ -32,6 +32,7 @@
 .fahrzeug-container {
     background-color: #131111;
     min-height: 100vh;
+    width: 100%;
 }
 
 .keine-autos{
@@ -94,6 +95,10 @@ td:first-child {
 
 /* ======================== kontakt ======================== */
 .kontakt-container{
+    width: 100%;
+}
+
+.kontakt-content{
     background-color: #131111;
     display: flex;
     gap: 15%;
@@ -207,6 +212,7 @@ textarea {
 .einloggen-container{
     background-color: #131111;
     height: 100vh;
+    width: 100%;
 }
 
 .login-form{

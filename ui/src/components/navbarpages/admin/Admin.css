@@ -1,6 +1,7 @@
 /* ======================== AdminLayout ======================== */
 .adminlayout-container {
     display: flex;
+    width: 100%;
 }
 
 .adminlayout-navbar {
