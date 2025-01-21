@@ -2,12 +2,12 @@
 
 wie wird das backend mit docker gestartet
 
-imag bauen
-
+als erstes imag bauen
 ```
-- docker build -t meine-spring-boot-app .
+docker build -t dacar-backend .
 ````
 
-container starten
+dann container starten
 ```
+docker run --name dacar-container -p 8080:8080 dacar-backend
 ```
