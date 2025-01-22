@@ -94,19 +94,15 @@ td:first-child {
 }
 
 @media screen and (max-width: 768px) {
-    .fahrzeug-bild img {
-        height: 100px;
-        width: auto;
-    }
 
-    .fahrzeug-bild {
-        display: flex;
-        align-items: center;
-    }
-
-    .slider {
-        transform: translateY(-30%);
-    }
+    .fahrzeug-table tr {
+        display: block;
+        margin-bottom: 20px;
+      }
+    
+      .fahrzeug-details {
+        display: block;
+      }
 
 }
 
@@ -274,7 +270,7 @@ textarea {
 .anmelden-button {
     margin-top: 20px;
     padding: 10px 15px;
-    width: 16vh;
+    /* width: 16vh; */
     background-color: #017cbc;
     color: white;
     border: none;
