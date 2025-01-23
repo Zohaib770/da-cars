@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "./NavbarPages.css"
 
@@ -46,65 +47,87 @@ const Kontakt : React.FC = () => {
   return (
     <div className="kontakt-container">
       <div className="kontakt-content">
-      <div className='adresse'>
-        <h1>{t("kontakt")}</h1>
-        <h1>DA-Cars</h1>
-        <a
-          href="https://maps.google.com?q=Pirmasenserstrasse 98, 66482 Zweibrücken"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="adresse-link"
-        >
-        <p>Pirmasenserstrasse 98</p>
-        <p>66482 Zweibrücken</p>
-        <p>{t("land")}</p>
-        </a>
-        <p>+4963328003425</p>
-        <p>info@da-cars.de</p>
-      </div>
+      <div className='adresse-kontakt-firma'>
 
-      <div className='kontakt-firma'>
-        <h1>{t("frage")}</h1>
-
-        {message && (
-          <div className={`alert ${message.type === 'success' ? 'alert-success' : 'alert-error'}`}>
-            {message.text}
+        <div className='adresse'>
+          <h1>{t("kontakt")}</h1>
+          <h1>DA-Cars</h1>
+          <div>
+            <a
+              href="https://maps.google.com?q=Pirmasenserstrasse 98, 66482 Zweibrücken"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="adresse-link"
+            >
+              <p>Pirmasenserstrasse 98</p>
+              <p>66482 Zweibrücken</p>
+              <p>{t("land")}</p>
+            </a>
+            <a href="tel:+4963328003425" className="telefon-link">
+              <p>+4963328003425</p>
+            </a>
+            <a 
+              href="mailto:info@da-cars.de" 
+              className="email-link"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <p>info@da-cars.de</p>
+            </a>
           </div>
-        )}
-        <form className="kontakt-firma-form" onSubmit={handleKontaktForm}>
-          
-          <label htmlFor="name">{t("name")}</label>
-          <input 
-            type="text" id="name" 
-            name="name" placeholder={t("ihr_name")} 
-            value={name} onChange={(e) => setName(e.target.value)} 
-            />
+        </div>
 
-          <label htmlFor="email">{t("Email")}</label>
-          <input 
-            type="email" id="email" 
-            name="email" placeholder={t("ihre_email_adresse")} 
-            value={email} onChange={(e) => setEmail(e.target.value)}
-            />
+        <div className='kontakt-firma'>
+          <h1>{t("frage")}</h1>
 
-          <label htmlFor="nachricht">{t("nachricht")}</label>
-          <textarea 
-            id="nachricht" name="nachricht" 
-            placeholder={t("ihre_nachricht")} rows={5}
-            value={nachricht} onChange={(e) => setNachricht(e.target.value)}>
-          </textarea>
-          
-          <label>
+          {message && (
+            <div className={`alert ${message.type === 'success' ? 'alert-success' : 'alert-error'}`}>
+              {message.text}
+            </div>
+          )}
+          <form className="kontakt-firma-form" onSubmit={handleKontaktForm}>
+            
+            <label htmlFor="name">{t("name")}</label>
             <input 
-              type="checkbox" id="agb" 
-              name="agb" checked={agbChecked} 
-              onChange={(e) => setAgbChecked(e.target.checked)} required />
-              {t("agb")}
-          </label>
+              type="text" id="name" 
+              name="name" placeholder={t("ihr_name")} 
+              value={name} onChange={(e) => setName(e.target.value)} 
+              />
 
-          <button type="submit" className="absenden-button">{t("absenden")}</button>
-        </form>
+            <label htmlFor="email">{t("Email")}</label>
+            <input 
+              type="email" id="email" 
+              name="email" placeholder={t("ihre_email_adresse")} 
+              value={email} onChange={(e) => setEmail(e.target.value)}
+              />
+
+            <label htmlFor="nachricht">{t("nachricht")}</label>
+            <textarea 
+              id="nachricht" name="nachricht" 
+              placeholder={t("ihre_nachricht")} rows={5}
+              value={nachricht} onChange={(e) => setNachricht(e.target.value)}>
+            </textarea>
+            
+            <label>
+              <input 
+                type="checkbox" id="agb" 
+                name="agb" checked={agbChecked} 
+                onChange={(e) => setAgbChecked(e.target.checked)} required />
+                {t("agb")}
+            </label>
+
+            <button type="submit" className="absenden-button">{t("absenden")}</button>
+          </form>
+        </div>
       </div>
+
+      <div className='footer'>
+        <div className='imp-daten'>
+          <Link to="/impressum">{t("impressum")}</Link>
+          <Link to="/haftungsausschluss">{t("haftungsausschluss")}</Link>
+        </div>
+      </div>
+
       </div>
     </div>
   )

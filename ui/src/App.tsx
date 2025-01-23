@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Fahrzeug from "./components/navbarpages/Fahrzeug";
 import Kontakt from "./components/navbarpages/Kontakt";
+import Impressum from "./components/navbarpages/Impressum";
+import Haftungsausschluss from "./components/navbarpages/Haftungsausschluss";
 import Einloggen from "./components/navbarpages/Einloggen";
 
 import AdminLayout from "./components/navbarpages/admin/AdminLayout";
@@ -39,6 +41,10 @@ const App: React.FC = () => {
           <Route path="/klimaservice" element={<Klimaservice />} />
           <Route path="/fahrzeug" element={<Fahrzeug />}/>
           <Route path="/kontakt" element={<Kontakt />}/>
+
+          <Route path="/impressum" element={<Impressum />}/>
+          <Route path="/haftungsausschluss" element={<Haftungsausschluss />}/>
+
           <Route path="/einloggen" element={<Einloggen />}/>
           {/* Geschützte Admin-Routen */}
           <Route element={<ProtectedRoute />}>

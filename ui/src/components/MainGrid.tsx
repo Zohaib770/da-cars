@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import "./maingridpages/MainGridPages.css";
 import { Link } from 'react-router-dom';
 
-
 const MainGrid: React.FC = () => {
   const{t} = useTranslation();
 

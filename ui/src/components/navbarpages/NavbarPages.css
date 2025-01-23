@@ -109,68 +109,67 @@ td:first-child {
 /* ======================== kontakt ======================== */
 .kontakt-container{
     width: 100%;
+    color: white;
 }
 
 .kontakt-content{
-    background-color: #131111;
-    display: flex;
-    gap: 15%;
     height: 100vh;
 }
 
-.kontakt-container h1 {
-    background-color: #131111;
-    color: white;
-}
-
-.adresse{
-    color: white;
-    padding-top: 1%;
-    padding-left: 10%;
-}
-
-.adresse a{
+.kontakt-content a{
     color: white;
     text-decoration: none;
 }
 
-.kontakt-firma{
-    color: white;
-    padding-top: 1%;
-    margin-left: 10%;
-    width: 40%;
+.adresse-kontakt-firma{
+    width: 100%;
+    height: 80%;
+    display: flex;
 }
 
-.kontakt-firma-form {
+.footer{
+    width: 100%;
+    height: 20%;
+}
+
+.adresse{
+    color: white;
+    width: 50%;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kontakt-firma{
+    width: 50%;
+    padding: 30px;
+}
+
+.kontakt-firma-form{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.kontakt-firma-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-  
 .kontakt-firma-form input,
 .kontakt-firma-form textarea {
     padding: 10px;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    width: 60vh;
-}
-  
-#agb{
-    width: 2vh;
+    width: 40vh;
 }
 
 textarea {
     resize: vertical;
 }
   
+#agb{
+    width: 2vh;
+}
+
 .absenden-button {
     padding: 10px 15px;
-    align-self: center;
     width: 18vh;
     background-color: #017cbc;
     color: white;
@@ -178,57 +177,30 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transform: translateX(-70%);
 }
 
-.alert {
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1rem;
-    text-align: center;
-    width: 50%;
-    margin-left: 10%;
+.imp-daten{
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+    font-size: 1.5rem;
 }
 
-.alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
-}
-
-.alert-error {
-    background-color: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-}  
-  
-/* Responsive Design für kleinere Bildschirme */
 @media screen and (max-width: 768px) {
-
-    .kontakt-container{
-        height: 100vh;
+    .kontakt-content{
+        display: flex;
+        flex-direction: column;
     }
 
-    .kontakt-content{
-        height: 80vh;
+    .adresse-kontakt-firma{
         display: flex;
         flex-direction: column-reverse;
     }
 
-    .kontakt-firma{
-        color: white;
-        padding-top: 1%;
-        width: 100%;
+    .imp-daten{
+        display: flex;
+        font-size: 1.5rem;
     }
-
-    .kontakt-firma-form input,
-    .kontakt-firma-form textarea {
-        padding: 10px;
-        border: 1px solid #ffffff;
-        border-radius: 5px;
-        width: 40vh;
-    }
-
 }
 
 /* ======================== einloggen ======================== */
@@ -276,4 +248,45 @@ textarea {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+}
+
+/* ======================== Impressum ======================== */
+.impressum-container{
+    height: 100vh;
+    background: #131111;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.impressum-content {
+    font-size: larger;
+    padding-left: 30px;
+    margin-bottom: 10%;
+}
+
+.impressum-content p{
+    font-size: larger;
+}
+
+.impressum-content a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* ======================== Haftungsasusschluss ======================== */
+.haftungsausschluss-container{
+    height: 100vh;
+    background: #131111;
+    color: #fff;
+    overflow-y: auto;
+}
+
+.haftungsausschluss-content{
+    color: fff;
+    padding: 10px 30px;
+    margin-bottom: 10%;
+}
+
+.haftungsausschluss-content p{
+    font-size: larger;
 }
