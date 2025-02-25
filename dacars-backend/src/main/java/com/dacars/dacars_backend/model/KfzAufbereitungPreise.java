@@ -32,7 +32,7 @@ public class KfzAufbereitungPreise {
     @Column(name = "pkw_preis")
     private BigDecimal pkwPreis;
 
-    @Column(name = "van_suv_pPreis")
+    @Column(name = "van_suv_preis")
     private BigDecimal vanSuvPreis;
 
     @Column(name = "kleinbus_preis")
