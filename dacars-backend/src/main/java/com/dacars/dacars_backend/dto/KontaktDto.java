@@ -11,6 +11,7 @@ public class KontaktDto {
 
     private String name;
     private String email;
+    private String telefon;
     private String nachricht;
     
 }

@@ -3,6 +3,7 @@ package com.dacars.dacars_backend.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
@@ -15,15 +16,20 @@ public class KontaktService {
 
     @Autowired
     private EmailService emailService;
+
+    @Value("${empfaenger.mail}")
+    private String empfaengerMail;
+
+    @Value("${spring.mail.username}")
+    private String mailUsername;
     
     public void kontaktDatenAnEmpfaengerSenden(KontaktDto kontaktDto) {
         log.info(" ===== kontaktDatenAnEmpfaengerSenden ENTER kontaktDto={}", kontaktDto);
 
         try {
             SimpleMailMessage message = new SimpleMailMessage();
-            message.setFrom("noreply@dacars.com");
-            message.setTo("kzohaib770@gmail.com");
-            /* message.setReplyTo("support@dacars.com"); */
+            message.setFrom(mailUsername);
+            message.setTo(empfaengerMail);
             message.setSubject("Da Cars: Neue Kontaktanfrage von " + kontaktDto.getName());
             
             StringBuilder emailText = new StringBuilder();
@@ -31,6 +37,7 @@ public class KontaktService {
                  .append("Sie haben eine neue Kontaktanfrage erhalten. Hier sind die Details:\n\n")
                  .append("Name: ").append(kontaktDto.getName()).append("\n")
                  .append("E-Mail: ").append(kontaktDto.getEmail()).append("\n")
+                 .append("Telefon: ").append(kontaktDto.getTelefon()).append("\n")
                  .append("Nachricht:\n")
                  .append(kontaktDto.getNachricht()).append("\n\n")
                  .append("Vielen Dank.\n")

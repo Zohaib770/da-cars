@@ -3,6 +3,7 @@ package com.dacars.dacars_backend.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,9 @@ public class EmailService {
     @Autowired
     OTPService otpService;
 
+    @Value("${empfaenger.mail}")
+    private String empfaengerMail;
+
     public void sendEmail(SimpleMailMessage message) {
         try {
             mailSender.send(message);
@@ -32,7 +36,7 @@ public class EmailService {
         log.info(" ===== sendOTPEmail ENTER ");
         String otp = otpService.generateOTP(email);
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo("kzohaib770@gmail.com");
+        message.setTo(empfaengerMail);
         message.setSubject("Your OTP Code");
         message.setText("Your OTP code is: " + otp);
         mailSender.send(message);
