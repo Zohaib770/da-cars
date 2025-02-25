@@ -70,7 +70,7 @@ const Profil: React.FC = () => {
   return (
     <div className="profil-container">
       <h1>{t("benutzer_profil")}</h1>
-      <h2>{t("email")}{savedEmail}</h2>
+      <h2>{t("email: ")}{savedEmail}</h2>
 
       {step === 1 && (
         <form onSubmit={handleEmailSubmit} className="profil-form">

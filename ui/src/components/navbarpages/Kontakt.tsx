@@ -9,6 +9,7 @@ const Kontakt : React.FC = () => {
   
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [telefon, setTelefon] = useState('');
   const [nachricht, setNachricht] = useState('');
   const [agbChecked, setAgbChecked] = useState(false);
   const [message, setMessage] = useState<{ type: string; text: string } | null>(null);
@@ -19,6 +20,7 @@ const Kontakt : React.FC = () => {
     const formData = {
       name: name,
       email: email,
+      telefon: telefon,
       nachricht: nachricht
     };
 
@@ -26,6 +28,7 @@ const Kontakt : React.FC = () => {
       const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/kontakt/mailanempfaenger`, formData);
       setName('');
       setEmail('');
+      setTelefon('');
       setNachricht('');
       setAgbChecked(false);
 
@@ -90,11 +93,18 @@ const Kontakt : React.FC = () => {
               value={name} onChange={(e) => setName(e.target.value)} 
               />
 
-            <label htmlFor="email">{t("Email")}</label>
+            <label htmlFor="email">{t("email")}</label>
             <input 
               type="email" id="email" 
               name="email" placeholder={t("ihre_email_adresse")} 
               value={email} onChange={(e) => setEmail(e.target.value)}
+              />
+
+            <label htmlFor="telefon">{t("telefon")}</label>
+            <input 
+              type="number" id="telefon" 
+              name="telefon" placeholder={t("ihre_tel")} 
+              value={telefon} onChange={(e) => setTelefon(e.target.value)}
               />
 
             <label htmlFor="nachricht">{t("nachricht")}</label>
