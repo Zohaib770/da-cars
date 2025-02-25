@@ -3,6 +3,7 @@ package com.dacars.dacars_backend.util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,15 +13,15 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
+@Component
 public class BildHandler {
 
     private static final Logger log = LoggerFactory.getLogger(BildHandler.class);
+    private final String BILDER_ORDNER;
 
+    public BildHandler(@Value("${bilder.ordner}") String bilderOrdner) {
+        this.BILDER_ORDNER = bilderOrdner;
 
-    @Value("${bilder.ordner}")
-    private static String BILDER_ORDNER;
-
-    static {
         try {
             Path ordnerPath = Paths.get(BILDER_ORDNER);
             if (!Files.exists(ordnerPath)) {
@@ -31,7 +32,7 @@ public class BildHandler {
         }
     }
 
-    public static String speichereBild(MultipartFile file, long autoId, int index) {
+    public String speichereBild(MultipartFile file, long autoId, int index) {
         String originalDateiname = StringUtils.cleanPath(file.getOriginalFilename());
         String einzigartigerDateiname = autoId + "_" + index + "_" + originalDateiname;
 
@@ -49,7 +50,7 @@ public class BildHandler {
         }
     }
 
-    public static void loescheBild(String dateiname) {
+    public void loescheBild(String dateiname) {
         log.info(" ===== loescheBild ENTER dateiname={}", dateiname);
         Path bildPfad = Paths.get(BILDER_ORDNER).resolve(dateiname);
         if (Files.exists(bildPfad)) {

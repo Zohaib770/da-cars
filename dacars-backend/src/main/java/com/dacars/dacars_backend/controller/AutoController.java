@@ -36,6 +36,9 @@ public class AutoController {
     @Autowired
     AutoBildService autoBildService;
 
+    @Autowired
+    BildHandler bildHandler;
+
     @PostMapping("save")
     public Auto save(@ModelAttribute Auto auto,
                     @RequestParam("dateien") List<MultipartFile> dateien) {
@@ -46,7 +49,7 @@ public class AutoController {
 
         for (int i = 0; i < dateien.size(); i++) {
             MultipartFile file = dateien.get(i);
-            String bildUrl = BildHandler.speichereBild(file, autoId, i);
+            String bildUrl = bildHandler.speichereBild(file, autoId, i);
             AutoBild autoBild = new AutoBild(autoId, bildUrl);
             autoBildService.save(autoBild);
         }

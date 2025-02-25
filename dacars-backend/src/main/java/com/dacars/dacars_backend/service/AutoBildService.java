@@ -15,7 +15,10 @@ import jakarta.transaction.Transactional;
 public class AutoBildService {
     
     @Autowired
-    AutoBildRepository autoBildRepository;    
+    AutoBildRepository autoBildRepository;
+
+    @Autowired
+    BildHandler bildHandler;
 
     public AutoBild save(AutoBild autoBild) {
         return autoBildRepository.save(autoBild);
@@ -29,7 +32,7 @@ public class AutoBildService {
     public void deleteByAutoId(long autoId){
         List<AutoBild> autoBilder = findByAutoId(autoId);
         for (AutoBild ab : autoBilder) {
-            BildHandler.loescheBild(ab.getBildUrl());
+            bildHandler.loescheBild(ab.getBildUrl());
         }
         autoBildRepository.deleteByAutoId(autoId);
     }
