@@ -20,11 +20,8 @@ const Einloggen : React.FC = () => {
     };
 
     try {
-      console.log(import.meta.env.VITE_REACT_APP_API_URL);
       const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/benutzer/login`, formData);
       const data = response;
-      console.log(" ================= data " + data.statusText);
-      /* navigate('/adminlayout/FahrzeugVerwalten'); */
       if (response.status === 200) {
         login();
         localStorage.setItem("benutzeremail", email);

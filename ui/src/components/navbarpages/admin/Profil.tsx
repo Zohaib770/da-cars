@@ -23,7 +23,6 @@ const Profil: React.FC = () => {
     const response = await axios.post(`${import.meta.env.VITE_REACT_APP_API_URL}/profil/send-otp?email=${savedEmail}`);
 
     if (response.status === 200) {
-      console.log("OTP sent to", savedEmail);
       setOtpSent(true);
       setStep(2);
     } else {
@@ -37,7 +36,6 @@ const Profil: React.FC = () => {
                                       { email: savedEmail, otp: otp });
 
     if (response.status === 200) {
-      console.log(response.data);
       setStep(3);
     } else {
       console.error("Failed to send OTP");
@@ -61,7 +59,6 @@ const Profil: React.FC = () => {
 
       if (response.status === 200) {
         setStep(1);  
-        console.log("Password updated successfully:", response.data);
       } else {
           console.error("Failed to update password:", response.data);
       }

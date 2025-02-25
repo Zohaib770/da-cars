@@ -73,7 +73,7 @@ const FahrzeugHochladen: React.FC = () => {
         });
 
         if (fileInputRef.current) {
-          fileInputRef.current.value = ''; // Rücksetzen des Datei-Inputs
+          fileInputRef.current.value = '';
         }
       }
     } catch (error) {
