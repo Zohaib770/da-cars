@@ -84,7 +84,7 @@ const FahrzeugVerwalten: React.FC = () => {
                       </>
                     )}
                     <img
-                      src={`http://localhost:8080/autobilder/${auto.bildUrl[bilderIndex[index]]}`}
+                      src={`${import.meta.env.VITE_REACT_APP_AUTO_BILDER_URL}/${auto.bildUrl[bilderIndex[index]]}`}
                       alt={`${auto.marke} ${auto.modell}`}
                     />
                     {auto.bildUrl.length > 1 && (
