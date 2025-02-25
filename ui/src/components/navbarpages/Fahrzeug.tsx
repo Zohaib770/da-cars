@@ -70,6 +70,7 @@ const Fahrzeug: React.FC = () => {
           {autoDaten.map((auto, index) => (
             <tr key={index}>
                 <td className="fahrzeug-bild">
+                  <div style={{ position: 'relative' }}>
                     {auto.bildUrl.length > 1 && (
                       <>
                         <button className="slider links" onClick={() => vorherigesBild(index)}>&lt;</button>
@@ -84,6 +85,7 @@ const Fahrzeug: React.FC = () => {
                           <button className="slider rechts" onClick={() => naechstesBild(index)}>&gt;</button>
                         </>
                       )}
+                  </div>
                 </td>
 
                 <td className="fahrzeug-details">
