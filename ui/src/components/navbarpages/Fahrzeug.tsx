@@ -18,7 +18,7 @@ interface Auto {
 
 
 const Fahrzeug: React.FC = () => {
-  const{t} = useTranslation();
+  const { t } = useTranslation();
 
   const [autoDaten, setAutoDaten] = useState<Auto[]>([]);
   const [bilderIndex, setBilderIndex] = useState<number[]>([]);
@@ -51,10 +51,10 @@ const Fahrzeug: React.FC = () => {
         console.error("Fehler beim Laden der Daten", err);
       }
     };
-  
+
     fetchAutoDaten();
   }, []);
-  
+
   if (autoDaten.length === 0) {
     return (
       <div className="fahrzeug-container">
@@ -65,10 +65,11 @@ const Fahrzeug: React.FC = () => {
 
   return (
     <div className="fahrzeug-container">
-       <table className="fahrzeug-table">
+      <table className="fahrzeug-table">
         <tbody>
-          {autoDaten.map((auto, index) => (
-            <tr key={index}>
+          <div className='fahrzeug-table-div'>
+            {autoDaten.map((auto, index) => (
+              <tr key={index}>
                 <td className="fahrzeug-bild">
                   <div style={{ position: 'relative' }}>
                     {auto.bildUrl.length > 1 && (
@@ -81,30 +82,33 @@ const Fahrzeug: React.FC = () => {
                       alt={`${auto.marke} ${auto.modell}`}
                     />
                     {auto.bildUrl.length > 1 && (
-                        <>
-                          <button className="slider rechts" onClick={() => naechstesBild(index)}>&gt;</button>
-                        </>
-                      )}
+                      <>
+                        <button className="slider rechts" onClick={() => naechstesBild(index)}>&gt;</button>
+                      </>
+                    )}
                   </div>
                 </td>
 
                 <td className="fahrzeug-details">
-                <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
-                    <p className="">{t("beschreibung")}: {auto.beschreibung}</p>
+                  <div className='fahrzeug-details-div'>
+                    <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
+                    <p className="beschreibung">{t("beschreibung")}: {auto.beschreibung}</p>
                     <div className="b-k-t">
-                      <p className="">{t("baujahr")}: {auto.baujahr}</p>
-                      <p className="">{t("kmStand")}: {auto.kmStand}</p>
-                      <p className="">{t("tuev")}: {new Intl.DateTimeFormat('de-DE').format(new Date(auto.tuev))}</p>
+                      <p>{t("baujahr")}: {auto.baujahr}</p>
+                      <p>{t("kmStand")}: {auto.kmStand}</p>
+                      <p>{t("tuev")}: {new Intl.DateTimeFormat('de-DE').format(new Date(auto.tuev))}</p>
                     </div>
                     <div className="l-p">
-                      <p className="">{t("leistung")}: {auto.leistung}</p>
-                      <p className="">{t("preis")}: {auto.preis} €</p>
+                      <p>{t("leistung")}: {auto.leistung}</p>
+                      <p>{t("preis")}: {auto.preis} €</p>
                     </div>
+                  </div>
                 </td>
-            </tr>
-          ))}
+              </tr>
+            ))}
+          </div>
         </tbody>
-       </table>
+      </table>
     </div>
   );
 };
