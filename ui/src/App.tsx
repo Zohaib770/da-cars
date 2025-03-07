@@ -27,39 +27,39 @@ import "./App.css";
 const App: React.FC = () => {
   return (
     <AuthProvider>
-    <div className="app">
-    <Router>
-    <div className="navbar-content">
-      <Navbar />
-    </div>
-      <div className="main-content">
-         <Routes>
-          <Route path="/" element={<MainGrid />}/>
-          <Route path="/kfzaufbereitung" element={<KfzAufbereitung />} />
-          <Route path="/scheibentoenung" element={<Scheibentoenung />} />
-          <Route path="/autoglasservice" element={<Autoglasservice />} />
-          <Route path="/klimaservice" element={<Klimaservice />} />
-          <Route path="/fahrzeug" element={<Fahrzeug />}/>
-          <Route path="/kontakt" element={<Kontakt />}/>
+      <div className="app">
+        <Router>
+          <div className="navbar-content">
+            <Navbar />
+          </div>
+          <div className="main-content">
+            <Routes>
+              <Route path="/" element={<MainGrid />} />
+              <Route path="/kfzaufbereitung" element={<KfzAufbereitung />} />
+              <Route path="/scheibentoenung" element={<Scheibentoenung />} />
+              <Route path="/autoglasservice" element={<Autoglasservice />} />
+              <Route path="/klimaservice" element={<Klimaservice />} />
+              <Route path="/fahrzeug" element={<Fahrzeug />} />
+              <Route path="/kontakt" element={<Kontakt />} />
 
-          <Route path="/impressum" element={<Impressum />}/>
-          <Route path="/haftungsausschluss" element={<Haftungsausschluss />}/>
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="/haftungsausschluss" element={<Haftungsausschluss />} />
 
-          <Route path="/einloggen" element={<Einloggen />}/>
-          {/* Geschützte Admin-Routen */}
-          <Route element={<ProtectedRoute />}>
-            <Route path="/adminlayout" element={<AdminLayout />}>
-              <Route path="fahrzeughochladen" element={<FahrzeugHochladen />} />
-              <Route path="fahrzeugverwalten" element={<FahrzeugVerwalten />} />
-              <Route path="kfzaufbereitungverwalten" element={<KfzAufbereitungVerwalten />} />
-              <Route path="profil" element={<Profil />} />
-            </Route>
-          </Route>
+              <Route path="/einloggen" element={<Einloggen />} />
+              {/* Geschützte Admin-Routen */}
+              <Route element={<ProtectedRoute />}>
+                <Route path="/adminlayout" element={<AdminLayout />}>
+                  <Route path="fahrzeughochladen" element={<FahrzeugHochladen />} />
+                  <Route path="fahrzeugverwalten" element={<FahrzeugVerwalten />} />
+                  <Route path="kfzaufbereitungverwalten" element={<KfzAufbereitungVerwalten />} />
+                  <Route path="profil" element={<Profil />} />
+                </Route>
+              </Route>
 
-        </Routes>
+            </Routes>
+          </div>
+        </Router>
       </div>
-    </Router>
-    </div>
     </AuthProvider>
   );
 };
