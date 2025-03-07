@@ -17,7 +17,6 @@ const MainGrid = () => {
         <div className="hero-content">
           <h1>{t("maingrid_herocontent_title")}</h1>
           <p>{t("maingrid_herocontent_text")}</p>
-          <Link to="/services" className="services-button">{t("maingrid_hercontent_unsere_services_entdecken")}</Link>
         </div>
       </div>
 
