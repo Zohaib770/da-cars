@@ -57,7 +57,7 @@ const MainGrid = () => {
         <p>{t("maingrid_dacar_wilk_text")}</p>
         <div className="about-stats">
           <div className="stat">
-            <span>15+</span>
+            <span>20+</span>
             <p>{t("maingrid_jahre_erfahrung")}</p>
           </div>
           <div className="stat">
@@ -67,10 +67,6 @@ const MainGrid = () => {
           <div className="stat">
             <span>100%</span>
             <p>{t("maingrid_qualitaetsgarantie")}</p>
-          </div>
-          <div className="stat">
-            <span>24/7</span>
-            <p>{t("maingrid_kundenservice")}</p>
           </div>
           <div className="stat-placeholder"></div>
         </div>
