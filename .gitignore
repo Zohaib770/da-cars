@@ -22,4 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
 ui/src/assets/Autosbilder
+dacars-backend/src/main/resources/static/autobilder
+*.env
