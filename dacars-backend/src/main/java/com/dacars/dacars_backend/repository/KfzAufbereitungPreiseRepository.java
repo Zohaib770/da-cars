@@ -7,6 +7,5 @@ import com.dacars.dacars_backend.model.KfzAufbereitungPreise;
 
 @Repository
 public interface KfzAufbereitungPreiseRepository extends JpaRepository<KfzAufbereitungPreise, Long>{
-
     
 }

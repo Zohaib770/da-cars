@@ -23,11 +23,8 @@ public class KfzAufbereitungPreise {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "dienste", nullable = false)
-    private String dienste;
-
-    @Column(name = "dienste_beschreibung", unique = true, nullable = false)
-    private String diensteBeschreibung;
+    @Column(name = "autopflege", unique = true, nullable = false)
+    private String autopflege;
 
     @Column(name = "pkw_preis")
     private BigDecimal pkwPreis;
