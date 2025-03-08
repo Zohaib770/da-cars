@@ -2,19 +2,22 @@
 INSERT INTO benutzer (email, passwort, role)
 VALUES ('admin@gmail.com', '$2a$10$wWy61t9rwpY6XzXjHtoVe.byVTM79QdEG990m9c7p4AcEHfj69eNe', 'ADMIN');
 
-INSERT INTO kfzaufbereitungpreise (id, dienste, dienste_beschreibung, kleinbus_preis, pkw_preis, van_suv_p_preis) 
+INSERT INTO kfzaufbereitungpreise (id, autopflege, kleinbus_preis, pkw_preis, van_suv_preis) 
 VALUES 
-('1', 'aussenreinigung', 'aussenreinigung_text', '10.00', '10.00', '10.00'),
-('2', 'aussenwaesche', 'aussenwaesche_shampoo', '39.99', '19.99', '29.99'),
-('3', 'lackpflege', 'lackpflege_politur', '69.99', '49.99', '59.99'),
-('4', 'lackpflege', 'lackpflege_schleife', '69.99', '49.99', '59.99'),
-('5', 'lackpflege', 'lackpflege_versiegelung', '69.99', '49.99', '59.99'),
-('6', 'lackpflege', 'lackpflege_24', '69.99', '49.99', '59.99'),
-('7', 'lackpflege', 'lackpflege_36', '69.99', '49.99', '59.99'),
-('8', 'innenreinigung', 'Innenreinigung_standard', '39.99', '19.99', '29.99'),
-('9', 'innenreinigung', 'Innenreinigung_intensive', '39.99', '19.99', '29.99'),
-('10', 'stoff_textil', 'stoff_textil', '44.99', '24.99', '34.99'),
-('11', 'motorwaesche', 'motorwaesche_text', '49.99', '29.99', '39.99'),
-('12', 'komplett_aufbereitung_inkl_motor', 'komplett_aufbereitung_inkl_motor', '139.99', '99.99', '119.99'),
-('13', 'glasversiegelung', 'glasversiegelung_text', '69.99', '49.99', '59.99');
+('1', 'komplettreinigung_text', '99.99', '79.99', '89.99'),
+('2', 'aussenreinigung_nasswaesche', '19.99', '14.99', '17.99'),
+('3', 'aussenreinigung_felgen', '29.99', '19.99', '24.99'),
+('4', 'aussenreinigung_motor', '39.99', '29.99', '34.99'),
+('5', 'aussenwaesche_shampoo', '39.99', '19.99', '29.99'),
+('6', 'Innenreinigung_standard_text', '39.99', '19.99', '29.99'),
+('7', 'Innenreinigung_intensive_text', '59.99', '39.99', '49.99'),
+('8', 'lackpflege_politur', '69.99', '49.99', '59.99'),
+('9', 'lackpflege_schleife', '69.99', '49.99', '59.99'),
+('10', 'lackpflege_versiegelung', '69.99', '49.99', '59.99'),
+('11', 'lackpflege_24', '69.99', '49.99', '59.99'),
+('12', 'lackpflege_36', '79.99', '59.99', '69.99'),
+('13', 'stoff_textil', '44.99', '24.99', '34.99'),
+('14', 'motorwaesche_text', '49.99', '29.99', '39.99'),
+('15', 'glasversiegelung_text', '69.99', '49.99', '59.99');
+
 
