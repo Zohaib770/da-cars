@@ -113,13 +113,24 @@
 }
 
 .about-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   max-width: 800px;
   margin: 0 auto 30px;
   padding-bottom: 80px;
 }
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+  flex: 1 1 200px;
+  max-width: 300px;
+}
+
 
 @media (max-width: 768px) {
   .hero-section {
