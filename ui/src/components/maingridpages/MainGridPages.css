@@ -215,6 +215,11 @@ td:nth-child(4) {
   text-align:center;
 }
 
+.komplett_aufbereitung{
+  font-size: x-large;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
   .kfzaufbereitung-container {
     width: 100vw;

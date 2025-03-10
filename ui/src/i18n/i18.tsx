@@ -87,7 +87,11 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                                     "Ablagerungen, sorgt für optimale Kühlung und erleichtert" +
                                     "die frühzeitige Erkennung von möglichen Problemen",
 
-                komplett_aufbereitung_inkl_motor: "Komplettaufbereitung (inkl. Motorwäsche)",
+                scheinwerfer_reparatur: "Scheinwerfer Reparatur",
+                scheinwerfer_reparatur_text: "entfernt Trübungen und Kratzer, stellt die Leuchtkraft wieder her und verbessert die Sicht sowie die Optik Ihres Fahrzeugs. Eine kostengünstige Alternative zum Austausch für mehr Sicherheit und ein frisches Aussehen.",
+
+                komplett_aufbereitung: "Komplettaufbereitung",
+                komplett_aufbereitung_text: "Unser Spar Paket  für komplett Aufbereitung enthält .(lackpflege - intensiv innenreinigung . Motorwäsche )", 
 
                 glasversiegelung: "Glasversiegelung",
                 glasversiegelung_text: "Eine Glasversiegelung sorgt für klare Sicht und schützt" +
@@ -330,7 +334,12 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                                     "dépôts, garantit un refroidissement optimal et facilite la" +
                                     "détection précoce de problèmes éventuels.",
 
-                komplett_aufbereitung_inkl_motor: "Préparation complète (incluant le nettoyage du moteur)",
+                scheinwerfer_reparatur: "Réparation de phares",
+                scheinwerfer_reparatur_text: "Élimine la turbidité et les rayures, restaure la luminosité et améliore la visibilité et l’apparence de votre véhicule. Une alternative rentable au remplacement pour plus de sécurité et un nouveau look",
+
+                komplett_aufbereitung: "Préparation complète",
+                komplett_aufbereitung_text: "Notre forfait d’économies pour une rénovation complète comprend . (Entretien de la peinture - nettoyage intérieur intensif . Lavage du moteur)",
+
 
                 glasversiegelung: "Protection des vitres",
                 glasversiegelung_text: "Une protection des vitres garantit une visibilité claire et" +

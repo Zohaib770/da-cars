@@ -193,6 +193,19 @@ const kfzaufbereitung: React.FC = () => {
                     <td>{item.vanSuvPreis}€</td>
                     <td>{item.kleinbusPreis}€</td>
                   </tr>
+                ); 
+              } else if (item.autopflege === "scheinwerfer_reparatur_text") {
+                return (
+                  <tr key={index}>
+                    <td>
+                      <span className='highlight'>
+                        {t("scheinwerfer_reparatur")}
+                      </span>
+                      <br />{t("scheinwerfer_reparatur_text")}</td>
+                    <td>{item.pkwPreis}€</td>
+                    <td>{item.vanSuvPreis}€</td>
+                    <td>{item.kleinbusPreis}€</td>
+                  </tr>
                 );
               } else if (item.autopflege === "glasversiegelung_text") {
                 return (
@@ -230,6 +243,19 @@ const kfzaufbereitung: React.FC = () => {
                         {t("polsterreparatur")}
                       </span>
                       <br /> {t("polsterreparatur_text")}</td>
+                    <td>{item.pkwPreis}€</td>
+                    <td>{item.vanSuvPreis}€</td>
+                    <td>{item.kleinbusPreis}€</td>
+                  </tr>
+                );
+              } else if (item.autopflege === "komplett_aufbereitung_text") {
+                return (
+                  <tr className='komplett_aufbereitung' key={index}>
+                    <td>
+                      <span className='highlight'>
+                        {t("komplett_aufbereitung")}
+                      </span>
+                      <br />{t("komplett_aufbereitung_text")}</td>
                     <td>{item.pkwPreis}€</td>
                     <td>{item.vanSuvPreis}€</td>
                     <td>{item.kleinbusPreis}€</td>
