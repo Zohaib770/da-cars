@@ -16,10 +16,8 @@ interface Auto {
   bildUrl: string[];
 }
 
-
 const Fahrzeug: React.FC = () => {
   const { t } = useTranslation();
-
   const [autoDaten, setAutoDaten] = useState<Auto[]>([]);
   const [bilderIndex, setBilderIndex] = useState<number[]>([]);
 
@@ -46,7 +44,7 @@ const Fahrzeug: React.FC = () => {
       try {
         const response = await axios.get<Auto[]>(`${import.meta.env.VITE_REACT_APP_API_URL}/auto/findAll`);
         setAutoDaten(response.data);
-        setBilderIndex(response.data.map(() => 0)); // Initialisiere Bildindex
+        setBilderIndex(response.data.map(() => 0));
       } catch (err) {
         console.error("Fehler beim Laden der Daten", err);
       }
@@ -65,50 +63,41 @@ const Fahrzeug: React.FC = () => {
 
   return (
     <div className="fahrzeug-container">
-      <table className="fahrzeug-table">
-        <tbody>
-          <div className='fahrzeug-table-div'>
-            {autoDaten.map((auto, index) => (
-              <tr key={index}>
-                <td className="fahrzeug-bild">
-                  <div style={{ position: 'relative' }}>
-                    {auto.bildUrl.length > 1 && (
-                      <>
-                        <button className="slider links" onClick={() => vorherigesBild(index)}>&lt;</button>
-                      </>
-                    )}
-                    <img
-                      src={`${import.meta.env.VITE_REACT_APP_AUTO_BILDER_URL}/${auto.bildUrl[bilderIndex[index]]}`}
-                      alt={`${auto.marke} ${auto.modell}`}
-                    />
-                    {auto.bildUrl.length > 1 && (
-                      <>
-                        <button className="slider rechts" onClick={() => naechstesBild(index)}>&gt;</button>
-                      </>
-                    )}
-                  </div>
-                </td>
-
-                <td className="fahrzeug-details">
-                  <div className='fahrzeug-details-div'>
-                    <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
-                    <p className="beschreibung">{t("beschreibung")}: {auto.beschreibung}</p>
-                    <div className="b-k-t">
-                      <p>{t("baujahr")}: {auto.baujahr}</p>
-                      <p>{t("kmStand")}: {auto.kmStand}</p>
-                      <p>{t("tuev")}: {new Intl.DateTimeFormat('de-DE').format(new Date(auto.tuev))}</p>
-                    </div>
-                    <div className="l-p">
-                      <p>{t("leistung")}: {auto.leistung}</p>
-                      <p>{t("preis")}: {auto.preis} €</p>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            ))}
+      <div className="fahrzeug-liste">
+        {autoDaten.map((auto, index) => (
+          <div className="fahrzeug-item" key={index}>
+            <div className="fahrzeug-bild">
+              {auto.bildUrl.length > 1 && (
+                <>
+                  <button className="slider links" onClick={() => vorherigesBild(index)}>&lt;</button>
+                </>
+              )}
+              <img
+                src={`${import.meta.env.VITE_REACT_APP_AUTO_BILDER_URL}/${auto.bildUrl[bilderIndex[index]]}`}
+                alt={`${auto.marke} ${auto.modell}`}
+              />
+              {auto.bildUrl.length > 1 && (
+                <>
+                  <button className="slider rechts" onClick={() => naechstesBild(index)}>&gt;</button>
+                </>
+              )}
+            </div>
+            <div className="fahrzeug-details">
+              <h1 className="fahrzeug-titel">{`${auto.marke} ${auto.modell}`}</h1>
+              <p className="beschreibung">{t("beschreibung")}: {auto.beschreibung}</p>
+              <div className="b-k-t">
+                <p>{t("baujahr")}: {auto.baujahr}</p>
+                <p>{t("kmStand")}: {auto.kmStand}</p>
+                <p>{t("tuev")}: {new Intl.DateTimeFormat('de-DE').format(new Date(auto.tuev))}</p>
+              </div>
+              <div className="l-p">
+                <p>{t("leistung")}: {auto.leistung}</p>
+                <p>{t("preis")}: {auto.preis} €</p>
+              </div>
+            </div>
           </div>
-        </tbody>
-      </table>
+        ))}
+      </div>
     </div>
   );
 };

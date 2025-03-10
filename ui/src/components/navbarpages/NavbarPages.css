@@ -31,68 +31,44 @@
 /* ======================== fahrzeug ======================== */
 .fahrzeug-container {
     background-color: #131111;
-    min-height: 100vh;
+    min-height: 90vh;
     width: 100%;
+    color: #fff;
 }
 
 .keine-autos {
-    color: #fff;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
     margin-top: 15%;
 }
 
-.fahrzeug-table {
-    display: block;
-    width: 100%;
-    margin-left: 5%;
+.fahrzeug-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     max-height: 90vh;
     overflow-y: auto;
+    margin-bottom: 100px;
 }
 
-.fahrzeug-table-div {
-    padding-bottom: 150px;
-    margin-top: 0;
-}
-
-td:first-child {
-    width: 25%;
+.fahrzeug-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #333;
 }
 
 .fahrzeug-bild {
-    border: none;
     position: relative;
     text-align: center;
 }
 
-.fahrzeug-details {
-    border: none;
-}
-
-.fahrzeug-details-div .beschreibung {
-    text-align: left;
-}
-
-.b-k-t {
-    display: flex;
-    justify-content: flex-start;
-    gap: 3%
-}
-
-.l-p {
-    display: flex;
-    justify-content: flex-start;
-    gap: 3%;
-}
-
-.fahrzeug-details h1 {
-    text-align: left;
-}
-
 .fahrzeug-bild img {
-    width: 70%;
+    max-width: 70%;
     height: auto;
+    text-align: center;
 }
 
 .slider {
@@ -115,29 +91,48 @@ td:first-child {
     right: 10px;
 }
 
-@media screen and (max-width: 768px) {
+.fahrzeug-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    .fahrzeug-table tr {
-        display: block;
-        margin-bottom: 20px;
+.fahrzeug-details h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.fahrzeug-details p {
+    margin: 0;
+    text-align: left;
+}
+
+.b-k-t,
+.l-p {
+    display: flex;
+    gap: 10px;
+}
+
+.fahrzeug-delete-button {
+    background-color: #017cbc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .fahrzeug-item {
+        grid-template-columns: 1fr;
     }
 
     .fahrzeug-details {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
-    .fahrzeug-details-div {
-        padding-left: 12%;
-    }
-
-    .fahrzeug-details-div .beschreibung {
-        margin-right: 8%;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        white-space: normal;
-        max-width: 100%;
-    }
-
 }
 
 /* ======================== kontakt ======================== */
