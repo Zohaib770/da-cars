@@ -58,9 +58,6 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 kfzaufbereitungverwalten_success: "erfolgreich aktualisiert !",
                 kfzaufbereitungverwalten_error: "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut",
 
-                komplettreinigung: "Komplettreinigung",
-                komplettreinigung_text: "enthält alle in diesem Abschnitt aufgeführten Leistungen",
-
                 aussenreinigung: "Außenreinigung",
                 aussenreinigung_nasswaesche: "Nasswäsche von Hand",
                 aussenreinigung_felgen: "Felgen - Spezialreinigung",
@@ -96,6 +93,13 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 glasversiegelung_text: "Eine Glasversiegelung sorgt für klare Sicht und schützt" +
                                         "Ihre Scheiben vor Schmutz, Wasser und Schnee, wodurch die" +
                                         "Sicherheit und Fahrsicht bei jedem Wetter verbessert wird.",
+                                        
+                ozonbehandlung: "Ozonbehandlung – Geruchsneutralisation",
+                ozonbehandlung_text: "Unsere Geruchsneutralisation entfernt effektiv unangenehme Gerüche im Fahrzeug, wie Rauch oder Tiergerüche, und sorgt für eine frische, saubere Luft im Innenraum. Ideal für ein angenehmes Fahrgefühl ohne störende Gerüche.",
+
+                polsterreparatur: "Polsterreparatur",
+                polsterreparatur_text: "Unsere Polsterreparatur behebt Schäden wie Brandlöcher im Stoff oder Leder und stellt das Aussehen Ihrer Sitze wieder her. Mit präziser Handarbeit sorgen wir für eine fast unsichtbare Reparatur, die den Komfort und die Optik Ihres Fahrzeugs verbessert.", 
+
 
                 // Scheibentoenung
                 scheibentoenung_title: "Scheibentönung x Foliatec",
@@ -246,7 +250,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 dacar: "Da Cars",
 
                 maingrid_herocontent_title: "Entretien professionnel des véhicules au plus haut niveau",
-                maingrid_herocontent_text: "Nous offrons une préparation de premier ordre, la teinture des vitres et l’entretien des véhicules pour les clients exigeants.",
+                maingrid_herocontent_text: "Wir bieten erstklassige Aufbereitung, Scheibentönung und Fahrzeugpflege für anspruchsvolle Kunden.	Nous proposons un reconditionnement haut de gamme, un teintement des vitres et un entretien de véhicule pour une clientèle exigeante.",
                 maingrid_unsere_dienstleistungen: "Nos services",
                 maingrid_professionelle_loesungen_fuer_ihr_fahrzeug: "Des solutions professionnelles pour votre véhicule",
 
@@ -262,9 +266,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                                 "nous utilisons des produits haut de gamme et des technologies modernes pour offrir" +
                                 "à votre véhicule une apparence impeccable.",
 
-                maingrid_jahre_erfahrung: "Années d’expérience",
-                maingrid_zufriedene_kunden: "Des clients satisfaits",
-                maingrid_qualitaetsgarantie: "Qualité",
+                maingrid_jahre_erfahrung: "Des Années d’expérience",
+                maingrid_zufriedene_kunden: "Clients satisfaits",
+                maingrid_qualitaetsgarantie: "Garantie de qualité",
 
                 // Navbar
                 dienstleistungen: "Services",
@@ -283,7 +287,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 kfzaufbereitungverwalten: "Administration de la préparation du véhicule",
                 preis_liste_kfzaufbereitung:"Liste de prix pour préparation automobile",
                 keine_preis_liste_kfzaufbereitung: "Prix pas encore disponibles",
-                autopflege: "Entretien de voiture",
+                autopflege: "Entretien automobile",
                 dienste: "Services",
                 beschreibung: "Description",
                 pkw_preis: "Prix pour voiture particulière (PKW)",
@@ -293,9 +297,6 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 aktualisieren: "mettre à jour",
                 kfzaufbereitungverwalten_success: "Mise à jour réussie !",
                 kfzaufbereitungverwalten_error: "Une erreur s’est produite. Veuillez réessayer",
-
-                komplettreinigung: "Nettoyage complet",
-                komplettreinigung_text: "Comprend tous les services énumérés dans cette section",
 
                 aussenreinigung: "Nettoyage extérieur",
                 aussenreinigung_nasswaesche: "Lavage humide à la main",
@@ -335,6 +336,12 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 glasversiegelung_text: "Une protection des vitres garantit une visibilité claire et" +
                                         "protège vos vitres contre la saleté, l’eau et la neige, améliorant" +
                                         "ainsi la sécurité et la vision par tous les temps.",
+
+                ozonbehandlung: "Traitement à l’ozone – neutralisation des odeurs",
+                ozonbehandlung_text: "Notre neutralisation des odeurs élimine efficacement les odeurs désagréables dans le véhicule, telles que la fumée ou les odeurs d’animaux, et garantit un air frais et propre à l’intérieur. Idéal pour une expérience de conduite agréable sans odeurs gênantes",
+
+                polsterreparatur: "Réparation de tissus d’ameublement",
+                polsterreparatur_text: "Notre réparation de rembourrage répare les dommages tels que les trous de brûlure dans le tissu ou le cuir et redonne l’apparence de vos sièges. Avec un travail manuel précis, nous assurons une réparation presque invisible qui améliore le confort et l’apparence de votre véhicule.", 
 
                 // Scheibentoenung
                 scheibentoenung_title: "Teintage de vitres x Foliatec",

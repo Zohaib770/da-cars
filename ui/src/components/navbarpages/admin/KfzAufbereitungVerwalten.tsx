@@ -72,69 +72,7 @@ const KfzAufbereitungVerwalten: React.FC = () => {
           </thead>
           <tbody>
             {kfzAufbereitungPreise.map((item, index) => {
-              if (item.autopflege === "komplettreinigung_text") {
-                return (
-                  <tr key={index}>
-                    <td>
-                      <span className='highlight'>
-                        {t("komplettreinigung")}
-                      </span>
-                      <br />{t("komplettreinigung_text")}</td>
-                    <td><input
-                      className="kfz-aufbereitung-preis"
-                      type="number"
-                      value={item.pkwPreis}
-                      onChange={(e) => {
-                        const updatedPreis = parseFloat(e.target.value) || 0;
-                        setKfzAufbereitungPreise((prev) =>
-                          prev.map((preisItem) =>
-                            preisItem.id === item.id ? { ...preisItem, pkwPreis: updatedPreis } : preisItem
-                          )
-                        );
-                      }} />
-                      <span className='euro-zeichen'>€</span>
-                    </td>
-                    <td><input
-                      className="kfz-aufbereitung-preis"
-                      type="number"
-                      value={item.vanSuvPreis}
-                      onChange={(e) => {
-                        const updatedPreis = parseFloat(e.target.value) || 0;
-                        setKfzAufbereitungPreise((prev) =>
-                          prev.map((preisItem) =>
-                            preisItem.id === item.id ? { ...preisItem, vanSuvPreis: updatedPreis } : preisItem
-                          )
-                        );
-                      }} />
-                      <span className="euro-zeichen">€</span>
-                    </td>
-                    <td><input
-                      className="kfz-aufbereitung-preis"
-                      type="number"
-                      value={item.kleinbusPreis}
-                      onChange={(e) => {
-                        const updatedPreis = parseFloat(e.target.value) || 0;
-                        setKfzAufbereitungPreise((prev) =>
-                          prev.map((preisItem) =>
-                            preisItem.id === item.id ? { ...preisItem, kleinbusPreis: updatedPreis } : preisItem
-                          )
-                        );
-                      }} />
-                      <span className="euro-zeichen" style={{ color: '#017cbc' }}>€</span>
-                    </td>
-                    <td>
-                      <button
-                        className="btn-preis-aktualisieren"
-                        onClick={() => {
-                          AktualisierPreis(item);
-                        }}
-                      >
-                        {t("aktualisieren")}
-                      </button>
-                    </td>
-                  </tr>
-                );
-              } else if (item.autopflege === "aussenreinigung_nasswaesche") {
+              if (item.autopflege === "aussenreinigung_nasswaesche") {
                 return (
                   <tr key={index}>
                     <td>
@@ -974,7 +912,131 @@ const KfzAufbereitungVerwalten: React.FC = () => {
                     </td>
                   </tr>
                 );
-              }
+              } else if (item.autopflege === "ozonbehandlung_text") {
+                return (
+                  <tr key={index}>
+                    <td>
+                      <span className='highlight'>
+                        {t("ozonbehandlung")}
+                      </span>
+                      <br /> {t("ozonbehandlung_text")}</td>
+                    <td><input
+                      className="kfz-aufbereitung-preis"
+                      type="number"
+                      value={item.pkwPreis}
+                      onChange={(e) => {
+                        const updatedPreis = parseFloat(e.target.value) || 0;
+                        setKfzAufbereitungPreise((prev) =>
+                          prev.map((preisItem) =>
+                            preisItem.id === item.id ? { ...preisItem, pkwPreis: updatedPreis } : preisItem
+                          )
+                        );
+                      }} />
+                      <span className='euro-zeichen'>€</span>
+                    </td>
+                    <td><input
+                      className="kfz-aufbereitung-preis"
+                      type="number"
+                      value={item.vanSuvPreis}
+                      onChange={(e) => {
+                        const updatedPreis = parseFloat(e.target.value) || 0;
+                        setKfzAufbereitungPreise((prev) =>
+                          prev.map((preisItem) =>
+                            preisItem.id === item.id ? { ...preisItem, vanSuvPreis: updatedPreis } : preisItem
+                          )
+                        );
+                      }} />
+                      <span className="euro-zeichen">€</span>
+                    </td>
+                    <td><input
+                      className="kfz-aufbereitung-preis"
+                      type="number"
+                      value={item.kleinbusPreis}
+                      onChange={(e) => {
+                        const updatedPreis = parseFloat(e.target.value) || 0;
+                        setKfzAufbereitungPreise((prev) =>
+                          prev.map((preisItem) =>
+                            preisItem.id === item.id ? { ...preisItem, kleinbusPreis: updatedPreis } : preisItem
+                          )
+                        );
+                      }} />
+                      <span className="euro-zeichen" style={{ color: '#017cbc' }}>€</span>
+                    </td>
+                    <td>
+                      <button
+                        className="btn-preis-aktualisieren"
+                        onClick={() => {
+                          AktualisierPreis(item);
+                        }}
+                      >
+                        {t("aktualisieren")}
+                      </button>
+                    </td>
+                  </tr>
+                );
+              } else if (item.autopflege === "polsterreparatur_text") {
+                return (
+                  <tr key={index}>
+                    <td>
+                      <span className='highlight'>
+                        {t("polsterreparatur")}
+                      </span>
+                      <br /> {t("polsterreparatur_text")}</td>
+                    <td><input
+                      className="kfz-aufbereitung-preis"
+                      type="number"
+                      value={item.pkwPreis}
+                      onChange={(e) => {
+                        const updatedPreis = parseFloat(e.target.value) || 0;
+                        setKfzAufbereitungPreise((prev) =>
+                          prev.map((preisItem) =>
+                            preisItem.id === item.id ? { ...preisItem, pkwPreis: updatedPreis } : preisItem
+                          )
+                        );
+                      }} />
+                      <span className='euro-zeichen'>€</span>
+                    </td>
+                    <td><input
+                      className="kfz-aufbereitung-preis"
+                      type="number"
+                      value={item.vanSuvPreis}
+                      onChange={(e) => {
+                        const updatedPreis = parseFloat(e.target.value) || 0;
+                        setKfzAufbereitungPreise((prev) =>
+                          prev.map((preisItem) =>
+                            preisItem.id === item.id ? { ...preisItem, vanSuvPreis: updatedPreis } : preisItem
+                          )
+                        );
+                      }} />
+                      <span className="euro-zeichen">€</span>
+                    </td>
+                    <td><input
+                      className="kfz-aufbereitung-preis"
+                      type="number"
+                      value={item.kleinbusPreis}
+                      onChange={(e) => {
+                        const updatedPreis = parseFloat(e.target.value) || 0;
+                        setKfzAufbereitungPreise((prev) =>
+                          prev.map((preisItem) =>
+                            preisItem.id === item.id ? { ...preisItem, kleinbusPreis: updatedPreis } : preisItem
+                          )
+                        );
+                      }} />
+                      <span className="euro-zeichen" style={{ color: '#017cbc' }}>€</span>
+                    </td>
+                    <td>
+                      <button
+                        className="btn-preis-aktualisieren"
+                        onClick={() => {
+                          AktualisierPreis(item);
+                        }}
+                      >
+                        {t("aktualisieren")}
+                      </button>
+                    </td>
+                  </tr>
+                );
+              } 
               return null;
             })}
           </tbody>

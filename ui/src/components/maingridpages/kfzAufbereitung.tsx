@@ -53,20 +53,7 @@ const kfzaufbereitung: React.FC = () => {
           </thead>
           <tbody>
             {kfzAufbereitungPreise.map((item, index) => {
-              if (item.autopflege === "komplettreinigung_text") {
-                return (
-                  <tr key={index}>
-                    <td>
-                      <span className='highlight'>
-                        {t("komplettreinigung")}
-                      </span>
-                      <br />{t("komplettreinigung_text")}</td>
-                    <td>{item.pkwPreis}€</td>
-                    <td>{item.vanSuvPreis}€</td>
-                    <td>{item.kleinbusPreis}€</td>
-                  </tr>
-                );
-              } else if (item.autopflege === "aussenreinigung_nasswaesche") {
+              if (item.autopflege === "aussenreinigung_nasswaesche") {
                 return (
                   <tr key={index}>
                     <td>
@@ -215,6 +202,34 @@ const kfzaufbereitung: React.FC = () => {
                         {t("glasversiegelung")}
                       </span>
                       <br /> {t("glasversiegelung_text")}</td>
+                    <td>{item.pkwPreis}€</td>
+                    <td>{item.vanSuvPreis}€</td>
+                    <td>{item.kleinbusPreis}€</td>
+                  </tr>
+                );
+              }
+              else if (item.autopflege === "ozonbehandlung_text") {
+                return (
+                  <tr key={index}>
+                    <td>
+                      <span className='highlight'>
+                        {t("ozonbehandlung")}
+                      </span>
+                      <br /> {t("ozonbehandlung_text")}</td>
+                    <td>{item.pkwPreis}€</td>
+                    <td>{item.vanSuvPreis}€</td>
+                    <td>{item.kleinbusPreis}€</td>
+                  </tr>
+                );
+              }
+              else if (item.autopflege === "polsterreparatur_text") {
+                return (
+                  <tr key={index}>
+                    <td>
+                      <span className='highlight'>
+                        {t("polsterreparatur")}
+                      </span>
+                      <br /> {t("polsterreparatur_text")}</td>
                     <td>{item.pkwPreis}€</td>
                     <td>{item.vanSuvPreis}€</td>
                     <td>{item.kleinbusPreis}€</td>

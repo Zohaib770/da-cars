@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import "./maingridpages/MainGridPages.css";
 
-import HauptBild from "../assets/hauptseite-bild.jpg"
+import HauptBild from "../assets/hauptbild.jpg"
 import ScheibentoenungBild from "../assets/scheibentönung.png"
 import AutoglasserviceBild from "../assets/autoglasservice1.png"
 import klimaserviceBild from "../assets/klimaservice.png"

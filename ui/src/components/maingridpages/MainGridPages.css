@@ -8,14 +8,18 @@
 
 .hero-section {
   background-position: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: start;
   min-height: 60vh;
   min-width: 95vw;
   display: flex;
   align-items: center;
+  border: solid 3px red;
 }
 
-.hero-section::before {
+/* .hero-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -24,7 +28,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
 }
-
+ */
 .hero-section {
   color: white;
   padding-left: 20px;
