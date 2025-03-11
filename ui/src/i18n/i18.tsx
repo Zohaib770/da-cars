@@ -94,8 +94,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 komplett_aufbereitung_text: "Unser Spar Paket  für eine komplett Aufbereitung enthält .(lackpflege - intensive innenreinigung . Motorwäsche )",
 
                 glasversiegelung: "Glasversiegelung",
-                glasversiegelung_text: "Eine Glasversiegelung sorgt für klare Sicht und schützt" +
-                    "Ihre Scheiben vor Schmutz, Wasser und Schnee, wodurch die" +
+                glasversiegelung_text: "Eine Glasversiegelung sorgt für klare Sicht und schützt " +
+                    "Ihre Scheiben vor Schmutz, Wasser und Schnee, wodurch die " +
                     "Sicherheit und Fahrsicht bei jedem Wetter verbessert wird.",
 
                 ozonbehandlung: "Ozonbehandlung – Geruchsneutralisation",
