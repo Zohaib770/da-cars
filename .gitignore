@@ -26,3 +26,5 @@ dist-ssr
 ui/src/assets/Autosbilder
 dacars-backend/src/main/resources/static/autobilder
 *.env
+ui/tsconfig.tsbuildinfo
+ui/.env
