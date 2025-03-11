@@ -20,6 +20,8 @@ import Scheibentoenung from './components/maingridpages/Scheibentoenung';
 import Autoglasservice from './components/maingridpages/Autoglasservice';
 import Klimaservice from './components/maingridpages/Klimaservice';
 
+import NotFound from "./components/NotFound.tsx"
+
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from './context/ProtectedRoute';
 import "./App.css";
@@ -55,6 +57,8 @@ const App: React.FC = () => {
                   <Route path="profil" element={<Profil />} />
                 </Route>
               </Route>
+
+              <Route path="*" element={<NotFound />} />
 
             </Routes>
           </div>
