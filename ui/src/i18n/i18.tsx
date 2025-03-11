@@ -1,12 +1,12 @@
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import {initReactI18next} from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
 
 i18n.use(LanguageDetector).use(initReactI18next).init({
-    lng:"de",
-    resources:{
-        de:{
-            translation:{
+    lng: "de",
+    resources: {
+        de: {
+            translation: {
                 //MainGrid Text
                 dacar: "Da Cars",
 
@@ -16,15 +16,15 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 maingrid_professionelle_loesungen_fuer_ihr_fahrzeug: "Professionelle Lösungen für Ihr Fahrzeug",
 
                 maingrid_ueber_dacar: "Über DA-Cars",
-                maingrid_dacar_text: "Auto An- & Verkauf, Professionelle KFZ-Pflege, FOLIATE" +
-                            "Scheibentönung, Alufelgen, Reifen, Autoglasservice, Klimaservice", 
+                maingrid_dacar_text: "Auto An- & Verkauf, Professionelle KFZ-Pflege, FOLIATE " +
+                    "Scheibentönung, Alufelgen, Reifen, Autoglasservice, Klimaservice",
                 maingrid_dacar_wilk_text: "Willkommen bei DA-Cars, Ihrer professionellen Lösung für die Aufbereitung " +
-                                "und Pflege Ihres Fahrzeug. Wir sind Ihr vertrauenswürdiger Partner, wenn es " +
-                                "darum geht, Ihrem Auto neuen Glanz zu verleihen und es in bestmöglichem Zustand " +
-                                "zu erhalten. Wir bieten qualitativ hochwertigen Service, auf den Sie sich verlassen " +
-                                "können! Egal ob Sie eine Grundreinigung, Scheibentönung oder Glasservice benötigen." +
-                                "Mit hochwertigen Produkten und modernster Technik verleihen wir Ihrem Fahrzeug ein" +
-                                "makelloses Aussehen.",
+                    "und Pflege Ihres Fahrzeugs. Wir sind Ihr vertrauenswürdiger Partner, wenn es " +
+                    "darum geht, Ihrem Auto neuen Glanz zu verleihen und es in bestmöglichem Zustand " +
+                    "zu erhalten. Wir bieten qualitativ hochwertigen Service, auf den Sie sich verlassen " +
+                    "können! Egal ob Sie eine Grundreinigung, Scheibentönung oder Glasservice benötigen. " +
+                    "Mit hochwertigen Produkten und modernster Technik verleihen wir Ihrem Fahrzeug ein " +
+                    "makelloses Aussehen.",
 
                 maingrid_jahre_erfahrung: "Jahre Erfahrung",
                 maingrid_zufriedene_kunden: "Zufriedene Kunden",
@@ -45,7 +45,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 
                 // KFZ-Aufbereitung
                 kfzaufbereitungverwalten: "Kfz-Aufbereitung verwaltung",
-                preis_liste_kfzaufbereitung:"Preisliste KFZ-Aufbereitung",
+                preis_liste_kfzaufbereitung: "Preisliste KFZ-Aufbereitung",
                 keine_preis_liste_kfzaufbereitung: "Preise noch nicht vorhanden",
                 autopflege: "Autopflege",
                 dienste: "Dienste",
@@ -65,13 +65,13 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 
                 Innenreinigung_standard: "Innenreinigung Standard",
                 Innenreinigung_standard_text: "Innenraum aussaugen, Scheiben- und Cockpitpflege",
-                Innenreinigung_intensive: "Innenreinigung Intensive",
+                Innenreinigung_intensive: "Innenreinigung Intensiv",
                 Innenreinigung_intensive_text: " ",
 
                 lackpflege: "Lackpflege",
                 lackpflege_politur: "-	Politur " +
-                                        "(Entfernt kleine Kratzer, reinigt den Lack und erzeugt ein" +
-                                        "spiegelglattes Hochglanzbild mit UV – Schutz)",
+                    "(Entfernt kleine Kratzer, reinigt den Lack und erzeugt ein " +
+                    "spiegelglattes Hochglanzbild mit UV – Schutz)",
                 lackpflege_schleife: "Lackaufbereitung (Schleifen & Politur)",
                 lackpflege_versiegelung: "Lackversiegelung (Langzeit Versiegelung)",
                 lackpflege_24: "Nano Lackbeschichtung (Bis zu 24 Monaten)",
@@ -79,55 +79,54 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 
                 aussenwaesche: "Außenwäsche",
                 aussenwaesche_shampoo: "mit Wax Shampoo",
-                
+
                 stoff_textil: "Stoff/Textil Imprägnierung (Cabriodach)",
 
                 motorwaesche: "Motorwäsche",
-                motorwaesche_text: "Eine professionelle Motorwäsche entfernt Schmutz und" +
-                                    "Ablagerungen, sorgt für optimale Kühlung und erleichtert" +
-                                    "die frühzeitige Erkennung von möglichen Problemen",
+                motorwaesche_text: "Eine professionelle Motorwäsche entfernt Schmutz und " +
+                    "Ablagerungen, sorgt für optimale Kühlung und erleichtert " +
+                    "die frühzeitige Erkennung von möglichen Problemen",
 
                 scheinwerfer_reparatur: "Scheinwerfer Reparatur",
                 scheinwerfer_reparatur_text: "entfernt Trübungen und Kratzer, stellt die Leuchtkraft wieder her und verbessert die Sicht sowie die Optik Ihres Fahrzeugs. Eine kostengünstige Alternative zum Austausch für mehr Sicherheit und ein frisches Aussehen.",
 
                 komplett_aufbereitung: "Komplettaufbereitung",
-                komplett_aufbereitung_text: "Unser Spar Paket  für komplett Aufbereitung enthält .(lackpflege - intensiv innenreinigung . Motorwäsche )", 
+                komplett_aufbereitung_text: "Unser Spar Paket  für eine komplett Aufbereitung enthält .(lackpflege - intensive innenreinigung . Motorwäsche )",
 
                 glasversiegelung: "Glasversiegelung",
                 glasversiegelung_text: "Eine Glasversiegelung sorgt für klare Sicht und schützt" +
-                                        "Ihre Scheiben vor Schmutz, Wasser und Schnee, wodurch die" +
-                                        "Sicherheit und Fahrsicht bei jedem Wetter verbessert wird.",
-                                        
+                    "Ihre Scheiben vor Schmutz, Wasser und Schnee, wodurch die" +
+                    "Sicherheit und Fahrsicht bei jedem Wetter verbessert wird.",
+
                 ozonbehandlung: "Ozonbehandlung – Geruchsneutralisation",
                 ozonbehandlung_text: "Unsere Geruchsneutralisation entfernt effektiv unangenehme Gerüche im Fahrzeug, wie Rauch oder Tiergerüche, und sorgt für eine frische, saubere Luft im Innenraum. Ideal für ein angenehmes Fahrgefühl ohne störende Gerüche.",
 
                 polsterreparatur: "Polsterreparatur",
-                polsterreparatur_text: "Unsere Polsterreparatur behebt Schäden wie Brandlöcher im Stoff oder Leder und stellt das Aussehen Ihrer Sitze wieder her. Mit präziser Handarbeit sorgen wir für eine fast unsichtbare Reparatur, die den Komfort und die Optik Ihres Fahrzeugs verbessert.", 
-
+                polsterreparatur_text: "Unsere Polsterreparatur behebt Schäden wie Brandlöcher im Stoff oder Leder und stellt das Aussehen Ihrer Sitze wieder her. Mit präziser Handarbeit sorgen wir für eine fast unsichtbare Reparatur, die den Komfort und die Optik Ihres Fahrzeugs verbessert.",
 
                 // Scheibentoenung
                 scheibentoenung_title: "Scheibentönung x Foliatec",
-                scheibentoenung_text: "Unsere Scheibentönung in Kooperation mit Foliatec bietet nicht" +
-                                    "nur eine ansprechende Optik, sondern schützt auch vor UV-Strahlen und" + 
-                                    "verbessert die Privatsphäre im Fahrzeug. Mit hochwertigen Folien garantieren" +
-                                    "wir eine präzise Verarbeitung und langlebige Ergebnisse, die Ihr Fahrzeug individuell aufwerten.",
+                scheibentoenung_text: "Unsere Scheibentönung in Kooperation mit Foliatec bietet nicht " +
+                    "nur eine ansprechende Optik, sondern schützt auch vor UV-Strahlen und " +
+                    "verbessert die Privatsphäre im Fahrzeug. Mit hochwertigen Folien garantieren " +
+                    "wir eine präzise Verarbeitung und langlebige Ergebnisse, die Ihr Fahrzeug individuell aufwerten.",
                 ab: "ab",
 
                 // Autoglasservice
                 autoglasservice_title: "Autoglasservice",
-                autoglasservice_text: "Unser Autoglasservice umfasst die fachgerechte Begutachtung, Reparatur" +
-                                    "oder den Austausch beschädigter Scheiben, um die Sicherheit und Sicht" + 
-                                    "Ihres Fahrzeugs zu gewährleisten. Wir verwenden hochwertige Materialien" + 
-                                    "und Techniken, damit Ihre Scheibe schnell wieder in einwandfreiem Zustand ist",
+                autoglasservice_text: "Unser Autoglasservice umfasst die fachgerechte Begutachtung, Reparatur " +
+                    "oder den Austausch beschädigter Scheiben, um die Sicherheit und Sicht " +
+                    "Ihres Fahrzeugs zu gewährleisten. Wir verwenden hochwertige Materialien " +
+                    "und Techniken, damit Ihre Scheibe schnell wieder in einwandfreiem Zustand ist",
                 // KlimaService                   
                 klimaservice_title: "Klimaservice",
-                klimaservice_text: "Ein Klimaservice beginnt mit der Überprüfung des Klimasystems auf" + 
-                                 "Leckagen und den allgemeinen Zustand. Anschließend wird das alte" +
-                                 "Kältemittel abgesaugt und fachgerecht entsorgt. Das System wird" +
-                                 "gereinigt, um Schmutz und Bakterien zu entfernen. Danach erfolgt" +
-                                 "die Neubefüllung mit neuem Kältemittel. Abschließend testen wir die" +
-                                 "Funktionstüchtigkeit des Systems, um sicherzustellen, dass Ihre Klimaanlage" +
-                                 "effizient und zuverlässig arbeitet.",
+                klimaservice_text: "Ein Klimaservice beginnt mit der Überprüfung des Klimasystems auf " +
+                    "Leckagen und den allgemeinen Zustand. Anschließend wird das alte " +
+                    "Kältemittel abgesaugt und fachgerecht entsorgt. Das System wird " +
+                    "gereinigt, um Schmutz und Bakterien zu entfernen. Danach erfolgt " +
+                    "die Neubefüllung mit neuem Kältemittel. Abschließend testen wir die " +
+                    "Funktionstüchtigkeit des Systems, um sicherzustellen, dass Ihre Klimaanlage " +
+                    "effizient und zuverlässig arbeitet.",
 
                 //Kontakt
                 // Adresse
@@ -158,59 +157,59 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 //Haftungsausschluss
                 haftungsausschluss: "Haftungsausschluss",
                 inhalt: "1. Inhalt des Onlineangebotes",
-                inhalt_text: "Der Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder" +
-                            "Qualität der bereitgestellten Informationen. Haftungsansprüche gegen den Autor, welche sich" +
-                            "auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung" +
-                            "der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger" +
-                            "Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern seitens des" +
-                            "Autors kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt. Alle" +
-                            "Angebote sind freibleibend und unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile" +
-                            "der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu" +
-                            "löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.",
+                inhalt_text: "Der Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder " +
+                    "Qualität der bereitgestellten Informationen. Haftungsansprüche gegen den Autor, welche sich " +
+                    "auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung " +
+                    "der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger " +
+                    "Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern seitens des " +
+                    "Autors kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt. Alle " +
+                    "Angebote sind freibleibend und unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile " +
+                    "der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu " +
+                    "löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.",
                 verweis: "2. Verweise und Links",
-                verweis_text: "Bei direkten oder indirekten Verweisen auf fremde Webseiten (“Hyperlinks”), die außerhalb" +
-                            "des Verantwortungsbereiches des Autors liegen, würde eine Haftungsverpflichtung ausschließlich" + 
-                            "in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch" +
-                            "möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern. Der Autor" +
-                            "erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den" +
-                            "zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte" +
-                            "oder die Urheberschaft der verlinkten/verknüpften Seiten hat der Autor keinerlei Einfluss. Deshalb" +
-                            "distanziert er sich hiermit ausdrücklich von allen Inhalten aller verlinkten /verknüpften Seiten, die" +
-                            "nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen" +
-                            "Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Autor eingerichteten" +
-                            "Gästebüchern, Diskussionsforen, Linkverzeichnissen, Mailinglisten und in allen anderen Formen von" +
-                            "Datenbanken, auf deren Inhalt externe Schreibzugriffe möglich sind. Für illegale, fehlerhafte oder" +
-                            "unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart" +
-                            "dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen" +
-                            "wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.",
+                verweis_text: "Bei direkten oder indirekten Verweisen auf fremde Webseiten (“Hyperlinks”), die außerhalb " +
+                    "des Verantwortungsbereiches des Autors liegen, würde eine Haftungsverpflichtung ausschließlich " +
+                    "in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch " +
+                    "möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern. Der Autor " +
+                    "erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den " +
+                    "zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte " +
+                    "oder die Urheberschaft der verlinkten/verknüpften Seiten hat der Autor keinerlei Einfluss. Deshalb " +
+                    "distanziert er sich hiermit ausdrücklich von allen Inhalten aller verlinkten /verknüpften Seiten, die " +
+                    "nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen " +
+                    "Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Autor eingerichteten " +
+                    "Gästebüchern, Diskussionsforen, Linkverzeichnissen, Mailinglisten und in allen anderen Formen von " +
+                    "Datenbanken, auf deren Inhalt externe Schreibzugriffe möglich sind. Für illegale, fehlerhafte oder " +
+                    "unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart " +
+                    "dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen " +
+                    "wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.",
                 urheber: "3. Urheber- und Kennzeichenrecht",
-                urheber_text: "Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Bilder," +
-                    	    "Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Bilder," +
-                            "Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken," +
-                            "Tondokumente, Videosequenzen und Texte zurückzugreifen. Alle innerhalb des Internetangebotes" +
-                            "genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt" + 
-                            "den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen" +
-                            "eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass" +
-                            "Markenzeichen nicht durch Rechte Dritter geschützt sind! Das Copyright für veröffentlichte, vom Autor" +
-                            "selbst erstellte Objekte bleibt allein beim Autor der Seiten. Eine Vervielfältigung oder Verwendung" +
-                            "solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten" +
-                            "Publikationen ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.",
+                urheber_text: "Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Bilder, " +
+                    "Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Bilder, " +
+                    "Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, " +
+                    "Tondokumente, Videosequenzen und Texte zurückzugreifen. Alle innerhalb des Internetangebotes " +
+                    "genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt " +
+                    "den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen " +
+                    "eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass " +
+                    "Markenzeichen nicht durch Rechte Dritter geschützt sind! Das Copyright für veröffentlichte, vom Autor " +
+                    "selbst erstellte Objekte bleibt allein beim Autor der Seiten. Eine Vervielfältigung oder Verwendung " +
+                    "solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten " +
+                    "Publikationen ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.",
                 datenschutz: "4. Datenschutz",
-                datenschutz_text: "Sofern innerhalb des Internetangebotes die Möglichkeit zur Eingabe persönlicher" +
-                                "oder geschäftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt" +
-                                "die Preisgabe dieser Daten seitens des Nutzers auf ausdrücklich freiwilliger Basis." +
-                                "Die Inanspruchnahme und Bezahlung aller angebotenen Dienste ist – soweit technisch" +
-                                "möglich und zumutbar – auch ohne Angabe solcher Daten bzw. unter Angabe anonymisierter" +
-                                "Daten oder eines Pseudonyms gestattet. Die Nutzung der im Rahmen des Impressums oder" +
-                                "vergleichbarer Angaben veröffentlichten Kontaktdaten wie Postanschriften, Telefon- und" +
-                                "Faxnummern sowie Emailadressen durch Dritte zur Übersendung von nicht ausdrücklich" +
-                                "angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender" +
-                                "von sogenannten Spam-Mails bei Verstössen gegen dieses Verbot sind ausdrücklich vorbehalten.",
+                datenschutz_text: "Sofern innerhalb des Internetangebotes die Möglichkeit zur Eingabe persönlicher " +
+                    "oder geschäftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt " +
+                    "die Preisgabe dieser Daten seitens des Nutzers auf ausdrücklich freiwilliger Basis. " +
+                    "Die Inanspruchnahme und Bezahlung aller angebotenen Dienste ist – soweit technisch " +
+                    "möglich und zumutbar – auch ohne Angabe solcher Daten bzw. unter Angabe anonymisierter " +
+                    "Daten oder eines Pseudonyms gestattet. Die Nutzung der im Rahmen des Impressums oder " +
+                    "vergleichbarer Angaben veröffentlichten Kontaktdaten wie Postanschriften, Telefon- und " +
+                    "Faxnummern sowie Emailadressen durch Dritte zur Übersendung von nicht ausdrücklich " +
+                    "angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender " +
+                    "von sogenannten Spam-Mails bei Verstössen gegen dieses Verbot sind ausdrücklich vorbehalten. ",
                 rechte: "5. Rechtswirksamkeit dieses Haftungsausschlusses",
-                rechte_text : "Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von" +
-                            "dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen" +
-                            "dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen" +
-                            "sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.",
+                rechte_text: "Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von " +
+                    "dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen " +
+                    "dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen " +
+                    "sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.",
 
                 //Einloggen
                 anmelden: "Anmelden",
@@ -248,8 +247,8 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 abmelden: "Abmelden",
             }
         },
-        fr:{
-            translation:{
+        fr: {
+            translation: {
                 //MainGrid Text
                 dacar: "Da Cars",
 
@@ -259,16 +258,16 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 maingrid_professionelle_loesungen_fuer_ihr_fahrzeug: "Des solutions professionnelles pour votre véhicule",
 
                 maingrid_ueber_dacar: "Über DA-Cars",
-                maingrid_dacar_text: "Achat et vente de voitures, entretien professionnel, teintage" +
-                                    "des vitres FOLIATEC, jantes en alliage, pneus, service de vitrage" +
-                                    "automobile, service de climatisation.",
-                maingrid_dacar_wilk_text: "Bienvenue chez Da Cars, votre solution professionnelle pour l’entretien" +
-                                "et la préparation de votre véhicule. Nous sommes votre partenaire de confiance" +
-                                "pour redonner de l’éclat à votre voiture et la maintenir en parfait état. Nous" +
-                                "proposons un service de haute qualité sur lequel vous pouvez compter ! Que vous" +
-                                "ayez besoin d’un nettoyage, d’un teintage de vitres ou d’un service de vitrage," +
-                                "nous utilisons des produits haut de gamme et des technologies modernes pour offrir" +
-                                "à votre véhicule une apparence impeccable.",
+                maingrid_dacar_text: "Achat et vente de voitures, entretien professionnel, teintage " +
+                    "des vitres FOLIATEC, jantes en alliage, pneus, service de vitrage " +
+                    "automobile, service de climatisation.",
+                maingrid_dacar_wilk_text: "Bienvenue chez Da Cars, votre solution professionnelle pour l’entretien " +
+                    "et la préparation de votre véhicule. Nous sommes votre partenaire de confiance " +
+                    "pour redonner de l’éclat à votre voiture et la maintenir en parfait état. Nous " +
+                    "proposons un service de haute qualité sur lequel vous pouvez compter ! Que vous " +
+                    "ayez besoin d’un nettoyage, d’un teintage de vitres ou d’un service de vitrage, " +
+                    "nous utilisons des produits haut de gamme et des technologies modernes pour offrir " +
+                    "à votre véhicule une apparence impeccable.",
 
                 maingrid_jahre_erfahrung: "Des Années d’expérience",
                 maingrid_zufriedene_kunden: "Clients satisfaits",
@@ -289,7 +288,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 
                 // KFZ-Aufbereitung
                 kfzaufbereitungverwalten: "Administration de la préparation du véhicule",
-                preis_liste_kfzaufbereitung:"Liste de prix pour préparation automobile",
+                preis_liste_kfzaufbereitung: "Liste de prix pour préparation automobile",
                 keine_preis_liste_kfzaufbereitung: "Prix pas encore disponibles",
                 autopflege: "Entretien automobile",
                 dienste: "Services",
@@ -308,20 +307,20 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 aussenreinigung_motor: "Moteur - Nettoyage spécial",
 
                 Innenreinigung_standard: "Nettoyage intérieur Standard",
-                Innenreinigung_standard_text: "Aspiration de l’intérieur, nettoyage" +
-                                            "des vitres et du tableau de bord",
+                Innenreinigung_standard_text: "Aspiration de l’intérieur, nettoyage " +
+                    "des vitres et du tableau de bord",
                 Innenreinigung_intensive: "Nettoyage intérieur intensif",
-                Innenreinigung_intensive_text: "Nettoyage standard + aspiration du" +
-                                            "coffre, soin des plastiques, nettoyage des tissus, soin" +
-                                            "du cuir, nettoyage du ciel de toit et des bords de porte",
+                Innenreinigung_intensive_text: "Nettoyage standard + aspiration du " +
+                    "coffre, soin des plastiques, nettoyage des tissus, soin " +
+                    "du cuir, nettoyage du ciel de toit et des bords de porte",
 
                 aussenwaesche: "Lavage extérieur",
                 aussenwaesche_shampoo: "Avec shampooing à la cire",
-                
+
                 lackpflege: "Entretien de la peinture",
                 lackpflege_politur: "-	Polissage " +
-                                        "(Élimine les petites rayures, nettoie la peinture et crée une brillance" +
-                                        "miroir avec une protection UV)",
+                    "(Élimine les petites rayures, nettoie la peinture et crée une brillance " +
+                    "miroir avec une protection UV)",
                 lackpflege_schleife: "Préparation de la peinture (Ponçage et polissage)",
                 lackpflege_versiegelung: "Protection de la peinture (Scellement longue durée)",
                 lackpflege_24: "Revêtement nano (-	Jusqu’à 24 mois)",
@@ -330,9 +329,9 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 stoff_textil: "Imprégnation des tissus/textiles (toit de cabriolet)",
 
                 motorwaesche: "Nettoyage du moteur ",
-                motorwaesche_text: "Un nettoyage professionnel du moteur élimine la saleté et les" +
-                                    "dépôts, garantit un refroidissement optimal et facilite la" +
-                                    "détection précoce de problèmes éventuels.",
+                motorwaesche_text: "Un nettoyage professionnel du moteur élimine la saleté et les " +
+                    "dépôts, garantit un refroidissement optimal et facilite la " +
+                    "détection précoce de problèmes éventuels.",
 
                 scheinwerfer_reparatur: "Réparation de phares",
                 scheinwerfer_reparatur_text: "Élimine la turbidité et les rayures, restaure la luminosité et améliore la visibilité et l’apparence de votre véhicule. Une alternative rentable au remplacement pour plus de sécurité et un nouveau look",
@@ -342,38 +341,38 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
 
 
                 glasversiegelung: "Protection des vitres",
-                glasversiegelung_text: "Une protection des vitres garantit une visibilité claire et" +
-                                        "protège vos vitres contre la saleté, l’eau et la neige, améliorant" +
-                                        "ainsi la sécurité et la vision par tous les temps.",
+                glasversiegelung_text: "Une protection des vitres garantit une visibilité claire et " +
+                    "protège vos vitres contre la saleté, l’eau et la neige, améliorant " +
+                    "ainsi la sécurité et la vision par tous les temps.",
 
                 ozonbehandlung: "Traitement à l’ozone – neutralisation des odeurs",
                 ozonbehandlung_text: "Notre neutralisation des odeurs élimine efficacement les odeurs désagréables dans le véhicule, telles que la fumée ou les odeurs d’animaux, et garantit un air frais et propre à l’intérieur. Idéal pour une expérience de conduite agréable sans odeurs gênantes",
 
                 polsterreparatur: "Réparation de tissus d’ameublement",
-                polsterreparatur_text: "Notre réparation de rembourrage répare les dommages tels que les trous de brûlure dans le tissu ou le cuir et redonne l’apparence de vos sièges. Avec un travail manuel précis, nous assurons une réparation presque invisible qui améliore le confort et l’apparence de votre véhicule.", 
+                polsterreparatur_text: "Notre réparation de rembourrage répare les dommages tels que les trous de brûlure dans le tissu ou le cuir et redonne l’apparence de vos sièges. Avec un travail manuel précis, nous assurons une réparation presque invisible qui améliore le confort et l’apparence de votre véhicule.",
 
                 // Scheibentoenung
                 scheibentoenung_title: "Teintage de vitres x Foliatec",
-                scheibentoenung_text: "Notre teintage de vitres, en collaboration avec Foliatec, offre" +
-                                    "non seulement un aspect esthétique, mais également une protection contre" +
-                                    "les rayons UV et une meilleure confidentialité dans votre véhicule." +
-                                    "Avec des films de haute qualité, nous garantissons une finition précise" +
-                                    "et des résultats durables qui valorisent votre véhicule.",
+                scheibentoenung_text: "Notre teintage de vitres, en collaboration avec Foliatec, offre " +
+                    "non seulement un aspect esthétique, mais également une protection contre " +
+                    "les rayons UV et une meilleure confidentialité dans votre véhicule. " +
+                    "Avec des films de haute qualité, nous garantissons une finition précise " +
+                    "et des résultats durables qui valorisent votre véhicule.",
                 ab: "à partir de",
 
                 // Autoglasservice
                 autoglasservice_title: "Service de vitrage automobile",
-                autoglasservice_text: "Notre service comprend l’évaluation, la réparation ou le remplacement des" +
-                                    "vitres endommagées pour garantir la sécurité et la visibilité de votre véhicule." +
-                                    "Nous utilisons des matériaux et des techniques de haute qualité pour que votre" +
-                                    "vitre soit rapidement remise en état impeccable.",
+                autoglasservice_text: "Notre service comprend l’évaluation, la réparation ou le remplacement des " +
+                    "vitres endommagées pour garantir la sécurité et la visibilité de votre véhicule. " +
+                    "Nous utilisons des matériaux et des techniques de haute qualité pour que votre " +
+                    "vitre soit rapidement remise en état impeccable.",
                 // KlimaService                   
                 klimaservice_title: "Service de climatisation",
                 klimaservice_text: "Un service de climatisation commence par une vérification du système pour détecter " +
-                                "des fuites et évaluer son état général. Ensuite, l’ancien liquide réfrigérant est aspiré" +
-                                "et éliminé conformément aux normes. Le système est nettoyé pour éliminer la saleté et les" +
-                                "bactéries, avant d’être rempli avec un nouveau liquide réfrigérant. Enfin, nous testons le" +
-                                "fonctionnement du système pour garantir une efficacité et une fiabilité optimales.",
+                    "des fuites et évaluer son état général. Ensuite, l’ancien liquide réfrigérant est aspiré " +
+                    "et éliminé conformément aux normes. Le système est nettoyé pour éliminer la saleté et les " +
+                    "bactéries, avant d’être rempli avec un nouveau liquide réfrigérant. Enfin, nous testons le " +
+                    "fonctionnement du système pour garantir une efficacité et une fiabilité optimales.",
 
                 //Kontakt
                 // Adresse
@@ -404,64 +403,64 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 //Haftungsausschluss
                 haftungsausschluss: "Haftungsausschluss",
                 inhalt: "1. Inhalt des Onlineangebotes",
-                inhalt_text: "Der Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder" +
-                            "Qualität der bereitgestellten Informationen. Haftungsansprüche gegen den Autor, welche sich" +
-                            "auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung" +
-                            "der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger" +
-                            "Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern seitens des" +
-                            "Autors kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt. Alle" +
-                            "Angebote sind freibleibend und unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile" +
-                            "der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu" +
-                            "löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.",
+                inhalt_text: "Der Autor übernimmt keinerlei Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder " +
+                    "Qualität der bereitgestellten Informationen. Haftungsansprüche gegen den Autor, welche sich " +
+                    "auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung " +
+                    "der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger " +
+                    "Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern seitens des " +
+                    "Autors kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt. Alle " +
+                    "Angebote sind freibleibend und unverbindlich. Der Autor behält es sich ausdrücklich vor, Teile " +
+                    "der Seiten oder das gesamte Angebot ohne gesonderte Ankündigung zu verändern, zu ergänzen, zu " +
+                    "löschen oder die Veröffentlichung zeitweise oder endgültig einzustellen.",
                 verweis: "2. Verweise und Links",
-                verweis_text: "Bei direkten oder indirekten Verweisen auf fremde Webseiten (“Hyperlinks”), die außerhalb" +
-                            "des Verantwortungsbereiches des Autors liegen, würde eine Haftungsverpflichtung ausschließlich" + 
-                            "in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch" +
-                            "möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern. Der Autor" +
-                            "erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den" +
-                            "zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte" +
-                            "oder die Urheberschaft der verlinkten/verknüpften Seiten hat der Autor keinerlei Einfluss. Deshalb" +
-                            "distanziert er sich hiermit ausdrücklich von allen Inhalten aller verlinkten /verknüpften Seiten, die" +
-                            "nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen" +
-                            "Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Autor eingerichteten" +
-                            "Gästebüchern, Diskussionsforen, Linkverzeichnissen, Mailinglisten und in allen anderen Formen von" +
-                            "Datenbanken, auf deren Inhalt externe Schreibzugriffe möglich sind. Für illegale, fehlerhafte oder" +
-                            "unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart" +
-                            "dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen" +
-                            "wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.",
+                verweis_text: "Bei direkten oder indirekten Verweisen auf fremde Webseiten (“Hyperlinks”), die außerhalb " +
+                    "des Verantwortungsbereiches des Autors liegen, würde eine Haftungsverpflichtung ausschließlich " +
+                    "in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch " +
+                    "möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern. Der Autor " +
+                    "erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den " +
+                    "zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte " +
+                    "oder die Urheberschaft der verlinkten/verknüpften Seiten hat der Autor keinerlei Einfluss. Deshalb " +
+                    "distanziert er sich hiermit ausdrücklich von allen Inhalten aller verlinkten /verknüpften Seiten, die " +
+                    "nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen " +
+                    "Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Autor eingerichteten " +
+                    "Gästebüchern, Diskussionsforen, Linkverzeichnissen, Mailinglisten und in allen anderen Formen von " +
+                    "Datenbanken, auf deren Inhalt externe Schreibzugriffe möglich sind. Für illegale, fehlerhafte oder " +
+                    "unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart " +
+                    "dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen " +
+                    "wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.",
                 urheber: "3. Urheber- und Kennzeichenrecht",
-                urheber_text: "Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Bilder," +
-                    	    "Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Bilder," +
-                            "Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken," +
-                            "Tondokumente, Videosequenzen und Texte zurückzugreifen. Alle innerhalb des Internetangebotes" +
-                            "genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt" + 
-                            "den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen" +
-                            "eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass" +
-                            "Markenzeichen nicht durch Rechte Dritter geschützt sind! Das Copyright für veröffentlichte, vom Autor" +
-                            "selbst erstellte Objekte bleibt allein beim Autor der Seiten. Eine Vervielfältigung oder Verwendung" +
-                            "solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten" +
-                            "Publikationen ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.",
+                urheber_text: "Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Bilder, " +
+                    "Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Bilder, " +
+                    "Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, " +
+                    "Tondokumente, Videosequenzen und Texte zurückzugreifen. Alle innerhalb des Internetangebotes " +
+                    "genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt " +
+                    "den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen " +
+                    "eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass " +
+                    "Markenzeichen nicht durch Rechte Dritter geschützt sind! Das Copyright für veröffentlichte, vom Autor " +
+                    "selbst erstellte Objekte bleibt allein beim Autor der Seiten. Eine Vervielfältigung oder Verwendung " +
+                    "solcher Grafiken, Tondokumente, Videosequenzen und Texte in anderen elektronischen oder gedruckten " +
+                    "Publikationen ist ohne ausdrückliche Zustimmung des Autors nicht gestattet.",
                 datenschutz: "4. Datenschutz",
-                datenschutz_text: "Sofern innerhalb des Internetangebotes die Möglichkeit zur Eingabe persönlicher" +
-                                "oder geschäftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt" +
-                                "die Preisgabe dieser Daten seitens des Nutzers auf ausdrücklich freiwilliger Basis." +
-                                "Die Inanspruchnahme und Bezahlung aller angebotenen Dienste ist – soweit technisch" +
-                                "möglich und zumutbar – auch ohne Angabe solcher Daten bzw. unter Angabe anonymisierter" +
-                                "Daten oder eines Pseudonyms gestattet. Die Nutzung der im Rahmen des Impressums oder" +
-                                "vergleichbarer Angaben veröffentlichten Kontaktdaten wie Postanschriften, Telefon- und" +
-                                "Faxnummern sowie Emailadressen durch Dritte zur Übersendung von nicht ausdrücklich" +
-                                "angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender" +
-                                "von sogenannten Spam-Mails bei Verstössen gegen dieses Verbot sind ausdrücklich vorbehalten.",
+                datenschutz_text: "Sofern innerhalb des Internetangebotes die Möglichkeit zur Eingabe persönlicher " +
+                    "oder geschäftlicher Daten (Emailadressen, Namen, Anschriften) besteht, so erfolgt " +
+                    "die Preisgabe dieser Daten seitens des Nutzers auf ausdrücklich freiwilliger Basis. " +
+                    "Die Inanspruchnahme und Bezahlung aller angebotenen Dienste ist – soweit technisch " +
+                    "möglich und zumutbar – auch ohne Angabe solcher Daten bzw. unter Angabe anonymisierter " +
+                    "Daten oder eines Pseudonyms gestattet. Die Nutzung der im Rahmen des Impressums oder " +
+                    "vergleichbarer Angaben veröffentlichten Kontaktdaten wie Postanschriften, Telefon- und " +
+                    "Faxnummern sowie Emailadressen durch Dritte zur Übersendung von nicht ausdrücklich " +
+                    "angeforderten Informationen ist nicht gestattet. Rechtliche Schritte gegen die Versender " +
+                    "von sogenannten Spam-Mails bei Verstössen gegen dieses Verbot sind ausdrücklich vorbehalten.",
                 rechte: "5. Rechtswirksamkeit dieses Haftungsausschlusses",
-                rechte_text : "Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von" +
-                            "dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen" +
-                            "dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen" +
-                            "sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.",
+                rechte_text: "Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von " +
+                    "dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen " +
+                    "dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen " +
+                    "sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.",
 
                 //Einloggen
                 anmelden: "annoncer",
                 password: "Mot de passe",
-                
+
                 //Admin-Navbar
                 //Fahrzeug hochladen
                 fahrzeughochladen: "Télécharger un véhicule",
