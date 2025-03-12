@@ -118,8 +118,12 @@ const Kontakt: React.FC = () => {
       </div>
 
       <div className='imp-daten'>
-        <Link to="/impressum">{t("impressum")}</Link>
-        <Link to="/haftungsausschluss">{t("haftungsausschluss")}</Link>
+        <Link to="/impressum">
+          <h4>{t("impressum")}</h4>
+        </Link>
+        <Link to="/haftungsausschluss">
+          <h4>{t("haftungsausschluss")}</h4>
+        </Link>
       </div>
 
     </div>
