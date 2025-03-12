@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import "./maingridpages/MainGridPages.css";
+import CookieBanner from "./CookieBanner" 
 
 import HauptBild from "../assets/hauptbild.jpg"
 import ScheibentoenungBild from "../assets/scheibentönung.png"
@@ -70,6 +71,9 @@ const MainGrid = () => {
           </div>
         </div>
       </div>
+
+      <CookieBanner />
+
     </div>
   );
 };
