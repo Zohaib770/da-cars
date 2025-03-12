@@ -8,10 +8,15 @@
 .adminlayout-navbar {
     width: 15%;
     background: #919191;
+    position: fixed;
+    height: 90vh;
 }
 
 .adminlayout-content {
     width: 85%;
+    margin-left: 15%;
+    overflow-y: auto;
+    height: 100vh;
 }
 
 /* ======================== adminnavbar ======================== */
