@@ -26,10 +26,14 @@ body {
 .navbar-content {
     height: 10vh;
     background-color: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 .main-content {
     flex: 1;
     background-color: #131111;
     overflow-y: auto;
+    padding-top: 10vh;
 }
