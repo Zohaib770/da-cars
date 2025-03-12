@@ -1,11 +1,11 @@
-import React, { useState, useRef  } from 'react';
+import React, { useState, useRef } from 'react';
 import { useTranslation } from "react-i18next";
 import { useNavigate } from 'react-router-dom';
 import './Admin.css';
 import axios from 'axios';
 
 const FahrzeugHochladen: React.FC = () => {
-  const{t} = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [auto, setAuto] = useState({
     bilder: [] as File[],
@@ -38,7 +38,7 @@ const FahrzeugHochladen: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const formData = new FormData();
     formData.append('marke', auto.marke);
     formData.append('modell', auto.modell);
@@ -60,7 +60,7 @@ const FahrzeugHochladen: React.FC = () => {
           'Content-Type': 'multipart/form-data',
         },
       });
-      
+
       if (response.status === 200) {
         setAuto({
           bilder: [],

@@ -1,38 +1,6 @@
-/* ======================== dienstleistungen ======================== */
-.main-grid {
-    background-color: #131111;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 20px;
-}
-
-.grid-item {
-    width: 30%;
-    height: 10%;
-    margin-left: 10%;
-    margin-top: 4%;
-    background-color: red;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.main-grid .grid-item a {
-    color: white;
-    text-decoration: none;
-    font-size: 2vw;
-}
-
 /* ======================== fahrzeug ======================== */
 .fahrzeug-container {
     background-color: #131111;
-    min-height: 90vh;
-    width: 100%;
     color: #fff;
 }
 
@@ -47,8 +15,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-height: 90vh;
-    overflow-y: auto;
     margin-bottom: 100px;
 }
 
@@ -124,7 +90,7 @@
 }
 
 .fahrzeug-item:last-child {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 @media screen and (max-width: 768px) {
@@ -142,42 +108,20 @@
 
 /* ======================== kontakt ======================== */
 .kontakt-container {
-    width: 100%;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
 }
 
 .kontakt-content {
-    height: 100vh;
-}
-
-.kontakt-content a {
-    color: white;
-    text-decoration: none;
-}
-
-.adresse-kontakt-firma {
-    width: 100%;
-    height: 80%;
     display: flex;
-}
-
-.footer {
-    width: 100%;
-    height: 20%;
-}
-
-.adresse {
-    color: white;
-    width: 50%;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    gap: 20%;
 }
 
 .kontakt-firma {
-    width: 50%;
-    padding: 30px;
+    padding: 30px 0 50px 30px;
 }
 
 .kontakt-firma-form {
@@ -198,10 +142,6 @@ textarea {
     resize: vertical;
 }
 
-#agb {
-    width: 2vh;
-}
-
 .absenden-button {
     padding: 10px 15px;
     width: 18vh;
@@ -213,11 +153,29 @@ textarea {
     font-size: 1rem;
 }
 
+.adresse {
+    color: white;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adresse a {
+    color: white;
+    text-decoration: none;
+}
+
 .imp-daten {
     display: flex;
     justify-content: center;
     gap: 8%;
     font-size: 1.5rem;
+}
+
+.imp-daten a{
+    color: white;
+    text-decoration: none;
 }
 
 .alert {
@@ -247,26 +205,16 @@ textarea {
         flex-direction: column;
     }
 
-    .adresse-kontakt-firma {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
     .imp-daten {
         display: flex;
         font-size: 1.5rem;
+        padding: 40px 0;
     }
 }
 
 /* ======================== einloggen ======================== */
 .einloggen-container {
     background-color: #131111;
-    height: 100vh;
-    width: 100%;
-}
-
-.login-form {
-    height: 100%;
 }
 
 .login-form h1 {

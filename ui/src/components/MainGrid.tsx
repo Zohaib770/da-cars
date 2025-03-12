@@ -68,7 +68,6 @@ const MainGrid = () => {
             <span>100%</span>
             <p>{t("maingrid_qualitaetsgarantie")}</p>
           </div>
-          <div className="stat-placeholder"></div>
         </div>
       </div>
     </div>
