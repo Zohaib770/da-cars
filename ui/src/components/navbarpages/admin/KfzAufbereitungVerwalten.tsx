@@ -850,14 +850,14 @@ const KfzAufbereitungVerwalten: React.FC = () => {
                     </td>
                   </tr>
                 );
-              } else if (item.autopflege === "komplett_aufbereitung_text") {
+              } else if (item.autopflege === "scheinwerfer_reparatur_text") {
                 return (
                   <tr key={index}>
                     <td>
                       <span className='highlight'>
-                        {t("komplett_aufbereitung")}
+                        {t("scheinwerfer_reparatur")}
                       </span>
-                      <br />{t("komplett_aufbereitung_text")}</td>
+                      <br />{t("scheinwerfer_reparatur_text")}</td>
                     <td><input
                       className="kfz-aufbereitung-preis"
                       type="number"
