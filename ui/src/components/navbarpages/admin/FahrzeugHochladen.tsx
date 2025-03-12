@@ -1,10 +1,12 @@
 import React, { useState, useRef  } from 'react';
 import { useTranslation } from "react-i18next";
+import { useNavigate } from 'react-router-dom';
 import './Admin.css';
 import axios from 'axios';
 
 const FahrzeugHochladen: React.FC = () => {
   const{t} = useTranslation();
+  const navigate = useNavigate();
   const [auto, setAuto] = useState({
     bilder: [] as File[],
     marke: '',
@@ -75,6 +77,8 @@ const FahrzeugHochladen: React.FC = () => {
         if (fileInputRef.current) {
           fileInputRef.current.value = '';
         }
+
+        navigate('/adminlayout/fahrzeugverwalten');
       }
     } catch (error) {
       console.error('Fehler beim Hochladen des Fahrzeugs:', error);
