@@ -28,3 +28,5 @@ dacars-backend/src/main/resources/static/autobilder
 *.env
 ui/tsconfig.tsbuildinfo
 ui/.env
+ui/package-lock.json
+ui/package.json

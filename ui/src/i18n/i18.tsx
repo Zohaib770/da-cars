@@ -16,7 +16,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 maingrid_professionelle_loesungen_fuer_ihr_fahrzeug: "Professionelle Lösungen für Ihr Fahrzeug",
 
                 maingrid_ueber_dacar: "Über DA-Cars",
-                maingrid_dacar_text: "Auto An- & Verkauf, Professionelle KFZ-Pflege, FOLIATE " +
+                maingrid_dacar_text: "Auto An- & Verkauf, Professionelle KFZ-Pflege, FOLIATEC " +
                     "Scheibentönung, Alufelgen, Reifen, Autoglasservice, Klimaservice",
                 maingrid_dacar_wilk_text: "Willkommen bei DA-Cars, Ihrer professionellen Lösung für die Aufbereitung " +
                     "und Pflege Ihres Fahrzeugs. Wir sind Ihr vertrauenswürdiger Partner, wenn es " +
