@@ -1,17 +1,16 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from "react-i18next";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "./NavbarPages.css"
 
-const Kontakt : React.FC = () => {
-  const{t} = useTranslation();
-  
+const Kontakt: React.FC = () => {
+  const { t } = useTranslation();
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [telefon, setTelefon] = useState('');
   const [nachricht, setNachricht] = useState('');
-  const [agbChecked, setAgbChecked] = useState(false);
   const [message, setMessage] = useState<{ type: string; text: string } | null>(null);
 
   const handleKontaktForm = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -30,7 +29,6 @@ const Kontakt : React.FC = () => {
       setEmail('');
       setTelefon('');
       setNachricht('');
-      setAgbChecked(false);
 
       setMessage({ type: 'success', text: t("kontakt_success") });
       setTimeout(() => setMessage(null), 3000);
@@ -45,8 +43,49 @@ const Kontakt : React.FC = () => {
 
   return (
     <div className="kontakt-container">
+
       <div className="kontakt-content">
-      <div className='adresse-kontakt-firma'>
+        <div className='kontakt-firma'>
+          <h1>{t("frage")}</h1>
+
+          {message && (
+            <div className={`alert ${message.type === 'success' ? 'alert-success' : 'alert-error'}`}>
+              {message.text}
+            </div>
+          )}
+          <form className="kontakt-firma-form" onSubmit={handleKontaktForm}>
+
+            <label htmlFor="name">{t("name")}</label>
+            <input
+              type="text" id="name"
+              name="name" placeholder={t("ihr_name")}
+              value={name} onChange={(e) => setName(e.target.value)}
+            />
+
+            <label htmlFor="email">{t("email")}</label>
+            <input
+              type="email" id="email"
+              name="email" placeholder={t("ihre_email_adresse")}
+              value={email} onChange={(e) => setEmail(e.target.value)}
+            />
+
+            <label htmlFor="telefon">{t("telefon")}</label>
+            <input
+              type="number" id="telefon"
+              name="telefon" placeholder={t("ihre_tel")}
+              value={telefon} onChange={(e) => setTelefon(e.target.value)}
+            />
+
+            <label htmlFor="nachricht">{t("nachricht")}</label>
+            <textarea
+              id="nachricht" name="nachricht"
+              placeholder={t("ihre_nachricht")} rows={5}
+              value={nachricht} onChange={(e) => setNachricht(e.target.value)}>
+            </textarea>
+
+            <button type="submit" className="absenden-button">{t("absenden")}</button>
+          </form>
+        </div>
 
         <div className='adresse'>
           <h1>{t("kontakt")}</h1>
@@ -65,10 +104,10 @@ const Kontakt : React.FC = () => {
             <a href="tel:+4963328003425" className="telefon-link">
               <p>+4963328003425</p>
             </a>
-            <a 
-              href="mailto:info@da-cars.de" 
+            <a
+              href="mailto:info@da-cars.de"
               className="email-link"
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
             >
               <p>info@da-cars.de</p>
@@ -76,65 +115,13 @@ const Kontakt : React.FC = () => {
           </div>
         </div>
 
-        <div className='kontakt-firma'>
-          <h1>{t("frage")}</h1>
-
-          {message && (
-            <div className={`alert ${message.type === 'success' ? 'alert-success' : 'alert-error'}`}>
-              {message.text}
-            </div>
-          )}
-          <form className="kontakt-firma-form" onSubmit={handleKontaktForm}>
-            
-            <label htmlFor="name">{t("name")}</label>
-            <input 
-              type="text" id="name" 
-              name="name" placeholder={t("ihr_name")} 
-              value={name} onChange={(e) => setName(e.target.value)} 
-              />
-
-            <label htmlFor="email">{t("email")}</label>
-            <input 
-              type="email" id="email" 
-              name="email" placeholder={t("ihre_email_adresse")} 
-              value={email} onChange={(e) => setEmail(e.target.value)}
-              />
-
-            <label htmlFor="telefon">{t("telefon")}</label>
-            <input 
-              type="number" id="telefon" 
-              name="telefon" placeholder={t("ihre_tel")} 
-              value={telefon} onChange={(e) => setTelefon(e.target.value)}
-              />
-
-            <label htmlFor="nachricht">{t("nachricht")}</label>
-            <textarea 
-              id="nachricht" name="nachricht" 
-              placeholder={t("ihre_nachricht")} rows={5}
-              value={nachricht} onChange={(e) => setNachricht(e.target.value)}>
-            </textarea>
-            
-            <label>
-              <input 
-                type="checkbox" id="agb" 
-                name="agb" checked={agbChecked} 
-                onChange={(e) => setAgbChecked(e.target.checked)} required />
-                {t("agb")}
-            </label>
-
-            <button type="submit" className="absenden-button">{t("absenden")}</button>
-          </form>
-        </div>
       </div>
 
-      <div className='footer'>
-        <div className='imp-daten'>
-          <Link to="/impressum">{t("impressum")}</Link>
-          <Link to="/haftungsausschluss">{t("haftungsausschluss")}</Link>
-        </div>
+      <div className='imp-daten'>
+        <Link to="/impressum">{t("impressum")}</Link>
+        <Link to="/haftungsausschluss">{t("haftungsausschluss")}</Link>
       </div>
 
-      </div>
     </div>
   )
 }
