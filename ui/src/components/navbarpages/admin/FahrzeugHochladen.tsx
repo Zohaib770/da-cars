@@ -58,8 +58,7 @@ const FahrzeugHochladen: React.FC = () => {
           'Content-Type': 'multipart/form-data',
         },
       });
-      
-      if (response.status === 200) {
+      if (response.status === 200 || response.status === 201) {
         setAuto({
           bilder: [],
           marke: '',
